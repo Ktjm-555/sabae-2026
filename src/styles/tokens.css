@@ -1,0 +1,33 @@
+@theme {
+  /* Figma SDGsフェス2026 palette */
+  --color-primary: #0b5ab1;
+  --color-primary-dark: #094a92;
+  --color-primary-light: #6ba6e8;
+  --color-navy: #273b73;
+  --color-pink: #ef8bb6;
+  --color-pink-light: #f7c9dd;
+  --color-sky: #bae3f9;
+  --color-gold: #c3ad46;
+  --color-beige: #efe1d1;
+  --color-background: #ffffff;
+  --color-background-alt: #f5f8fc;
+  --color-foreground: #4b5563;
+  --color-foreground-heading: #0b5ab1;
+  --color-foreground-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-footer: #0b5ab1;
+
+  --font-sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-display: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+
+  --container-max: 87.5rem;
+  --header-height: 5rem;
+  --header-height-mobile: 4.375rem;
+
+  --radius-card: 1.25rem;
+  --radius-header: 2.5rem;
+  --radius-pill: 5rem;
+
+  --shadow-card: 0 4px 16px rgb(11 90 177 / 0.14);
+  --shadow-card-hover: 0 8px 24px rgb(11 90 177 / 0.22);
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ミライフェス 2026",
+  "shortName": "ミライフェス2026",
+  "tagline": "みんなでつくる、さばえのミライ",
+  "description": "みんなでつくる、さばえのミライ ものづくり、まちづくり、そして「ひと」━━ \"さばえらしさ\"をぎゅっと詰め込んだ、ミライへつながる2日間です。",
+  "aboutDescription": "みんなでつくる、さばえのミライ\nものづくり、まちづくり、そして「ひと」━━\n\"さばえらしさ\"をぎゅっと詰め込んだ、ミライへつながる2日間です。",
+  "eventDate": "2026.10.17 sat - 18 sun",
+  "eventTime": "10:00 ~ 16:00",
+  "eventLocation": "西山公園（鯖江市桜町）",
+  "organizer": "主催：鯖江市",
+  "googleAnalyticsId": "G-1P3N11YF8M",
+  "registrationUrl": "#",
+  "social": {
+    "twitter": "https://x.com/SabaeSDGsCenter",
+    "instagram": "https://www.instagram.com/sabae_mirai_fes/",
+    "facebook": "https://www.facebook.com/profile.php?id=61564680812799"
+  },
+  "navigation": [
+    { "label": "トップ", "href": "/" },
+    { "label": "お知らせ", "href": "/news" }
+  ],
+  "contact": {
+    "general": {
+      "title": "お問合せ",
+      "organization": "鯖江市総合政策課",
+      "phone": "0778-53-2263"
+    },
+    "booth": {
+      "title": "ブースエリア事務局",
+      "organization": "さばえSDGs推進センター",
+      "note": "（指定管理者 (株)メディアビジョン）",
+      "phone": "0778-42-8938",
+      "email": "contact@sabae-sdgs.jp"
+    }
+  },
+  "pastFestivals": [
+    { "label": "2025", "href": "https://fes.sabae-sdgs.jp/" },
+    { "label": "2024", "href": "https://fes.sabae-sdgs.jp/2024/" },
+    { "label": "2023", "href": "https://fes.sabae-sdgs.jp/2023/" }
+  ],
+  "copyright": "© 2026 Resources Center for Implementation of the SDGs in SABAE"
+}

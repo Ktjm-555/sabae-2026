@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@import "../styles/tokens.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-noto-sans), var(--font-sans);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+  }
+
+  ::selection {
+    background-color: var(--color-sky);
+    color: var(--color-primary-dark);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-mplus-rounded), var(--font-display);
+  }
+}
+
+@layer components {
+  .prose-news {
+    @apply leading-relaxed text-foreground;
+
+    h2 {
+      @apply mt-8 mb-4 text-xl font-bold text-primary;
+    }
+
+    h3 {
+      @apply mt-6 mb-3 text-lg font-bold text-primary;
+    }
+
+    p {
+      @apply mb-4;
+    }
+
+    ul {
+      @apply mb-4 list-disc pl-6;
+    }
+
+    ol {
+      @apply mb-4 list-decimal pl-6;
+    }
+
+    li {
+      @apply mb-1;
+    }
+
+    a {
+      @apply text-primary underline underline-offset-2 hover:text-primary-dark;
+    }
+
+    strong {
+      @apply font-bold;
+    }
+
+    table {
+      @apply mb-4 w-full border-collapse text-sm;
+    }
+
+    th,
+    td {
+      @apply border border-border px-3 py-2;
+    }
+
+    th {
+      @apply bg-background-alt font-bold;
+    }
+  }
+}
