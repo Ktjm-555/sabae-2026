@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
 import { NewsItem, getCategoryLabel } from "@/lib/news";
+import { withBasePath } from "@/lib/basePath";
 
 interface NewsListItemProps {
   news: NewsItem;
@@ -13,7 +14,7 @@ export const newsArrowIconSizeClass = buttonArrowIconSizeClass;
 function ButtonArrowIcon({ className }: { className?: string }) {
   return (
     <Image
-      src="/images/btn_arrow.svg"
+      src={withBasePath("/images/btn_arrow.svg")}
       alt=""
       width={12}
       height={20}
@@ -26,7 +27,7 @@ function ButtonArrowIcon({ className }: { className?: string }) {
 export function NewsArrowIcon({ className }: { className?: string }) {
   return (
     <Image
-      src="/images/news_arrow.svg"
+      src={withBasePath("/images/news_arrow.svg")}
       alt=""
       width={12}
       height={20}

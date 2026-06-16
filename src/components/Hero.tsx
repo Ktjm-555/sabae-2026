@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
 
 export function Hero() {
@@ -9,7 +10,7 @@ export function Hero() {
       {/* Mobile — hero_sp.jpg（804×1680） */}
       <div className="leading-none lg:hidden">
         <Image
-          src="/images/hero-sp.jpg"
+          src={withBasePath("/images/hero-sp.jpg")}
           alt={`めがねのまちさばえ ${site.shortName} - ${site.eventDate} ${site.eventLocation}`}
           width={804}
           height={1680}
@@ -23,7 +24,7 @@ export function Hero() {
       {/* PC — hero_pc2.jpg（3490×2146） */}
       <div className="hidden leading-none lg:block">
         <Image
-          src="/images/hero-pc2.jpg"
+          src={withBasePath("/images/hero-pc2.jpg")}
           alt={`めがねのまちさばえ ${site.shortName} - ${site.eventDate} ${site.eventLocation}`}
           width={3490}
           height={2146}

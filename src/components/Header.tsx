@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
 
 function SocialIcon({
@@ -58,7 +59,7 @@ export function Header({ overlay }: HeaderProps) {
         >
           <Link href="/" className="ml-2 shrink-0 lg:ml-6">
             <Image
-              src="/images/logo-header.svg"
+              src={withBasePath("/images/logo-header.svg")}
               alt="めがねのまちさばえ ミライフェス 2026"
               width={270}
               height={53}

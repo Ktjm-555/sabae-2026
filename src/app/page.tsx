@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { NewsListButton, NewsListItem } from "@/components/NewsListItem";
 import { SectionTitle } from "@/components/SectionTitle";
+import { withBasePath } from "@/lib/basePath";
 import { getAllNews } from "@/lib/news";
 import { getSiteConfig } from "@/lib/site";
 
@@ -47,7 +48,7 @@ export default function HomePage() {
           <div className="mx-auto flex max-w-[1127px] flex-col items-center gap-6 rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:flex-row lg:items-center lg:gap-12 lg:px-12 lg:py-10">
             <div className="shrink-0 lg:w-[273px]">
               <Image
-                src="/images/about-logo.png"
+                src={withBasePath("/images/about-logo.png")}
                 alt={`めがねのまちさばえ ${site.shortName} - ${site.tagline}`}
                 width={546}
                 height={250}
