@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
 
 function PhoneIcon() {
   return (
     <Image
-      src="/images/telephone.svg"
+      src={withBasePath("/images/telephone.svg")}
       alt=""
       width={16}
       height={16}
@@ -18,7 +19,7 @@ function PhoneIcon() {
 function MailIcon() {
   return (
     <Image
-      src="/images/mail.svg"
+      src={withBasePath("/images/mail.svg")}
       alt=""
       width={16}
       height={16}

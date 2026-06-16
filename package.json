@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:stg": "APP_ENV=stg next build",
     "start": "next start",
     "lint": "eslint"
   },
