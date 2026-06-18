@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:stg": "APP_ENV=stg next build",
+    "build:stg": "APP_ENV=stg NEXT_PUBLIC_BASE_PATH=/sabae-2026 next build",
     "start": "next start",
     "lint": "eslint"
   },
