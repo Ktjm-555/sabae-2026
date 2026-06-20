@@ -3,6 +3,7 @@ import { AreasWaveTop } from "@/components/AreasWaveTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { SpecialStageSection } from "@/components/SpecialStageSection";
 import { VenueAreasSection } from "@/components/VenueAreasSection";
 import { NewsListButton, NewsListItem } from "@/components/NewsListItem";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -43,7 +44,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="relative bg-white pb-0 pt-[85px]">
+      <section id="about" className="relative bg-white pb-0 pt-4 sm:pt-6 lg:pt-2">
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionTitle title="ミライフェスとは" subtitle="ABOUT" />
 
@@ -66,6 +67,8 @@ export default function HomePage() {
       </section>
 
       <VenueAreasSection />
+
+      <SpecialStageSection />
 
       <Footer />
     </>

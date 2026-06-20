@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fashion-show",
+    "dateBar": {
+      "date": "10.17",
+      "day": "sat",
+      "title": "さばえミライのかがやき",
+      "titleHighlight": "FASHION Show"
+    },
+    "badge": "センイ産業の魅力",
+    "title": "福井文化服装学院ステージ",
+    "subtitle": "ミライをまとう、鯖江の繊維",
+    "description": "鯖江の繊維企業で学び、職人の想いに触れた福井文化服装学院の学生たちが、提供素材を使って世界に一つだけの衣装を制作。学生モデルによるランウェイで、ミライへつながる繊維産業の魅力を発信します。若者の感性と鯖江のものづくりが出会い、新たな価値を生み出す特別なファッションステージです。",
+    "image": "/images/special-stage/fukui-fashion-block.png",
+    "imageAlt": "福井文化服装学院ファッションショーの様子"
+  },
+  {
+    "id": "tgc-stage",
+    "badge": "メガネ産業の魅力",
+    "titlePrefix": "produced by",
+    "title": "TGCステージ",
+    "subtitle": "めがねのまちさばえからミライへ",
+    "description": "鯖江が世界に誇る“眼鏡”を取り入れたコーディネートで、TGCモデルが登場。一つひとつ丁寧に作られた眼鏡には、職人の高い技術と想いが込められています。モデルたちは、自分らしいスタイルとともに、鯖江のものづくりの魅力を発信します。",
+    "models": [
+      { "name": "MINAMI" },
+      { "name": "なんり" },
+      { "comingSoon": true },
+      { "comingSoon": true },
+      { "comingSoon": true },
+      {
+        "image": "/images/special-stage/tgc-model-3-56586a.png",
+        "imageAlt": "TGCモデル",
+        "tall": true,
+        "noBackground": true
+      }
+    ]
+  }
+]
