@@ -1,0 +1,55 @@
+import Link from "next/link";
+import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
+import { buttonArrowIconSizeClass } from "@/components/NewsListItem";
+
+function ButtonArrowIcon({ className }: { className?: string }) {
+  return (
+    <Image
+      src={withBasePath("/images/btn_arrow.svg")}
+      alt=""
+      width={12}
+      height={20}
+      className={className}
+      aria-hidden="true"
+    />
+  );
+}
+
+interface VenueAreaButtonProps {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+export function VenueAreaButton({ href, label, external = false }: VenueAreaButtonProps) {
+  const className =
+    "relative inline-flex h-[39px] min-w-[166px] items-center justify-center rounded-[80px] bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:min-w-[241px] lg:px-8 lg:text-xl";
+
+  const arrow = (
+    <ButtonArrowIcon
+      className={`absolute top-1/2 right-[15px] -translate-y-1/2 lg:right-[29px] ${buttonArrowIconSizeClass}`}
+    />
+  );
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {label}
+        {arrow}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+      {arrow}
+    </Link>
+  );
+}

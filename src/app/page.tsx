@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { AreasWaveTop } from "@/components/AreasWaveTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { VenueAreasSection } from "@/components/VenueAreasSection";
 import { NewsListButton, NewsListItem } from "@/components/NewsListItem";
 import { SectionTitle } from "@/components/SectionTitle";
 import { withBasePath } from "@/lib/basePath";
@@ -41,11 +43,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="bg-white pb-10 sm:pb-14 lg:pb-16">
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+      <section id="about" className="relative bg-white pb-0 pt-[85px]">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionTitle title="ミライフェスとは" subtitle="ABOUT" />
 
-          <div className="mx-auto flex max-w-[1127px] flex-col items-center gap-6 rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:flex-row lg:items-center lg:gap-12 lg:px-12 lg:py-10">
+          <div className="relative z-10 mx-auto flex max-w-[1127px] flex-col items-center gap-6 rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:flex-row lg:items-center lg:gap-12 lg:px-12 lg:py-10">
             <div className="shrink-0 lg:w-[273px]">
               <Image
                 src={withBasePath("/images/about-logo.png")}
@@ -60,7 +62,10 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+        <AreasWaveTop className="relative z-[1] -mt-[200px] lg:-mt-36" />
       </section>
+
+      <VenueAreasSection />
 
       <Footer />
     </>

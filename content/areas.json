@@ -1,0 +1,50 @@
+[
+  {
+    "id": "booth",
+    "title": "ブースエリア",
+    "subtitle": "BOOTH AREA",
+    "description": "ものづくり、市民主役、学生連携、女性活躍、SDGsなど、“鯖江らしさ”に出会えるブースが出展！",
+    "image": "/images/areas/booth-frame.png",
+    "imageAlt": "ブースエリアの様子",
+    "imagePosition": "left",
+    "buttonLabel": "出展者募集はこちら",
+    "buttonHref": "https://www.sabae-sdgs.jp/news/boothbosyu2026",
+    "buttonExternal": true
+  },
+  {
+    "id": "asobi",
+    "title": "アソビエリア",
+    "subtitle": "ASOBI AREA",
+    "description": "子どもたちが楽しく体を動かせる体験がいっぱい！",
+    "image": "/images/areas/asobi-frame.png",
+    "imageAlt": "アソビエリアの様子",
+    "imagePosition": "right",
+    "buttonLabel": "詳しくはこちら",
+    "buttonHref": "#asobi",
+    "buttonExternal": false
+  },
+  {
+    "id": "gourmet",
+    "title": "グルメエリア",
+    "subtitle": "GOURMET AREA",
+    "description": "鯖江グルメが集結！",
+    "image": "/images/areas/gourmet-frame.png",
+    "imageAlt": "グルメエリアの様子",
+    "imagePosition": "left",
+    "buttonLabel": "詳しくはこちら",
+    "buttonHref": "#gourmet",
+    "buttonExternal": false
+  },
+  {
+    "id": "mystery-rally",
+    "title": "謎解きラリー",
+    "subtitle": "MYSTERY RALLY",
+    "description": "会場内に隠れた手がかりを探してクイズに挑戦！ミライにつながるアクションとは⁉ 正解して景品をゲットしよう！",
+    "image": "/images/areas/mystery-frame.png",
+    "imageAlt": "謎解きラリーの様子",
+    "imagePosition": "right",
+    "buttonLabel": "詳しくはこちら",
+    "buttonHref": "#mystery-rally",
+    "buttonExternal": false
+  }
+]
