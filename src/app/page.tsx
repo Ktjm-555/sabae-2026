@@ -62,7 +62,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <AreasWaveTop className="relative z-[1] -mt-20 sm:-mt-28 lg:-mt-36" />
+        <AreasWaveTop className="relative z-[1] -mt-[200px] lg:-mt-36" />
       </section>
 
       <VenueAreasSection />
