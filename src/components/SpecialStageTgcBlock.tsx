@@ -59,22 +59,22 @@ export function SpecialStageTgcBlock({ stage }: SpecialStageTgcBlockProps) {
           {stage.badge}
         </span>
 
-        <h3 className="mt-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:mt-4 lg:text-[32px] lg:leading-[46px]">
-          {stage.titlePrefix ? (
-            <>
-              <span className="font-sans text-2xl font-bold">{stage.titlePrefix}</span>
-              {stage.title}
-            </>
-          ) : (
-            stage.title
-          )}
-        </h3>
+        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4">
+          <h3 className="pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px]">
+            {stage.titlePrefix ? (
+              <>
+                <span className="font-sans text-2xl font-bold">{stage.titlePrefix}</span>
+                {stage.title}
+              </>
+            ) : (
+              stage.title
+            )}
+          </h3>
+        </div>
 
-        <p className="mt-2 text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:mt-3 lg:text-[32px] lg:leading-[46px]">
+        <p className="mt-3 text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:mt-4 lg:text-[32px] lg:leading-[46px]">
           {stage.subtitle}
         </p>
-
-        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
 
         <p className="mt-4 text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:text-xl lg:leading-8">
           {stage.description}
