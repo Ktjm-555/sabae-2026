@@ -13,13 +13,15 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
 
   // 画像が左で、ボーダーと文字列の余白をいい感じ（ボーダーは画像につける、文字は余白あり）に。
   const textInset = "lg:pl-10 xl:pl-16";
+  // 楕円画像の右余白（1200px幅で約10.5%）分だけボーダーを伸ばす。文字位置は変えない。
+  const borderAttach = "lg:-left-[calc(48/52*10.5%)]";
 
   return (
     <article
       id={stage.id}
       className="scroll-mt-24 flex flex-col lg:flex-row lg:items-center"
     >
-      <div className="relative order-2 mt-6 w-full shrink-0 lg:order-1 lg:mt-0 lg:w-[48%] lg:max-w-[600px]">
+      <div className="relative z-10 order-2 mt-6 w-full shrink-0 lg:order-1 lg:mt-0 lg:w-[48%] lg:max-w-[600px]">
         <Image
           src={withBasePath(stage.image)}
           alt={stage.imageAlt ?? stage.title ?? stage.subtitle}
@@ -37,12 +39,16 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
           </span>
         </div>
 
-        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4 lg:-ml-[calc(48/52*100%)] lg:w-[calc(100%+48/52*100%)]">
+        <div className="relative mt-3 lg:mt-4">
           <h3
             className={`pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px] ${textInset}`}
           >
             {stage.title}
           </h3>
+          <div
+            aria-hidden="true"
+            className={`pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc] ${borderAttach}`}
+          />
         </div>
 
         <p
