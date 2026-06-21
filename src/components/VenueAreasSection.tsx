@@ -15,7 +15,7 @@ export function VenueAreasSection() {
             ))}
           </div>
           <div
-            className="h-14 sm:h-16 lg:h-18"
+            className="h-14 sm:h-16 lg:h-28"
             aria-hidden="true"
           />
         </div>
