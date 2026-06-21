@@ -13,14 +13,27 @@ function TgcModelCard({
   model: SpecialStageModel;
   className?: string;
 }) {
-  const aspectClass = model.tall
-    ? "aspect-[253/309] lg:aspect-auto lg:h-full lg:min-h-[309px]"
-    : "aspect-[246/227]";
+  if (model.tall && model.image) {
+    return (
+      <div className={`relative ${className ?? ""}`}>
+        <div className="aspect-[246/227] w-full" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 aspect-[253/309]">
+          <Image
+            src={withBasePath(model.image)}
+            alt={model.imageAlt ?? model.name ?? "TGCモデル"}
+            fill
+            className="object-contain"
+            sizes="(max-width: 1024px) 45vw, 250px"
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={`${model.tall ? "flex h-full flex-col" : undefined} ${className ?? ""}`}>
+    <div className={className}>
       <div
-        className={`relative overflow-hidden rounded-[20px] ${model.noBackground ? "" : "bg-[#f3f2f9]"} ${aspectClass}`}
+        className={`relative aspect-[246/227] overflow-hidden rounded-[20px] ${model.noBackground ? "" : "bg-[#f3f2f9]"}`}
       >
         {model.image ? (
           <Image
@@ -81,7 +94,7 @@ export function SpecialStageTgcBlock({ stage }: SpecialStageTgcBlockProps) {
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:grid-rows-2 sm:gap-5 lg:w-[58%] lg:max-w-[797px]">
+      <div className="grid w-full grid-cols-2 items-start gap-x-4 gap-y-4 overflow-visible sm:grid-cols-3 sm:grid-rows-2 sm:gap-x-6 sm:gap-y-6 lg:w-[58%] lg:max-w-[797px]">
         <TgcModelCard model={models[0]} />
         <TgcModelCard model={models[1]} />
         <TgcModelCard model={models[2]} className="sm:col-start-3 sm:row-start-1" />
