@@ -13,9 +13,12 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
   const textInset = imageFirst
     ? "lg:pl-10 xl:pl-16"
     : "lg:pr-10 xl:pr-16";
-  // 謎解きラリーは、画面幅が狭いと楕円画像の透明部分に隙間が見えるため、線を画像の下まで伸ばす。
-  const borderAttach =
-    area.id === "mystery-rally" ? "lg:-right-[calc(48/52*12%)]" : "";
+  // 楕円画像の透明余白（1374px幅で約8%）分だけボーダーを伸ばす。文字位置は変えない。
+  const borderAttach = imageFirst
+    ? "lg:-left-[calc(48/52*8%)]"
+    : area.id === "mystery-rally"
+      ? "lg:-right-[calc(48/52*12%)]"
+      : "";
 
   const imageBlock = (
     // SPでは画像は下に固定、PCでは、左右交互になる
