@@ -24,12 +24,10 @@ interface VenueAreaButtonProps {
 
 export function VenueAreaButton({ href, label, external = false }: VenueAreaButtonProps) {
   const className =
-    "relative inline-flex h-[39px] min-w-[166px] items-center justify-center rounded-[80px] bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:min-w-[241px] lg:px-8 lg:text-xl";
+    "inline-flex h-[39px] min-w-[166px] items-center justify-center gap-2 rounded-[80px] bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:min-w-[241px] lg:gap-5 lg:px-8 lg:text-xl";
 
   const arrow = (
-    <ButtonArrowIcon
-      className={`absolute top-1/2 right-[15px] -translate-y-1/2 lg:right-[29px] ${buttonArrowIconSizeClass}`}
-    />
+    <ButtonArrowIcon className={`shrink-0 ${buttonArrowIconSizeClass}`} />
   );
 
   if (external) {
