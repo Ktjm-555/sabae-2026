@@ -37,7 +37,7 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
           </span>
         </div>
 
-        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4">
+        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4 lg:-ml-[calc(48/52*100%)] lg:w-[calc(100%+48/52*100%)]">
           <h3
             className={`pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px] ${textInset}`}
           >
