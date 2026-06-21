@@ -19,6 +19,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   const physicalIndexRef = useRef(items.length);
   const isTransitioningRef = useRef(false);
   const isPausedRef = useRef(false);
+  const lastInteractionRef = useRef(0);
   const normalizeTimerRef = useRef<number | null>(null);
 
   const loopItems = useMemo(
@@ -59,6 +60,49 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
     }
   }, [getTargetScrollLeft, items.length]);
 
+  const findNearestPhysicalIndex = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container) return physicalIndexRef.current;
+
+    let nearestIndex = physicalIndexRef.current;
+    let nearestDistance = Infinity;
+
+    slideRefs.current.forEach((slide, index) => {
+      if (!slide) return;
+
+      const distance = Math.abs(
+        container.scrollLeft - getTargetScrollLeft(slide)
+      );
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearestIndex = index;
+      }
+    });
+
+    return nearestIndex;
+  }, [getTargetScrollLeft]);
+
+  const finishProgrammaticScroll = useCallback(() => {
+    if (!isTransitioningRef.current) return;
+
+    if (normalizeTimerRef.current !== null) {
+      window.clearTimeout(normalizeTimerRef.current);
+      normalizeTimerRef.current = null;
+    }
+
+    physicalIndexRef.current = findNearestPhysicalIndex();
+    normalizePosition();
+    isTransitioningRef.current = false;
+  }, [findNearestPhysicalIndex, normalizePosition]);
+
+  const syncManualScroll = useCallback(() => {
+    if (isTransitioningRef.current) return;
+
+    physicalIndexRef.current = findNearestPhysicalIndex();
+    normalizePosition();
+    lastInteractionRef.current = Date.now();
+  }, [findNearestPhysicalIndex, normalizePosition]);
+
   const scrollToPhysical = useCallback(
     (physicalIndex: number, behavior: ScrollBehavior = "smooth") => {
       const container = scrollRef.current;
@@ -80,13 +124,15 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
       if (behavior === "smooth") {
         isTransitioningRef.current = true;
         normalizeTimerRef.current = window.setTimeout(() => {
-          isTransitioningRef.current = false;
-          normalizeTimerRef.current = null;
+          finishProgrammaticScroll();
+        }, SCROLL_DURATION_MS + 100);
+      } else {
+        window.requestAnimationFrame(() => {
           normalizePosition();
-        }, SCROLL_DURATION_MS);
+        });
       }
     },
-    [getTargetScrollLeft, normalizePosition]
+    [finishProgrammaticScroll, getTargetScrollLeft, normalizePosition]
   );
 
   useEffect(() => {
@@ -100,11 +146,47 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   useEffect(() => {
     const interval = window.setInterval(() => {
       if (isPausedRef.current || isTransitioningRef.current) return;
+      if (Date.now() - lastInteractionRef.current < AUTOPLAY_DELAY) return;
       scrollToPhysical(physicalIndexRef.current + 1, "smooth");
     }, AUTOPLAY_DELAY);
 
     return () => window.clearInterval(interval);
   }, [scrollToPhysical]);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handleScrollEnd = () => {
+      if (isTransitioningRef.current) {
+        finishProgrammaticScroll();
+      } else {
+        syncManualScroll();
+      }
+    };
+
+    container.addEventListener("scrollend", handleScrollEnd);
+
+    let scrollTimer: number | null = null;
+    const handleScroll = () => {
+      if (isTransitioningRef.current) return;
+
+      if (scrollTimer !== null) {
+        window.clearTimeout(scrollTimer);
+      }
+      scrollTimer = window.setTimeout(syncManualScroll, 150);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scrollend", handleScrollEnd);
+      container.removeEventListener("scroll", handleScroll);
+      if (scrollTimer !== null) {
+        window.clearTimeout(scrollTimer);
+      }
+    };
+  }, [finishProgrammaticScroll, syncManualScroll]);
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -139,6 +221,15 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
       <div
         ref={scrollRef}
         className="flex snap-x snap-mandatory gap-[25px] overflow-x-auto scroll-pl-3 scroll-pr-3 px-3 py-2.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        onPointerDown={() => {
+          isPausedRef.current = true;
+        }}
+        onPointerUp={() => {
+          isPausedRef.current = false;
+        }}
+        onPointerCancel={() => {
+          isPausedRef.current = false;
+        }}
       >
         {loopItems.map((item, index) => (
           <div
