@@ -47,7 +47,7 @@ function TgcModelCard({
             sizes="(max-width: 1024px) 45vw, 250px"
           />
         ) : model.comingSoon ? (
-          <div className="flex h-full items-center justify-center px-4 text-center font-display text-[32px] font-medium leading-[46px] whitespace-pre-line text-[#868686]">
+          <div className="flex h-full items-center justify-center px-4 text-center font-display text-[24px] font-normal leading-8 whitespace-pre-line text-[#868686] lg:text-[32px] lg:leading-[46px]">
             {"COMING\nSOON"}
           </div>
         ) : null}

@@ -15,7 +15,7 @@ const notoSans = Noto_Sans_JP({
 
 const mPlusRounded = M_PLUS_Rounded_1c({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["400", "700"],
   variable: "--font-mplus-rounded",
   display: "swap",
 });
