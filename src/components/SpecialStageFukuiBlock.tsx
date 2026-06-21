@@ -11,6 +11,7 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
     return null;
   }
 
+  // 画像が左で、ボーダーと文字列の余白をいい感じ（ボーダーは画像につける、文字は余白あり）に。
   const textInset = "lg:pl-10 xl:pl-16";
 
   return (

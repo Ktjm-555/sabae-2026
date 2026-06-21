@@ -12,6 +12,7 @@ function splitPerformerName(name: string): { main: string; suffix?: string } {
   return { main: match[1], suffix: `（${match[2]}）` };
 }
 
+// 画像下の名前表示を表示幅によって、1段、2段を変える
 function PerformerName({ name }: { name: string }) {
   const { main, suffix } = splitPerformerName(name);
 

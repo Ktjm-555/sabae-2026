@@ -8,12 +8,14 @@ interface VenueAreaItemProps {
 }
 
 export function VenueAreaItem({ area }: VenueAreaItemProps) {
+  // 画像が左か右かでボーダーと他の文字列の余白を調整
   const imageFirst = area.imagePosition === "left";
   const textInset = imageFirst
     ? "lg:pl-10 xl:pl-16"
     : "lg:pr-10 xl:pr-16";
 
   const imageBlock = (
+    // SPでは画像は下に固定、PCでは、左右交互になる
     <div
       className={`relative order-2 mt-6 w-full lg:mt-0 lg:w-[48%] lg:max-w-[687px] lg:shrink-0 ${
         imageFirst ? "lg:order-1" : "lg:order-2"
