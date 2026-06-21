@@ -1,6 +1,8 @@
 import { SectionTitle } from "@/components/SectionTitle";
+import { SpecialStageDanceContestBlock } from "@/components/SpecialStageDanceContestBlock";
 import { SpecialStageDateBar } from "@/components/SpecialStageDateBar";
 import { SpecialStageFukuiBlock } from "@/components/SpecialStageFukuiBlock";
+import { SpecialStageLdhBlock } from "@/components/SpecialStageLdhBlock";
 import { SpecialStageTgcBlock } from "@/components/SpecialStageTgcBlock";
 import { getSpecialStages } from "@/lib/specialStages";
 
@@ -8,6 +10,8 @@ export function SpecialStageSection() {
   const stages = getSpecialStages();
   const fashionShow = stages.find((stage) => stage.id === "fashion-show");
   const tgcStage = stages.find((stage) => stage.id === "tgc-stage");
+  const ldhStage = stages.find((stage) => stage.id === "ldh-workshop");
+  const danceContest = stages.find((stage) => stage.id === "dance-contest");
 
   return (
     <section
@@ -38,6 +42,34 @@ export function SpecialStageSection() {
           ) : null}
 
           {tgcStage ? <SpecialStageTgcBlock stage={tgcStage} /> : null}
+
+          {ldhStage?.dateBar ? (
+            <div className="flex flex-col gap-8 lg:gap-10">
+              <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                <SpecialStageDateBar
+                  date={ldhStage.dateBar.date}
+                  day={ldhStage.dateBar.day}
+                  title={ldhStage.dateBar.title}
+                  titleHighlight={ldhStage.dateBar.titleHighlight}
+                />
+              </div>
+              <SpecialStageLdhBlock stage={ldhStage} />
+            </div>
+          ) : null}
+
+          {danceContest?.dateBar ? (
+            <div className="flex flex-col gap-8 lg:gap-10">
+              <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                <SpecialStageDateBar
+                  date={danceContest.dateBar.date}
+                  day={danceContest.dateBar.day}
+                  title={danceContest.dateBar.title}
+                  titleHighlight={danceContest.dateBar.titleHighlight}
+                />
+              </div>
+              <SpecialStageDanceContestBlock stage={danceContest} />
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

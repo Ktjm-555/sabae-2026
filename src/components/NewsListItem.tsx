@@ -71,12 +71,10 @@ export function NewsListButton() {
   return (
     <Link
       href="/news"
-      className="relative inline-flex h-[39px] min-w-[166px] items-center justify-center rounded-[80px] bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:min-w-[241px] lg:text-xl"
+      className="inline-flex h-[39px] w-[166px] items-center justify-center gap-2 rounded-[80px] bg-primary text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:w-[241px] lg:gap-5 lg:text-xl"
     >
       お知らせ一覧
-      <ButtonArrowIcon
-        className={`absolute top-1/2 right-[15px] -translate-y-1/2 lg:right-[29px] ${buttonArrowIconSizeClass}`}
-      />
+      <ButtonArrowIcon className={`shrink-0 ${buttonArrowIconSizeClass}`} />
     </Link>
   );
 }

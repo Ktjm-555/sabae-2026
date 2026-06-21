@@ -2,7 +2,7 @@ interface SpecialStageDateBarProps {
   date: string;
   day: string;
   title: string;
-  titleHighlight: string;
+  titleHighlight?: string;
 }
 
 function DateBarWaveSeparator() {
@@ -31,7 +31,7 @@ export function SpecialStageDateBar({
   title,
   titleHighlight,
 }: SpecialStageDateBarProps) {
-  const fullTitle = `${title} ${titleHighlight}`;
+  const fullTitle = titleHighlight ? `${title} ${titleHighlight}` : title;
 
   return (
     <div className="overflow-hidden bg-gradient-to-r from-[#66a8dc] via-[#a688bd] to-[#db99c1] py-4 sm:py-5 lg:flex lg:min-h-14 lg:items-center lg:rounded-[60px] lg:px-8 lg:py-0 lg:h-[76px]">
@@ -51,8 +51,14 @@ export function SpecialStageDateBar({
 
       <div className="min-w-0 text-white lg:flex-1">
         <div className="px-4 sm:px-6 lg:hidden">
-          <p className="text-[28px] font-bold leading-snug">{title}</p>
-          <p className="mt-1 text-[28px] font-bold leading-tight">{titleHighlight}</p>
+          {titleHighlight ? (
+            <>
+              <p className="text-[28px] font-bold leading-snug">{title}</p>
+              <p className="mt-1 text-[28px] font-bold leading-tight">{titleHighlight}</p>
+            </>
+          ) : (
+            <p className="text-[28px] font-bold leading-snug">{title}</p>
+          )}
         </div>
 
         <p className="hidden text-sm font-bold leading-snug lg:block lg:text-[36px] lg:leading-[30px]">

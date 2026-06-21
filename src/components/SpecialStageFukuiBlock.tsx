@@ -21,7 +21,7 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
       <div className="relative order-2 mt-6 w-full shrink-0 lg:order-1 lg:mt-0 lg:w-[48%] lg:max-w-[600px]">
         <Image
           src={withBasePath(stage.image)}
-          alt={stage.imageAlt ?? stage.title}
+          alt={stage.imageAlt ?? stage.title ?? stage.subtitle}
           width={1200}
           height={624}
           className="h-auto w-full"
