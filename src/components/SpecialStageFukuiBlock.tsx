@@ -30,9 +30,11 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
       </div>
 
       <div className="order-1 flex w-full flex-col lg:order-2 lg:w-[52%] lg:max-w-[653px] lg:justify-center">
-        <span className={`inline-flex h-8 w-fit items-center justify-center rounded-[20px] bg-gold px-4 text-base font-bold text-white ${textInset}`}>
-          {stage.badge}
-        </span>
+        <div className={textInset}>
+          <span className="inline-flex h-8 w-fit items-center justify-center rounded-[20px] bg-gold px-4 text-base font-bold text-white">
+            {stage.badge}
+          </span>
+        </div>
 
         <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4">
           <h3
