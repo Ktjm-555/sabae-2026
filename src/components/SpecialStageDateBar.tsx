@@ -50,7 +50,7 @@ export function SpecialStageDateBar({
         aria-hidden="true"
       />
 
-      <div className="min-w-0 text-white lg:flex-1">
+      <div className="@container min-w-0 text-white lg:flex-1">
         <div className="px-4 sm:px-6 lg:hidden">
           {titleHighlight ? (
             <>
@@ -62,7 +62,7 @@ export function SpecialStageDateBar({
           )}
         </div>
 
-        <p className="hidden text-sm font-bold leading-snug lg:block lg:text-[36px] lg:leading-[30px]">
+        <p className="hidden font-bold leading-[30px] lg:block lg:text-[30px] @[750px]:text-[34px] @[820px]:text-[36px]">
           {fullTitle}
         </p>
       </div>
