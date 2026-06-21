@@ -23,7 +23,7 @@ export function SpecialStageSection() {
         id="special-stage"
         className="relative z-10 scroll-mt-24 -mt-6 bg-background-sky pb-0 sm:-mt-8 lg:-mt-10"
       >
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 lg:pt-8">
           <SectionTitle title="スペシャルステージ" subtitle="SPECIAL STAGE" />
 
           <p className="mx-auto max-w-[1296px] whitespace-pre-line text-left text-base font-medium leading-8 text-foreground min-[801px]:text-center sm:text-lg lg:text-xl lg:leading-8">

@@ -7,7 +7,7 @@ export function VenueAreasSection() {
 
   return (
     <div className="relative z-0">
-      <section className="-mt-px bg-[#fdfff4] pb-0 pt-0">
+      <section className="-mt-px bg-[#fdfff4] pb-0 lg:pt-8">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-14 pt-[180px] sm:gap-16 lg:gap-20 lg:pt-[100px]">
             {areas.map((area) => (
@@ -15,7 +15,7 @@ export function VenueAreasSection() {
             ))}
           </div>
           <div
-            className="h-14 sm:h-16 lg:h-18"
+            className="h-14 sm:h-16 lg:h-28"
             aria-hidden="true"
           />
         </div>

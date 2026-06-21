@@ -3,6 +3,7 @@ import specialStagesData from "../../content/special-stages.json";
 export type SpecialStageModel = {
   name?: string;
   image?: string;
+  imageSp?: string;
   imageAlt?: string;
   comingSoon?: boolean;
   tall?: boolean;

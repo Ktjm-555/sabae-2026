@@ -37,7 +37,7 @@ export function SpecialStageDateBar({
   return (
     <div className="overflow-hidden bg-gradient-to-r from-[#66a8dc] via-[#a688bd] to-[#db99c1] py-4 sm:py-5 lg:flex lg:min-h-14 lg:items-center lg:rounded-[60px] lg:px-8 lg:py-0 lg:h-[76px]">
       <div className="flex shrink-0 items-baseline justify-center gap-1.5 text-white sm:gap-2 lg:justify-start">
-        <span className="text-2xl font-bold leading-none sm:text-3xl lg:text-4xl">{date}</span>
+        <span className="text-[32px] font-bold leading-none lg:text-4xl">{date}</span>
         <span className="text-base font-bold leading-none sm:text-xl lg:text-2xl">{day}</span>
       </div>
 
@@ -50,7 +50,7 @@ export function SpecialStageDateBar({
         aria-hidden="true"
       />
 
-      <div className="min-w-0 text-white lg:flex-1">
+      <div className="@container min-w-0 text-white lg:flex-1">
         <div className="px-4 sm:px-6 lg:hidden">
           {titleHighlight ? (
             <>
@@ -62,7 +62,7 @@ export function SpecialStageDateBar({
           )}
         </div>
 
-        <p className="hidden text-sm font-bold leading-snug lg:block lg:text-[36px] lg:leading-[30px]">
+        <p className="hidden font-bold leading-[30px] lg:block lg:text-[30px] @[750px]:text-[34px] @[820px]:text-[36px]">
           {fullTitle}
         </p>
       </div>

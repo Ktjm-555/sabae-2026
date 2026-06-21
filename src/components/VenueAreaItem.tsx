@@ -13,11 +13,17 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
   const textInset = imageFirst
     ? "lg:pl-10 xl:pl-16"
     : "lg:pr-10 xl:pr-16";
+  // 楕円画像の透明余白（1374px幅で約8%）分だけボーダーを伸ばす。文字位置は変えない。
+  const borderAttach = imageFirst
+    ? "lg:-left-[calc(48/52*8%)]"
+    : area.id === "mystery-rally"
+      ? "lg:-right-[calc(48/52*12%)]"
+      : "";
 
   const imageBlock = (
     // SPでは画像は下に固定、PCでは、左右交互になる
     <div
-      className={`relative order-2 mt-6 w-full lg:mt-0 lg:w-[48%] lg:max-w-[687px] lg:shrink-0 ${
+      className={`relative z-10 order-2 mt-6 w-full lg:mt-0 lg:w-[48%] lg:max-w-[687px] lg:shrink-0 ${
         imageFirst ? "lg:order-1" : "lg:order-2"
       }`}
     >
@@ -38,12 +44,16 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
         imageFirst ? "lg:order-2" : "lg:order-1"
       }`}
     >
-      <div className="border-b border-[#dcdcdc]">
+      <div className="relative">
         <h3
           className={`pb-3 text-center font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-left lg:text-[40px] lg:leading-[50px] ${textInset}`}
         >
           {area.title}
         </h3>
+        <div
+          aria-hidden="true"
+          className={`pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc] ${borderAttach}`}
+        />
       </div>
       <p
         className={`mt-3 text-center font-display text-sm font-bold tracking-wide text-primary-light sm:text-base lg:mt-4 lg:text-left ${textInset}`}
