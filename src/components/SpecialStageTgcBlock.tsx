@@ -13,6 +13,9 @@ function TgcModelCard({
   model: SpecialStageModel;
   className?: string;
 }) {
+  // 画像とイラストの高さを調整（SP版では不要）
+  // 画像とイラストで高さを一緒にするとグリットが縦長になる。
+  // そのため、イラストの高さを考慮しないようにする必要がある。
   if (model.tall && model.image) {
     return (
       <div className={`relative ${className ?? ""}`}>

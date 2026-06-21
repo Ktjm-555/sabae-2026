@@ -11,6 +11,7 @@ interface NewsListItemProps {
 export const buttonArrowIconSizeClass = "h-[13.5px] w-[7px] lg:h-[17px] lg:w-[10px]";
 export const newsArrowIconSizeClass = buttonArrowIconSizeClass;
 
+// 文字と矢印（ButtonArrowIcon）はセットで中央揃えに
 function ButtonArrowIcon({ className }: { className?: string }) {
   return (
     <Image

@@ -6,6 +6,7 @@ import { getSabaeActionContent } from "@/lib/sabaeAction";
 
 const titleHeadingClassName =
   "inline-flex items-end font-sans font-bold leading-none text-primary";
+// 鯖江の∞を表示高さを調整
 const titleSuffixClassName =
   "translate-y-[0.2em] text-[1.43em] leading-none max-[638px]:translate-y-[0.14em] sm:text-[1.5625em]";
 const titleRubyClassName =

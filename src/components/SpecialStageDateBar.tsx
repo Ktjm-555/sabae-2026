@@ -5,6 +5,7 @@ interface SpecialStageDateBarProps {
   titleHighlight?: string;
 }
 
+// セクション区切りの日付とタイトルのバーのV字
 function DateBarWaveSeparator() {
   return (
     <svg

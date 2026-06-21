@@ -30,6 +30,7 @@ export function VenueAreaButton({ href, label, external = false }: VenueAreaButt
     <ButtonArrowIcon className={`shrink-0 ${buttonArrowIconSizeClass}`} />
   );
 
+  // 別タブで開く場合
   if (external) {
     return (
       <a

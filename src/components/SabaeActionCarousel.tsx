@@ -6,7 +6,9 @@ import { withBasePath } from "@/lib/basePath";
 import type { SabaeActionItem } from "@/lib/sabaeAction";
 
 const AUTOPLAY_DELAY = 2000;
+// 無限スクロールを途切れなく見せるためのスライドのコピー回数
 const LOOP_COPIES = 3;
+// 1回分の自動スクロールが完了したと判断するまでの目安時間
 const SCROLL_DURATION_MS = 350;
 
 interface SabaeActionCarouselProps {
@@ -22,6 +24,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   const lastInteractionRef = useRef(0);
   const normalizeTimerRef = useRef<number | null>(null);
 
+  // 前後に同じスライド群を並べ、中央のコピーを起点にして無限ループを表現する
   const loopItems = useMemo(
     () => Array.from({ length: LOOP_COPIES }, () => items).flat(),
     [items]
@@ -33,9 +36,12 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
 
     const centered = window.matchMedia("(max-width: 900px)").matches;
     if (centered) {
+      // SP版では対象スライドがコンテナ中央に来る位置を算出する
       return slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2;
     }
 
+    // PCではコンテナの左パディング位置にスライドの先頭を揃える
+    // カードの枠が左に重なって消えていたので。
     const paddingLeft = Number.parseFloat(
       getComputedStyle(container).paddingLeft
     );
@@ -47,6 +53,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
     const len = items.length;
 
     if (physical >= len * 2 || physical < len) {
+      // 両端のコピーに到達したら、見た目が同じ中央のコピーへ瞬時に移動する
       const normalized = len + (physical % len);
       const container = scrollRef.current;
       const slide = slideRefs.current[normalized];
@@ -67,6 +74,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
     let nearestIndex = physicalIndexRef.current;
     let nearestDistance = Infinity;
 
+    // スクロール位置と各スライドの停止位置を比較し、現在地に最も近いものを探す
     slideRefs.current.forEach((slide, index) => {
       if (!slide) return;
 
@@ -90,6 +98,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
       normalizeTimerRef.current = null;
     }
 
+    // 実際の停止位置を基準に現在位置を確定してから、必要なら中央コピーへ戻す
     physicalIndexRef.current = findNearestPhysicalIndex();
     normalizePosition();
     isTransitioningRef.current = false;
@@ -98,6 +107,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   const syncManualScroll = useCallback(() => {
     if (isTransitioningRef.current) return;
 
+    // 手動操作後の位置を同期し、直後に自動再生が走らないよう操作時刻を記録する
     physicalIndexRef.current = findNearestPhysicalIndex();
     normalizePosition();
     lastInteractionRef.current = Date.now();
@@ -123,6 +133,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
 
       if (behavior === "smooth") {
         isTransitioningRef.current = true;
+        // scrollend 非対応環境でも後処理できるよう、タイマーをフォールバックにする
         normalizeTimerRef.current = window.setTimeout(() => {
           finishProgrammaticScroll();
         }, SCROLL_DURATION_MS + 100);
@@ -136,6 +147,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   );
 
   useEffect(() => {
+    // 初期表示は中央のコピーから開始し、左右どちらにもループできる余白を確保する
     const frame = window.requestAnimationFrame(() => {
       scrollToPhysical(items.length, "auto");
     });
@@ -167,6 +179,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
 
     container.addEventListener("scrollend", handleScrollEnd);
 
+    // scrollendの補助として、scrollが止まってから手動操作の終了を判定する
     let scrollTimer: number | null = null;
     const handleScroll = () => {
       if (isTransitioningRef.current) return;
@@ -193,6 +206,7 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
     if (!container) return;
 
     const handleResize = () => {
+      // 表示幅に応じて中央揃え/左揃えの停止位置を再計算する
       scrollToPhysical(physicalIndexRef.current, "auto");
     };
 
