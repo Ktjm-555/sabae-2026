@@ -29,6 +29,7 @@
       { "comingSoon": true },
       {
         "image": "/images/special-stage/tgc-model-3-56586a.png",
+        "imageSp": "/images/special-stage/tgc-model-3-sp.png",
         "imageAlt": "TGCモデル",
         "tall": true,
         "noBackground": true

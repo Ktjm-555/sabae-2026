@@ -17,15 +17,26 @@ function TgcModelCard({
   // 画像とイラストで高さを一緒にするとグリットが縦長になる。
   // そのため、イラストの高さを考慮しないようにする必要がある。
   if (model.tall && model.image) {
+    const imageAlt = model.imageAlt ?? model.name ?? "TGCモデル";
+
     return (
       <div className={`relative ${className ?? ""}`}>
         <div className="aspect-[246/227] w-full" aria-hidden="true" />
-        <div className="absolute inset-x-0 top-0 aspect-[253/309]">
+        <div className="absolute inset-x-0 top-0 aspect-[440/501] lg:aspect-[253/309]">
+          {model.imageSp ? (
+            <Image
+              src={withBasePath(model.imageSp)}
+              alt={imageAlt}
+              fill
+              className="object-contain lg:hidden"
+              sizes="45vw"
+            />
+          ) : null}
           <Image
             src={withBasePath(model.image)}
-            alt={model.imageAlt ?? model.name ?? "TGCモデル"}
+            alt={imageAlt}
             fill
-            className="object-contain"
+            className={`object-contain ${model.imageSp ? "hidden lg:block" : ""}`}
             sizes="(max-width: 1024px) 45vw, 250px"
           />
         </div>
