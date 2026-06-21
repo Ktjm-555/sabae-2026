@@ -1,0 +1,53 @@
+{
+  "eyebrow": "さぁ、はじめよう！",
+  "title": "さばえACTION",
+  "titleSuffix": "∞",
+  "titleRuby": "-エイト-",
+  "description": "学生団体「さばえSDGs部」が、若者の視点から考案した行動目標。一人ひとりの小さな行動が広がり、つながり、まちを大きく変えていく。そんな“∞（無限）” の願いを込めた未来へのアクションです。",
+  "logo": "/images/sabae-action/sabae-action-logo.png",
+  "logoAlt": "さばえアクション∞(エイト)_ロゴ",
+  "buttonLabel": "詳しくはこちら",
+  "buttonHref": "https://www.sabae-sdgs.jp/news/sabae-action8",
+  "items": [
+    {
+      "num": "01",
+      "image": "/images/sabae-action/action-01.png",
+      "text": "いいと思ったらほめよう"
+    },
+    {
+      "num": "02",
+      "image": "/images/sabae-action/action-02.png",
+      "text": "自分を大切にしよう"
+    },
+    {
+      "num": "03",
+      "image": "/images/sabae-action/action-03.png",
+      "text": "視野を広げよう"
+    },
+    {
+      "num": "04",
+      "image": "/images/sabae-action/action-04.png",
+      "text": "フードロスを減らそう"
+    },
+    {
+      "num": "05",
+      "image": "/images/sabae-action/action-05.png",
+      "text": "地産地消しよう"
+    },
+    {
+      "num": "06",
+      "image": "/images/sabae-action/action-06.png",
+      "text": "イベントに参加しよう"
+    },
+    {
+      "num": "07",
+      "image": "/images/sabae-action/action-07.png",
+      "text": "リサイクルしよう"
+    },
+    {
+      "num": "08",
+      "image": "/images/sabae-action/action-08.png",
+      "text": "さばえらしさを伝えよう"
+    }
+  ]
+}

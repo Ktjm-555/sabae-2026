@@ -3,6 +3,7 @@ import { AreasWaveTop } from "@/components/AreasWaveTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { SabaeActionSection } from "@/components/SabaeActionSection";
 import { SpecialStageSection } from "@/components/SpecialStageSection";
 import { VenueAreasSection } from "@/components/VenueAreasSection";
 import { NewsListButton, NewsListItem } from "@/components/NewsListItem";
@@ -69,6 +70,8 @@ export default function HomePage() {
       <VenueAreasSection />
 
       <SpecialStageSection />
+
+      <SabaeActionSection />
 
       <Footer />
     </>
