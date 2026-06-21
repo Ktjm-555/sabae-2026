@@ -4,6 +4,7 @@ import { SpecialStageDateBar } from "@/components/SpecialStageDateBar";
 import { SpecialStageFukuiBlock } from "@/components/SpecialStageFukuiBlock";
 import { SpecialStageLdhBlock } from "@/components/SpecialStageLdhBlock";
 import { SpecialStageTgcBlock } from "@/components/SpecialStageTgcBlock";
+import { SpecialStageWankoSobaBlock } from "@/components/SpecialStageWankoSobaBlock";
 import { getSpecialStages } from "@/lib/specialStages";
 
 export function SpecialStageSection() {
@@ -12,6 +13,7 @@ export function SpecialStageSection() {
   const tgcStage = stages.find((stage) => stage.id === "tgc-stage");
   const ldhStage = stages.find((stage) => stage.id === "ldh-workshop");
   const danceContest = stages.find((stage) => stage.id === "dance-contest");
+  const wankoSoba = stages.find((stage) => stage.id === "wanko-soba");
 
   return (
     <section
@@ -68,6 +70,20 @@ export function SpecialStageSection() {
                 />
               </div>
               <SpecialStageDanceContestBlock stage={danceContest} />
+            </div>
+          ) : null}
+
+          {wankoSoba?.dateBar ? (
+            <div className="flex flex-col gap-8 lg:gap-10">
+              <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                <SpecialStageDateBar
+                  date={wankoSoba.dateBar.date}
+                  day={wankoSoba.dateBar.day}
+                  title={wankoSoba.dateBar.title}
+                  titleHighlight={wankoSoba.dateBar.titleHighlight}
+                />
+              </div>
+              <SpecialStageWankoSobaBlock stage={wankoSoba} />
             </div>
           ) : null}
         </div>
