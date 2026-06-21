@@ -13,40 +13,6 @@ interface SabaeActionCarouselProps {
   items: SabaeActionItem[];
 }
 
-function CarouselNavButton({
-  direction,
-  onClick,
-  className = "",
-}: {
-  direction: "prev" | "next";
-  onClick: () => void;
-  className?: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={direction === "prev" ? "前のスライド" : "次のスライド"}
-      className={`flex size-10 items-center justify-center rounded-full bg-primary/80 text-white transition-colors hover:bg-primary ${className}`}
-    >
-      <svg
-        viewBox="0 0 12 20"
-        fill="none"
-        className={`h-3 w-2 ${direction === "prev" ? "rotate-180" : ""}`}
-        aria-hidden="true"
-      >
-        <path
-          d="M1 1L10 10L1 19"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-  );
-}
-
 export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const slideRefs = useRef<(HTMLElement | null)[]>([]);
@@ -123,16 +89,6 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
     [getTargetScrollLeft, normalizePosition]
   );
 
-  const goNext = useCallback(() => {
-    if (isTransitioningRef.current) return;
-    scrollToPhysical(physicalIndexRef.current + 1, "smooth");
-  }, [scrollToPhysical]);
-
-  const goPrev = useCallback(() => {
-    if (isTransitioningRef.current) return;
-    scrollToPhysical(physicalIndexRef.current - 1, "smooth");
-  }, [scrollToPhysical]);
-
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
       scrollToPhysical(items.length, "auto");
@@ -180,17 +136,6 @@ export function SabaeActionCarousel({ items }: SabaeActionCarouselProps) {
         isPausedRef.current = false;
       }}
     >
-      <CarouselNavButton
-        direction="prev"
-        onClick={goPrev}
-        className="absolute left-2 top-1/2 z-10 -translate-y-1/2 sm:left-4"
-      />
-      <CarouselNavButton
-        direction="next"
-        onClick={goNext}
-        className="absolute right-2 top-1/2 z-10 -translate-y-1/2 sm:right-4"
-      />
-
       <div
         ref={scrollRef}
         className="flex snap-x snap-mandatory gap-[25px] overflow-x-auto scroll-pl-3 scroll-pr-3 px-3 py-2.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
