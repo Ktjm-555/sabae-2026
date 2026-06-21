@@ -35,7 +35,7 @@ function PerformerCard({ performer }: { performer: SpecialStagePerformer }) {
     <div className="@container">
       <div className="relative aspect-[178/164] overflow-hidden rounded-[20px] bg-[#f3f2f9] lg:aspect-[304/227]">
         {performer.comingSoon ? (
-          <div className="flex h-full items-center justify-center px-4 text-center font-display text-[32px] font-medium leading-[46px] whitespace-pre-line text-[#868686]">
+          <div className="flex h-full items-center justify-center px-4 text-center font-display text-[24px] font-normal leading-8 whitespace-pre-line text-[#868686] lg:text-[32px] lg:leading-[46px]">
             {"COMING\nSOON"}
           </div>
         ) : performer.image ? (
