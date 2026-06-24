@@ -82,21 +82,29 @@ export function SpecialStageTgcBlock({ stage }: SpecialStageTgcBlockProps) {
       className="scroll-mt-24 flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10 xl:gap-14"
     >
       <div className="flex w-full flex-col lg:w-[42%] lg:max-w-[504px] lg:shrink-0">
-        <span className="inline-flex h-8 w-fit items-center justify-center rounded-[20px] bg-gold px-4 text-base font-bold text-white">
+        {/* <span className="inline-flex h-8 w-fit items-center justify-center rounded-[20px] bg-gold px-4 text-base font-bold text-white">
           {stage.badge}
-        </span>
+        </span> */}
 
-        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4">
-          <h3 className="pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px]">
-            {stage.titlePrefix ? (
+        <div className="relative mt-3 lg:mt-4">
+          <h3 className="pb-3 font-sans text-[24px] font-bold leading-9 text-primary lg:pb-4 lg:text-[32px] lg:leading-[46px]">
+            {stage.title}
+            {stage.titleLine2 ? (
               <>
-                <span className="font-sans text-2xl font-bold">{stage.titlePrefix}</span>
-                {stage.title}
+                <br />
+                {stage.titleLine2}{" "}
+                {stage.producedBy ? (
+                  <span className="text-[20px] leading-9 lg:text-2xl lg:leading-[46px]">
+                    {stage.producedBy}
+                  </span>
+                ) : null}
               </>
-            ) : (
-              stage.title
-            )}
+            ) : null}
           </h3>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc]"
+          />
         </div>
 
         <p className="mt-3 text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:mt-4 lg:text-[32px] lg:leading-[46px]">

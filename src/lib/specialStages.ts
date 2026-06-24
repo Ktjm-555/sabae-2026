@@ -34,7 +34,8 @@ export type SpecialStage = {
   };
   badge?: string;
   title?: string;
-  titlePrefix?: string;
+  titleLine2?: string;
+  producedBy?: string;
   subtitle: string;
   description: string;
   image?: string;

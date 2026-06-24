@@ -44,22 +44,50 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
         imageFirst ? "lg:order-2" : "lg:order-1"
       }`}
     >
-      <div className="relative">
-        <h3
-          className={`pb-3 text-center font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-left lg:text-[40px] lg:leading-[50px] ${textInset}`}
-        >
-          {area.title}
-        </h3>
-        <div
-          aria-hidden="true"
-          className={`pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc] ${borderAttach}`}
-        />
-      </div>
-      <p
-        className={`mt-3 text-center font-display text-sm font-bold tracking-wide text-primary-light sm:text-base lg:mt-4 lg:text-left ${textInset}`}
-      >
-        {area.subtitle}
-      </p>
+      {area.producedBy ? (
+        <>
+          <h3
+            className={`text-center font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:text-left lg:text-[40px] lg:leading-none ${textInset}`}
+          >
+            {area.title}
+          </h3>
+          <div className="relative">
+            <p
+              className={`mt-1 pb-3 text-center font-display text-[18px] font-bold text-primary lg:mt-0 lg:pb-4 lg:text-left lg:text-[24px] ${textInset}`}
+            >
+              {area.producedBy}
+            </p>
+            <div
+              aria-hidden="true"
+              className={`pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc] ${borderAttach}`}
+            />
+          </div>
+          <p
+            className={`mt-3 text-center font-display text-sm font-bold tracking-wide text-primary-light sm:text-base lg:mt-4 lg:text-left ${textInset}`}
+          >
+            {area.subtitle}
+          </p>
+        </>
+      ) : (
+        <>
+          <div className="relative">
+            <h3
+              className={`pb-3 text-center font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-left lg:text-[40px] lg:leading-[50px] ${textInset}`}
+            >
+              {area.title}
+            </h3>
+            <div
+              aria-hidden="true"
+              className={`pointer-events-none absolute right-0 bottom-0 left-0 border-b border-[#dcdcdc] ${borderAttach}`}
+            />
+          </div>
+          <p
+            className={`mt-3 text-center font-display text-sm font-bold tracking-wide text-primary-light sm:text-base lg:mt-4 lg:text-left ${textInset}`}
+          >
+            {area.subtitle}
+          </p>
+        </>
+      )}
       <p
         className={`mt-4 text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:text-xl lg:leading-8 ${textInset}`}
       >
