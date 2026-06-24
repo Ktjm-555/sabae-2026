@@ -26,7 +26,7 @@ export function SectionTitle({
     <div className="mb-8 flex flex-col items-center sm:mb-10">
       <div className="flex items-center gap-2 sm:gap-3">
         <SparkleIcon className="h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />
-        <h2 className="font-display text-[32px] font-bold leading-tight text-primary lg:text-[36px]">
+        <h2 className="font-display text-[32px] font-bold leading-tight text-primary lg:text-[40px]">
           {title}
         </h2>
         <SparkleIcon className="h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />
