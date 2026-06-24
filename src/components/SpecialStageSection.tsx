@@ -73,6 +73,8 @@ export function SpecialStageSection() {
                     day={danceContest.dateBar.day}
                     title={danceContest.dateBar.title}
                     titleHighlight={danceContest.dateBar.titleHighlight}
+                    titleSpCompact={danceContest.dateBar.titleSpCompact}
+                    titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
                   />
                 </div>
                 <SpecialStageDanceContestBlock stage={danceContest} />
@@ -87,6 +89,7 @@ export function SpecialStageSection() {
                     day={wankoSoba.dateBar.day}
                     title={wankoSoba.dateBar.title}
                     titleHighlight={wankoSoba.dateBar.titleHighlight}
+                    titleSpCompact={wankoSoba.dateBar.titleSpCompact}
                   />
                 </div>
                 <SpecialStageWankoSobaBlock stage={wankoSoba} />

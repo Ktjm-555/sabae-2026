@@ -31,6 +31,8 @@ export type SpecialStage = {
     day: string;
     title: string;
     titleHighlight?: string;
+    titleSpCompact?: boolean;
+    titleHighlightNoSpace?: boolean;
   };
   badge?: string;
   title?: string;
