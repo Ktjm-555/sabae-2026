@@ -42,7 +42,7 @@ export function SpecialStageDateBar({
       : `${title} ${titleHighlight}`
     : title;
   const spTitleClassName = titleSpCompact
-    ? "text-[24px] font-bold leading-snug"
+    ? "text-[24px] min-[460px]:text-[28px] font-bold leading-snug"
     : "text-[28px] font-bold leading-snug";
 
   return (
@@ -65,8 +65,11 @@ export function SpecialStageDateBar({
         <div className="px-4 sm:px-6 lg:hidden">
           {titleHighlight ? (
             <>
-              <p className={spTitleClassName}>{title}</p>
-              <p className={`mt-1 ${spTitleClassName} leading-tight`}>{titleHighlight}</p>
+              <div className="min-[460px]:hidden">
+                <p className={spTitleClassName}>{title}</p>
+                <p className={`mt-1 ${spTitleClassName} leading-tight`}>{titleHighlight}</p>
+              </div>
+              <p className={`hidden min-[460px]:block ${spTitleClassName}`}>{fullTitle}</p>
             </>
           ) : (
             <p className={spTitleClassName}>{title}</p>
