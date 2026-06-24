@@ -22,7 +22,7 @@ function TgcModelCard({
     return (
       <div className={`relative ${className ?? ""}`}>
         <div className="aspect-[246/227] w-full" aria-hidden="true" />
-        <div className="absolute inset-x-0 top-0 aspect-[440/501] lg:aspect-[253/309]">
+        <div className="absolute inset-x-0 top-0 aspect-[354/396] lg:aspect-[253/309]">
           {model.imageSp ? (
             <Image
               src={withBasePath(model.imageSp)}
@@ -108,13 +108,19 @@ export function SpecialStageTgcBlock({ stage }: SpecialStageTgcBlockProps) {
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-2 items-start gap-x-4 gap-y-4 overflow-visible sm:grid-cols-3 sm:grid-rows-2 sm:gap-x-6 sm:gap-y-6 lg:w-[58%] lg:max-w-[797px]">
-        <TgcModelCard model={models[0]} />
-        <TgcModelCard model={models[1]} />
-        <TgcModelCard model={models[2]} className="sm:col-start-3 sm:row-start-1" />
-        <TgcModelCard model={models[3]} className="sm:col-start-1 sm:row-start-2" />
-        <TgcModelCard model={models[4]} className="sm:col-start-2 sm:row-start-2" />
-        <TgcModelCard model={models[5]} className="sm:col-start-3 sm:row-start-2" />
+      <div className="w-full lg:w-[58%] lg:max-w-[797px]">
+        <div className="grid grid-cols-2 items-start gap-x-4 gap-y-4 overflow-visible sm:grid-cols-3 sm:grid-rows-2 sm:gap-x-6 sm:gap-y-6">
+          <TgcModelCard model={models[0]} />
+          <TgcModelCard model={models[1]} />
+          <TgcModelCard model={models[2]} className="sm:col-start-3 sm:row-start-1" />
+          <TgcModelCard model={models[3]} className="sm:col-start-1 sm:row-start-2" />
+          <TgcModelCard model={models[4]} className="sm:col-start-2 sm:row-start-2" />
+          <TgcModelCard model={models[5]} className="sm:col-start-3 sm:row-start-2" />
+        </div>
+
+        <p className="mt-2 text-left text-[13px] font-normal text-foreground lg:text-[14px]">
+          ※掲載順は五十音順です。
+        </p>
       </div>
     </article>
   );

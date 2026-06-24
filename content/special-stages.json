@@ -22,9 +22,24 @@
     "subtitle": "めがねのまちさばえからミライへ",
     "description": "鯖江が世界に誇る“眼鏡”を取り入れたコーディネートで、TGCモデルが登場。一つひとつ丁寧に作られた眼鏡には、職人の高い技術と想いが込められています。モデルたちは、自分らしいスタイルとともに、鯖江のものづくりの魅力を発信します。",
     "models": [
-      { "name": "MINAMI" },
-      { "name": "なんり" },
-      { "comingSoon": true },
+      {
+        "name": "なんり",
+        "image": "/images/special-stage/tgc-model-nanri.png",
+        "imageSp": "/images/special-stage/tgc-model-nanri-sp.png",
+        "imageAlt": "なんり"
+      },
+      {
+        "name": "MINAMI",
+        "image": "/images/special-stage/tgc-model-minami.png",
+        "imageSp": "/images/special-stage/tgc-model-minami-sp.png",
+        "imageAlt": "MINAMI"
+      },
+      {
+        "name": "米澤りあ",
+        "image": "/images/special-stage/tgc-model-yonezawa-ria.png",
+        "imageSp": "/images/special-stage/tgc-model-yonezawa-ria-sp.png",
+        "imageAlt": "米澤りあ"
+      },
       { "comingSoon": true },
       { "comingSoon": true },
       {
@@ -47,7 +62,10 @@
     "description": "EXILE TETSUYAさん、岩谷翔吾さんと一緒にダンスワークショップを開催します。\nダンスが初めての方や小さなお子さまも大歓迎。音楽に合わせて体を動かしながら、みんなで笑顔あふれるひとときを過ごしましょう。",
     "performers": [
       {
-        "name": "TETSUYA"
+        "name": "EXILE TETSUYA",
+        "image": "/images/special-stage/ldh-tetsuya.png",
+        "imageSp": "/images/special-stage/ldh-tetsuya-sp.png",
+        "imageAlt": "TETSUYA"
       },
       {
         "name": "岩谷翔吾（THE RAMPAGE）",
