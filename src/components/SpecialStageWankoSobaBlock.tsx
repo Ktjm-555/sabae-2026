@@ -25,7 +25,12 @@ export function SpecialStageWankoSobaBlock({
       <div className="relative">
         <div className="lg:pr-[340px] xl:pr-[360px]">
           <h3 className="text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:text-[32px] lg:leading-[46px]">
-            {stage.subtitle}
+            <span className="lg:hidden">
+              鯖江青年会議所イベント
+              <br />
+              わんこそば大会
+            </span>
+            <span className="hidden lg:inline">{stage.subtitle}</span>
           </h3>
 
           <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
