@@ -126,7 +126,7 @@ export function SpecialStageTgcBlock({ stage }: SpecialStageTgcBlockProps) {
           <TgcModelCard model={models[5]} className="sm:col-start-3 sm:row-start-2" />
         </div>
 
-        <p className="mt-2 text-left text-[13px] font-normal text-foreground lg:text-[14px]">
+        <p className="mt-2 text-left text-[13px] font-medium text-foreground lg:text-[14px]">
           ※掲載順は五十音順です。
         </p>
       </div>
