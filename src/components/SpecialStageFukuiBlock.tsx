@@ -33,13 +33,13 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
       </div>
 
       <div className="order-1 flex w-full flex-col lg:order-2 lg:w-[52%] lg:max-w-[653px] lg:justify-center">
-        <div className={textInset}>
+        {/* <div className={textInset}>
           <span className="inline-flex h-8 w-fit items-center justify-center rounded-[20px] bg-gold px-4 text-base font-bold text-white">
             {stage.badge}
           </span>
-        </div>
+        </div> */}
 
-        <div className="relative mt-3 lg:mt-4">
+        <div className="relative mt-0 lg:mt-4">
           <h3
             className={`pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px] ${textInset}`}
           >
@@ -58,7 +58,7 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
         </p>
 
         <p
-          className={`mt-4 text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:text-xl lg:leading-8 ${textInset}`}
+          className={`mt-4 whitespace-pre-line text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:text-xl lg:leading-8 ${textInset}`}
         >
           {stage.description}
         </p>
