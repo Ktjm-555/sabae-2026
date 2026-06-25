@@ -60,16 +60,16 @@
       "title": "LDHダンスワークショップショー"
     },
     "subtitle": "みんなで楽しく踊ろう！",
-    "description": "EXILE TETSUYAさん、岩谷翔吾さんと一緒にダンスワークショップを開催します。\nダンスが初めての方や小さなお子さまも大歓迎。音楽に合わせて体を動かしながら、みんなで笑顔あふれるひとときを過ごしましょう。",
+    "description": "EXILE B HAPPYのTETSUYAさん、岩谷翔吾さんと一緒にダンスワークショップを開催します。\nダンスが初めての方や小さなお子さまも大歓迎。音楽に合わせて体を動かしながら、みんなで笑顔あふれるひとときを過ごしましょう。",
     "performers": [
       {
-        "name": "EXILE TETSUYA",
+        "name": "TETSUYA",
         "image": "/images/special-stage/ldh-tetsuya.png",
         "imageSp": "/images/special-stage/ldh-tetsuya-sp.png",
         "imageAlt": "TETSUYA"
       },
       {
-        "name": "岩谷翔吾（THE RAMPAGE）",
+        "name": "岩谷翔吾",
         "image": "/images/special-stage/ldh-iwatani.png",
         "imageSp": "/images/special-stage/ldh-iwatani-sp.png",
         "imageAlt": "岩谷翔吾"
@@ -110,7 +110,7 @@
     "dateBar": {
       "date": "10.18",
       "day": "sun",
-      "title": "食べて、つながる、鯖江の輪",
+      "title": "食べて、つながる、さばえの輪",
       "titleSpCompact": true
     },
     "subtitle": "鯖江青年会議所イベント わんこそば大会",
