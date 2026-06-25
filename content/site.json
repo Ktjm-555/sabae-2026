@@ -34,7 +34,7 @@
     }
   },
   "pastFestivals": [
-    { "label": "2025", "href": "https://fes.sabae-sdgs.jp/" },
+    { "label": "2025", "href": "https://fes.sabae-sdgs.jp/2025/" },
     { "label": "2024", "href": "https://fes.sabae-sdgs.jp/2024/" },
     { "label": "2023", "href": "https://fes.sabae-sdgs.jp/2023/" }
   ],
