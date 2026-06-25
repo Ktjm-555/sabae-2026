@@ -9,7 +9,7 @@
     },
     "badge": "センイ産業の魅力",
     "title": "福井文化服装学院 FASHION Show",
-    "subtitle": "学生がつむぐ、鯖江のミライ",
+    "subtitle": "学生がつむぐ、さばえのミライ",
     "description": "福井文化服装学院の学生が、鯖江市内の繊維企業を訪問し、工場見学や職人との交流を通して得た学びや気づきをもとに、提供素材を活かしたオリジナル衣装を制作。完成した作品は、自らモデルとなってランウェイで披露します。\n学生ならではの自由な発想とチャレンジ精神が詰まった、この日のためだけの特別なコレクション。ミライへ羽ばたく若者たちが魅せる、熱意あふれるステージをぜひご覧ください。",
     "image": "/images/special-stage/fukui-fashion-block.png",
     "imageAlt": "福井文化服装学院ファッションショーの様子"
@@ -60,16 +60,16 @@
       "title": "LDHダンスワークショップショー"
     },
     "subtitle": "みんなで楽しく踊ろう！",
-    "description": "EXILE TETSUYAさん、岩谷翔吾さんと一緒にダンスワークショップを開催します。\nダンスが初めての方や小さなお子さまも大歓迎。音楽に合わせて体を動かしながら、みんなで笑顔あふれるひとときを過ごしましょう。",
+    "description": "EXILE B HAPPYのTETSUYAさん、岩谷翔吾さんと一緒にダンスワークショップを開催します。\nダンスが初めての方や小さなお子さまも大歓迎。音楽に合わせて体を動かしながら、みんなで笑顔あふれるひとときを過ごしましょう。",
     "performers": [
       {
-        "name": "EXILE TETSUYA",
+        "name": "TETSUYA",
         "image": "/images/special-stage/ldh-tetsuya.png",
         "imageSp": "/images/special-stage/ldh-tetsuya-sp.png",
         "imageAlt": "TETSUYA"
       },
       {
-        "name": "岩谷翔吾（THE RAMPAGE）",
+        "name": "岩谷翔吾",
         "image": "/images/special-stage/ldh-iwatani.png",
         "imageSp": "/images/special-stage/ldh-iwatani-sp.png",
         "imageAlt": "岩谷翔吾"
@@ -95,7 +95,7 @@
       "titleHighlight": "コンテスト",
       "titleHighlightNoSpace": true
     },
-    "subtitle": "踊って魅せる！鯖江のミライ",
+    "subtitle": "踊って魅せる！さばえのミライ",
     "description": "子どもたちがチームで創り上げたオリジナルダンスを披露するショーケースを、コンテスト形式で開催。\n振付や演出には「鯖江らしさ」を取り入れ、めがねのまちやものづくりなど、地域の魅力を表現します。ミライを担う子どもたちが届ける熱いパフォーマンスを、ぜひ会場でお楽しみください。",
     "illustration": "/images/special-stage/dance-contest-illustration.png",
     "illustrationAlt": "ダンスショーコンテスト",
@@ -110,7 +110,7 @@
     "dateBar": {
       "date": "10.18",
       "day": "sun",
-      "title": "食べて、つながる、鯖江の輪",
+      "title": "食べて、つながる、さばえの輪",
       "titleSpCompact": true
     },
     "subtitle": "鯖江青年会議所イベント わんこそば大会",
