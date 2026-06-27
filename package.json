@@ -3,6 +3,9 @@
   "version": "2.0.1",
   "private": true,
   "scripts": {
+    "generate:news": "node scripts/generate-news.mjs",
+    "prebuild": "npm run generate:news",
+    "predev": "npm run generate:news",
     "build": "next build",
     "dev": "next dev --turbopack",
     "build:stg": "APP_ENV=stg NEXT_PUBLIC_BASE_PATH=/sabae-2026 next build",

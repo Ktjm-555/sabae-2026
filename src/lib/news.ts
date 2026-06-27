@@ -1,10 +1,7 @@
-import fs from "fs";
-import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-
-const newsDirectory = path.join(process.cwd(), "content/news");
+import { newsRawFiles } from "@/lib/generated/news";
 
 export type NewsCategory = "event" | "speaker" | "ticket" | "general" | "recruitment";
 
@@ -42,8 +39,10 @@ export function getCategoryLabel(category: NewsCategory): string {
   return categoryLabels[category] ?? "お知らせ";
 }
 
-function getSlugFromFilename(filename: string): string {
-  return filename.replace(/\.md$/, "");
+interface ParsedNewsFile {
+  slug: string;
+  frontmatter: NewsFrontmatter;
+  content: string;
 }
 
 function createExcerpt(content: string): string {
@@ -57,53 +56,19 @@ function createExcerpt(content: string): string {
   return plain.length > 120 ? `${plain.slice(0, 120)}…` : plain;
 }
 
-export function getAllNews(): NewsItem[] {
-  if (!fs.existsSync(newsDirectory)) {
-    return [];
-  }
+function parseNewsFiles(): ParsedNewsFile[] {
+  return Object.entries(newsRawFiles).map(([slug, rawContent]) => {
+    const { data, content } = matter(rawContent);
 
-  const filenames = fs.readdirSync(newsDirectory);
-
-  return filenames
-    .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => {
-      const slug = getSlugFromFilename(filename);
-      const filePath = path.join(newsDirectory, filename);
-      const fileContents = fs.readFileSync(filePath, "utf8");
-      const { data, content } = matter(fileContents);
-      const frontmatter = data as NewsFrontmatter;
-
-      return {
-        slug,
-        title: frontmatter.title,
-        date: frontmatter.date,
-        category: frontmatter.category,
-        published: frontmatter.published,
-        excerpt: createExcerpt(content),
-        externalUrl: frontmatter.externalUrl,
-      };
-    })
-    .filter((item) => item.published)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return {
+      slug,
+      frontmatter: data as NewsFrontmatter,
+      content,
+    };
+  });
 }
 
-export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
-  const filePath = path.join(newsDirectory, `${slug}.md`);
-
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
-  const fileContents = fs.readFileSync(filePath, "utf8");
-  const { data, content } = matter(fileContents);
-  const frontmatter = data as NewsFrontmatter;
-
-  if (!frontmatter.published) {
-    return null;
-  }
-
-  const processed = await remark().use(html).process(content);
-
+function toNewsItem({ slug, frontmatter, content }: ParsedNewsFile): NewsItem {
   return {
     slug,
     title: frontmatter.title,
@@ -112,6 +77,27 @@ export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
     published: frontmatter.published,
     excerpt: createExcerpt(content),
     externalUrl: frontmatter.externalUrl,
+  };
+}
+
+export function getAllNews(): NewsItem[] {
+  return parseNewsFiles()
+    .filter((item) => item.frontmatter.published)
+    .map(toNewsItem)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
+  const newsFile = parseNewsFiles().find((item) => item.slug === slug);
+
+  if (!newsFile || !newsFile.frontmatter.published) {
+    return null;
+  }
+
+  const processed = await remark().use(html).process(newsFile.content);
+
+  return {
+    ...toNewsItem(newsFile),
     contentHtml: processed.toString(),
   };
 }
