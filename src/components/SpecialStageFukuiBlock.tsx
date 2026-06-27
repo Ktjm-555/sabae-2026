@@ -11,6 +11,11 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
     return null;
   }
 
+  const titleSpLine1 =
+    stage.titleSpLine2 && stage.title?.endsWith(stage.titleSpLine2)
+      ? stage.title.slice(0, stage.title.length - stage.titleSpLine2.length).trimEnd()
+      : stage.title;
+
   // 画像が左で、ボーダーと文字列の余白をいい感じ（ボーダーは画像につける、文字は余白あり）に。
   const textInset = "lg:pl-10 xl:pl-16";
   // 楕円画像の右余白（1200px幅で約10.5%）分だけボーダーを伸ばす。文字位置は変えない。
@@ -43,7 +48,18 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
           <h3
             className={`pb-3 font-display text-[28px] font-bold leading-tight text-primary sm:text-[32px] lg:pb-4 lg:text-[32px] lg:leading-[46px] ${textInset}`}
           >
-            {stage.title}
+            {stage.titleSpLine2 && stage.title ? (
+              <>
+                <span className="min-[462px]:hidden">
+                  {titleSpLine1}
+                  <br />
+                  {stage.titleSpLine2}
+                </span>
+                <span className="hidden min-[462px]:inline">{stage.title}</span>
+              </>
+            ) : (
+              stage.title
+            )}
           </h3>
           <div
             aria-hidden="true"
