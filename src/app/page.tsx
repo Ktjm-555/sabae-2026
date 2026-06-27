@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AreasWaveTop } from "@/components/AreasWaveTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -8,7 +7,6 @@ import { SpecialStageSection } from "@/components/SpecialStageSection";
 import { VenueAreasSection } from "@/components/VenueAreasSection";
 import { NewsListButton, NewsListItem } from "@/components/NewsListItem";
 import { SectionTitle } from "@/components/SectionTitle";
-import { withBasePath } from "@/lib/basePath";
 import { getAllNews } from "@/lib/news";
 import { getSiteConfig } from "@/lib/site";
 
@@ -49,17 +47,9 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionTitle title="ミライフェスとは" subtitle="ABOUT" />
 
-          <div className="relative z-10 mx-auto flex max-w-[1127px] flex-col items-center gap-6 rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:flex-row lg:items-center lg:gap-12 lg:px-12 lg:py-10">
-            <div className="shrink-0 lg:w-[273px]">
-              <Image
-                src={withBasePath("/images/about-logo.png")}
-                alt={`めがねのまちさばえ ${site.shortName} - ${site.tagline}`}
-                width={546}
-                height={250}
-                className="mx-auto h-auto w-full max-w-[220px] lg:max-w-[273px]"
-              />
-            </div>
-            <p className="whitespace-pre-line text-base font-medium leading-[1.8] text-foreground lg:flex-1 lg:text-xl lg:font-normal">
+          <div className="relative z-10 mx-auto max-w-[1127px] rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:px-12 lg:py-10">
+            <p className="whitespace-pre-line text-base font-medium leading-[1.8] text-foreground lg:text-xl lg:font-normal">
+              <span className="block font-bold">{site.tagline}</span>
               {site.aboutDescription}
             </p>
           </div>

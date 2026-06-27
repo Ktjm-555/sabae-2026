@@ -31,11 +31,13 @@ export type SpecialStage = {
     day: string;
     title: string;
     titleHighlight?: string;
+    titleSpLine2?: string;
     titleSpCompact?: boolean;
     titleHighlightNoSpace?: boolean;
   };
   badge?: string;
   title?: string;
+  titleSpLine2?: string;
   titleLine2?: string;
   producedBy?: string;
   subtitle: string;
