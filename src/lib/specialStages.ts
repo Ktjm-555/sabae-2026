@@ -31,6 +31,7 @@ export type SpecialStage = {
     day: string;
     title: string;
     titleHighlight?: string;
+    titleSpLine2?: string;
     titleSpCompact?: boolean;
     titleHighlightNoSpace?: boolean;
   };

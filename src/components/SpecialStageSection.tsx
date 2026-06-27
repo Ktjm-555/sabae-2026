@@ -43,6 +43,7 @@ export function SpecialStageSection() {
                     day={fashionShow.dateBar.day}
                     title={fashionShow.dateBar.title}
                     titleHighlight={fashionShow.dateBar.titleHighlight}
+                    titleSpLine2={fashionShow.dateBar.titleSpLine2}
                   />
                 </div>
                 <SpecialStageFukuiBlock stage={fashionShow} />
@@ -59,6 +60,7 @@ export function SpecialStageSection() {
                     day={ldhStage.dateBar.day}
                     title={ldhStage.dateBar.title}
                     titleHighlight={ldhStage.dateBar.titleHighlight}
+                    titleSpLine2={ldhStage.dateBar.titleSpLine2}
                   />
                 </div>
                 <SpecialStageLdhBlock stage={ldhStage} />
@@ -73,6 +75,7 @@ export function SpecialStageSection() {
                     day={danceContest.dateBar.day}
                     title={danceContest.dateBar.title}
                     titleHighlight={danceContest.dateBar.titleHighlight}
+                    titleSpLine2={danceContest.dateBar.titleSpLine2}
                     titleSpCompact={danceContest.dateBar.titleSpCompact}
                     titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
                   />
@@ -89,6 +92,7 @@ export function SpecialStageSection() {
                     day={wankoSoba.dateBar.day}
                     title={wankoSoba.dateBar.title}
                     titleHighlight={wankoSoba.dateBar.titleHighlight}
+                    titleSpLine2={wankoSoba.dateBar.titleSpLine2}
                     titleSpCompact={wankoSoba.dateBar.titleSpCompact}
                   />
                 </div>

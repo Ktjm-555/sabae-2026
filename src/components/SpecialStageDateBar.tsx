@@ -3,6 +3,7 @@ interface SpecialStageDateBarProps {
   day: string;
   title: string;
   titleHighlight?: string;
+  titleSpLine2?: string;
   titleSpCompact?: boolean;
   titleHighlightNoSpace?: boolean;
 }
@@ -33,9 +34,14 @@ export function SpecialStageDateBar({
   day,
   title,
   titleHighlight,
+  titleSpLine2,
   titleSpCompact = false,
   titleHighlightNoSpace = false,
 }: SpecialStageDateBarProps) {
+  const titleSpLine1 =
+    titleSpLine2 && title.endsWith(titleSpLine2)
+      ? title.slice(0, title.length - titleSpLine2.length)
+      : title;
   const fullTitle = titleHighlight
     ? titleHighlightNoSpace
       ? `${title}${titleHighlight}`
@@ -70,6 +76,14 @@ export function SpecialStageDateBar({
                 <p className={`mt-1 ${spTitleClassName} leading-tight`}>{titleHighlight}</p>
               </div>
               <p className={`hidden min-[460px]:block ${spTitleClassName}`}>{fullTitle}</p>
+            </>
+          ) : titleSpLine2 ? (
+            <>
+              <div className="min-[460px]:hidden">
+                <p className={spTitleClassName}>{titleSpLine1}</p>
+                <p className={`mt-1 ${spTitleClassName} leading-tight`}>{titleSpLine2}</p>
+              </div>
+              <p className={`hidden min-[460px]:block ${spTitleClassName}`}>{title}</p>
             </>
           ) : (
             <p className={spTitleClassName}>{title}</p>
