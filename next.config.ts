@@ -10,12 +10,13 @@ function normalizeBasePath(basePath?: string) {
 }
 
 const appEnv = process.env.APP_ENV ?? process.env.NEXT_PUBLIC_APP_ENV;
+const isCloudflare = process.env.CLOUDFLARE === "true";
 const basePath = normalizeBasePath(
   process.env.NEXT_PUBLIC_BASE_PATH ?? (appEnv === "stg" ? "/sabae-event-lp" : ""),
 );
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: isCloudflare ? "standalone" : "export",
   trailingSlash: true,
   ...(basePath ? { basePath, assetPrefix: basePath } : {}),
   env: {
@@ -32,3 +33,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
