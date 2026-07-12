@@ -20,7 +20,18 @@ const mPlusRounded = M_PLUS_Rounded_1c({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://mirai2026.example.com";
+
+const ogImage = {
+  url: "/images/og/sns-og.jpg",
+  width: 2400,
+  height: 1260,
+  alt: site.name,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: site.name,
     template: `%s | ${site.name}`,
@@ -36,6 +47,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     siteName: site.name,
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+    images: [ogImage.url],
   },
 };
 
