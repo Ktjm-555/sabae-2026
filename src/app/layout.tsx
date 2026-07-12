@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { M_PLUS_Rounded_1c, Noto_Sans_JP } from "next/font/google";
+import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import "./globals.css";
@@ -20,11 +21,15 @@ const mPlusRounded = M_PLUS_Rounded_1c({
   display: "swap",
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://mirai2026.example.com";
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (basePath === "/sabae-2026"
+    ? "https://sabae-2026.mirai-project.workers.dev/sabae-2026"
+    : "https://fes.sabae-sdgs.jp/2026");
 
 const ogImage = {
-  url: "/images/og/sns-og.jpg",
+  url: withBasePath("/images/og/sns-og.jpg"),
   width: 2400,
   height: 1260,
   alt: site.name,
