@@ -27,9 +27,14 @@ const siteUrl =
     ? "https://sabae-2026.mirai-project.workers.dev/sabae-2026"
     : "https://fes.sabae-sdgs.jp/2026");
 
+// 本番 OG 画像はドメイン直下（/2026 配下ではない）に配置
+const ogImageUrl =
+  basePath === "/sabae-2026"
+    ? `${siteUrl}/images/og/sns-og.jpg`
+    : "https://fes.sabae-sdgs.jp/images/og/sns-og.jpg";
+
 const ogImage = {
-  // metadataBase の pathname と join されるため basePath は付けない
-  url: "/images/og/sns-og.jpg",
+  url: ogImageUrl,
   width: 2400,
   height: 1260,
   alt: site.name,
@@ -58,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: [ogImage.url],
+    images: [ogImageUrl],
   },
 };
 
