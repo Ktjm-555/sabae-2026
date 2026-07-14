@@ -4,7 +4,7 @@ import { SpecialStageDateBar } from "@/components/SpecialStageDateBar";
 import { SpecialStageFukuiBlock } from "@/components/SpecialStageFukuiBlock";
 import { SpecialStageLdhBlock } from "@/components/SpecialStageLdhBlock";
 import { SpecialStageTgcBlock } from "@/components/SpecialStageTgcBlock";
-import { SpecialStageWankoSobaBlock } from "@/components/SpecialStageWankoSobaBlock";
+// import { SpecialStageWankoSobaBlock } from "@/components/SpecialStageWankoSobaBlock";
 import { VenueMapWaveBottom } from "@/components/VenueMapWaveBottom";
 import { VenueMapSection } from "@/components/VenueMapSection";
 import { getSpecialStages } from "@/lib/specialStages";
@@ -15,7 +15,7 @@ export function SpecialStageSection() {
   const tgcStage = stages.find((stage) => stage.id === "tgc-stage");
   const ldhStage = stages.find((stage) => stage.id === "ldh-workshop");
   const danceContest = stages.find((stage) => stage.id === "dance-contest");
-  const wankoSoba = stages.find((stage) => stage.id === "wanko-soba");
+  // const wankoSoba = stages.find((stage) => stage.id === "wanko-soba");
 
   return (
     <>
@@ -84,6 +84,7 @@ export function SpecialStageSection() {
               </div>
             ) : null}
 
+            {/* 一時非表示: 食べて、つながる、さばえの輪（わんこそば大会）
             {wankoSoba?.dateBar ? (
               <div className="flex flex-col gap-8 lg:gap-10">
                 <div className="-mx-4 sm:-mx-6 lg:mx-0">
@@ -99,6 +100,7 @@ export function SpecialStageSection() {
                 <SpecialStageWankoSobaBlock stage={wankoSoba} />
               </div>
             ) : null}
+            */}
           </div>
 
           <div
