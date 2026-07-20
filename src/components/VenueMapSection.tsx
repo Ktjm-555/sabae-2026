@@ -21,7 +21,7 @@ export function VenueMapSection() {
                 src={withBasePath(venueMap.mapImageSp)}
                 alt={venueMap.mapAlt}
                 width={354}
-                height={220}
+                height={224}
                 className="h-auto w-full max-w-[354px] lg:hidden"
                 sizes="(max-width: 1024px) 100vw, 354px"
               />
@@ -29,10 +29,10 @@ export function VenueMapSection() {
             <Image
               src={withBasePath(venueMap.mapImage)}
               alt={venueMap.mapAlt}
-              width={742}
-              height={461}
-              className={`h-auto w-full max-w-[742px] ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
-              sizes="742px"
+              width={773}
+              height={490}
+              className={`h-auto w-full max-w-[773px] ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
+              sizes="773px"
             />
           </div>
 
