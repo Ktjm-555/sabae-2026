@@ -114,8 +114,8 @@ export function SpecialStageSection() {
       </section>
 
       {danceContest?.dateBar ? (
-        <section className="relative z-[11] -mt-6 bg-background-yellow sm:-mt-px">
-          <div className="mx-auto max-w-[1400px] px-4 pt-4 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14">
+        <section className="relative z-[11] -mt-6 bg-background-yellow sm:-mt-8 lg:-mt-px">
+          <div className="mx-auto max-w-[1400px] px-4 pt-2 sm:px-6 sm:pt-2 lg:px-8 lg:pt-2">
             <div className="flex flex-col gap-8 lg:gap-10">
               <SpecialStageAreaLabel date="10.18" day="sun" />
 

@@ -9,9 +9,9 @@ export function VenueMapSection() {
   return (
     <section
       id="venue-map"
-      className="relative z-10 scroll-mt-24 -mt-6 bg-white pb-10 sm:-mt-8 sm:pb-14 lg:-mt-10 lg:pb-16"
+      className="relative z-[12] scroll-mt-24 -mt-6 bg-white pb-10 sm:-mt-8 sm:pb-14 lg:-mt-10 lg:pb-16"
     >
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 lg:pt-8">
+      <div className="mx-auto max-w-[1400px] px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8 lg:pt-6">
         <SectionTitle title="会場マップ" subtitle="VENUE MAP" />
 
         <div className="mx-auto w-full overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] lg:max-w-[1292px]">
