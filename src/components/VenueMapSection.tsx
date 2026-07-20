@@ -9,9 +9,9 @@ export function VenueMapSection() {
   return (
     <section
       id="venue-map"
-      className="relative z-10 scroll-mt-24 -mt-6 bg-white pb-10 sm:-mt-8 sm:pb-14 lg:-mt-10 lg:pb-16"
+      className="relative z-[12] scroll-mt-24 -mt-6 bg-white pb-10 sm:-mt-8 sm:pb-14 lg:-mt-10 lg:pb-16"
     >
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 lg:pt-8">
+      <div className="mx-auto max-w-[1400px] px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8 lg:pt-6">
         <SectionTitle title="会場マップ" subtitle="VENUE MAP" />
 
         <div className="mx-auto w-full overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] lg:max-w-[1292px]">
@@ -21,7 +21,7 @@ export function VenueMapSection() {
                 src={withBasePath(venueMap.mapImageSp)}
                 alt={venueMap.mapAlt}
                 width={354}
-                height={220}
+                height={224}
                 className="h-auto w-full max-w-[354px] lg:hidden"
                 sizes="(max-width: 1024px) 100vw, 354px"
               />
@@ -29,10 +29,10 @@ export function VenueMapSection() {
             <Image
               src={withBasePath(venueMap.mapImage)}
               alt={venueMap.mapAlt}
-              width={742}
-              height={461}
-              className={`h-auto w-full max-w-[742px] ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
-              sizes="742px"
+              width={773}
+              height={490}
+              className={`h-auto w-full max-w-[773px] ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
+              sizes="773px"
             />
           </div>
 
