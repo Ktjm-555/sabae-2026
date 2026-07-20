@@ -1,3 +1,4 @@
+import { SpecialStageYellowWaveTop } from "@/components/SpecialStageYellowWaveTop";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SpecialStageAreaLabel } from "@/components/SpecialStageAreaLabel";
 import { SpecialStageDanceContestBlock } from "@/components/SpecialStageDanceContestBlock";
@@ -24,7 +25,7 @@ export function SpecialStageSection() {
         id="special-stage"
         className="relative z-10 scroll-mt-24 -mt-6 bg-background-sky pb-0 sm:-mt-8 lg:-mt-10"
       >
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 lg:pt-8">
+        <div className="mx-auto max-w-[1400px] px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-8">
           <SpecialStageAreaLabel date="10.17" day="sat" />
 
           <p className="mb-2 mt-6 text-center font-display text-[18px] font-bold text-primary sm:mt-8 lg:mb-3 lg:mt-10 lg:text-[24px]">
@@ -69,28 +70,30 @@ export function SpecialStageSection() {
                 <SpecialStageLdhBlock stage={ldhStage} />
               </div>
             ) : null}
+          </div>
+        </div>
 
-            {danceContest?.dateBar ? (
-              <div className="flex flex-col gap-8 lg:gap-10">
-                <SpecialStageAreaLabel date="10.18" day="sun" />
+        {danceContest?.dateBar ? (
+          <SpecialStageYellowWaveTop className="relative z-[1] -mt-12 sm:-mt-14 lg:-mt-16" />
+        ) : null}
 
-                <div className="-mx-4 sm:-mx-6 lg:mx-0">
-                  <SpecialStageDateBar
-                    date={danceContest.dateBar.date}
-                    day={danceContest.dateBar.day}
-                    title={danceContest.dateBar.title}
-                    titleHighlight={danceContest.dateBar.titleHighlight}
-                    titleSpLine2={danceContest.dateBar.titleSpLine2}
-                    titleSpCompact={danceContest.dateBar.titleSpCompact}
-                    titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
-                  />
-                </div>
-                <SpecialStageDanceContestBlock stage={danceContest} />
-              </div>
-            ) : null}
+        {!danceContest?.dateBar ? (
+          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+            <div
+              className="h-20 sm:h-24 lg:h-28"
+              aria-hidden="true"
+            />
+          </div>
+        ) : null}
 
-            {/* 一時非表示: 食べて、つながる、さばえの輪（わんこそば大会）
-            {wankoSoba?.dateBar ? (
+        {!danceContest?.dateBar ? (
+          <VenueMapWaveBottom className="relative z-[1] -mt-8 sm:-mt-10 lg:-mt-12" />
+        ) : null}
+
+        {/* 一時非表示: 食べて、つながる、さばえの輪（わんこそば大会）
+        {wankoSoba?.dateBar ? (
+          <div className="bg-background-yellow">
+            <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col gap-8 lg:gap-10">
                 <div className="-mx-4 sm:-mx-6 lg:mx-0">
                   <SpecialStageDateBar
@@ -104,17 +107,40 @@ export function SpecialStageSection() {
                 </div>
                 <SpecialStageWankoSobaBlock stage={wankoSoba} />
               </div>
-            ) : null}
-            */}
+            </div>
           </div>
-
-          <div
-            className="h-20 sm:h-24 lg:h-28"
-            aria-hidden="true"
-          />
-        </div>
-        <VenueMapWaveBottom className="relative z-[1] -mt-8 sm:-mt-10 lg:-mt-12" />
+        ) : null}
+        */}
       </section>
+
+      {danceContest?.dateBar ? (
+        <section className="relative z-[11] -mt-6 bg-background-yellow sm:-mt-px">
+          <div className="mx-auto max-w-[1400px] px-4 pt-4 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14">
+            <div className="flex flex-col gap-8 lg:gap-10">
+              <SpecialStageAreaLabel date="10.18" day="sun" />
+
+              <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                <SpecialStageDateBar
+                  date={danceContest.dateBar.date}
+                  day={danceContest.dateBar.day}
+                  title={danceContest.dateBar.title}
+                  titleHighlight={danceContest.dateBar.titleHighlight}
+                  titleSpLine2={danceContest.dateBar.titleSpLine2}
+                  titleSpCompact={danceContest.dateBar.titleSpCompact}
+                  titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
+                />
+              </div>
+              <SpecialStageDanceContestBlock stage={danceContest} />
+            </div>
+
+            <div
+              className="h-20 sm:h-24 lg:h-28"
+              aria-hidden="true"
+            />
+          </div>
+          <VenueMapWaveBottom className="relative z-[1] -mt-8 sm:-mt-10 lg:-mt-12" />
+        </section>
+      ) : null}
 
       <VenueMapSection />
     </>
