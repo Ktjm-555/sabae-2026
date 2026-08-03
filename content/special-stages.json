@@ -93,9 +93,8 @@
     "dateBar": {
       "date": "10.18",
       "day": "sun",
-      "title": "ダンスショーケース",
-      "titleHighlight": "コンテスト",
-      "titleHighlightNoSpace": true
+      "title": "ダンスショーケースコンテスト",
+      "titleSpLine2": "コンテスト"
     },
     "subtitle": "踊って魅せる！さばえのミライ",
     "description": "子どもたちがチームで創り上げたオリジナルダンスを披露するショーケースを、コンテスト形式で開催。\n振付や演出には「鯖江らしさ」を取り入れ、めがねのまちやものづくりなど、地域の魅力を表現します。ミライを担う子どもたちが届ける熱いパフォーマンスを、ぜひ会場でお楽しみください。",
@@ -105,7 +104,41 @@
       "label": "募集要項・参加申込",
       "href": "https://form.run/@sabaemiraifes2026-dance",
       "external": true
-    }
+    },
+    "guests": [
+      {
+        "label": "MC",
+        "name": "YUKI",
+        "role": "（株）トゥーアーティー所属",
+        "bio": "福井県出身。ダンスインストラクターとして幼児から大人まで幅広い世代を指導する傍ら、B.LEAGUEダンサーとして活動。ステージで培った表現力と明るさを活かし、MCとしてもイベントを盛り上げる。",
+        "image": "/images/special-stage/dance-contest-yuki.png",
+        "imageAlt": "MC YUKI"
+      },
+      {
+        "label": "審査員",
+        "name": "SHINDO",
+        "role": "DANCE STUDIO JIGGY代表",
+        "bio": "福井のヒップホップシーンのパイオニアとして福井ダンスシーンの礎を築き、県内外のイベントに数多く出演。現在はダンススタジオを構え、キッズを中心に数多くのダンサーを輩出！！コンテストチームも数多く手掛け、福井ではNo.1の入賞実績を誇る！",
+        "image": "/images/special-stage/dance-contest-shindo.png",
+        "imageAlt": "審査員 SHINDO"
+      },
+      {
+        "label": "審査員",
+        "name": "YOU",
+        "role": "DiNA DANCE SCHOOL代表",
+        "bio": "福島県会津若松市生まれ。ダンスインストラクター歴17年、HIP HOP歴 20年、WAACK歴 15年、JAZZ歴 19年の経歴を持ち、RUN UP 北陸予選 OPEN部門で優勝のほか、数々の大会、コンテストでの受賞歴を持つ。",
+        "image": "/images/special-stage/dance-contest-you.png",
+        "imageAlt": "審査員 YOU"
+      },
+      {
+        "label": "審査員",
+        "name": "白木結女",
+        "role": "（株）トゥーアーティー所属",
+        "bio": "幼少期よりダンスを習い、福井商業高校チアリーダー部JETSに入部。全日本・全米大会優勝メンバー。2021年4月からチアドリームプロジェクトの一員として、チアダンスのプロとして活動。現在はまなびサイトチアダンス講師として、福井県・石川県でチアダンスの指導を行う。",
+        "image": "/images/special-stage/dance-contest-shiraki.png",
+        "imageAlt": "審査員 白木結女"
+      }
+    ]
   },
   {
     "id": "wanko-soba",

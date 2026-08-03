@@ -24,6 +24,16 @@ export type SpecialStageButton = {
   external?: boolean;
 };
 
+export type SpecialStageGuest = {
+  label: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  imageSp?: string;
+  imageAlt?: string;
+};
+
 export type SpecialStage = {
   id: string;
   dateBar?: {
@@ -49,6 +59,7 @@ export type SpecialStage = {
   illustration?: string;
   illustrationAlt?: string;
   button?: SpecialStageButton;
+  guests?: SpecialStageGuest[];
 };
 
 export function getSpecialStages(): SpecialStage[] {
