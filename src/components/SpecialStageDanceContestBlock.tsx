@@ -11,7 +11,7 @@ function GuestCard({ guest }: { guest: SpecialStageGuest }) {
   const imageAlt = guest.imageAlt ?? `${guest.label} ${guest.name}`;
 
   return (
-    <article className="flex flex-col gap-4 min-[1061px]:flex-row min-[1061px]:gap-0">
+    <article className="flex flex-col gap-4 min-[1061px]:flex-row min-[1061px]:gap-6">
       <div className="w-full shrink-0 min-[1061px]:w-[304px]">
         <Image
           src={withBasePath(guest.image)}
@@ -23,11 +23,20 @@ function GuestCard({ guest }: { guest: SpecialStageGuest }) {
         />
       </div>
 
-      <div className="flex min-w-0 flex-1 flex-col min-[1061px]:ml-8 min-[1061px]:border-l min-[1061px]:border-foreground min-[1061px]:pl-8">
+      <div className="flex min-w-0 flex-1 flex-col">
         <p className="text-xs font-medium leading-8 text-foreground">{guest.role}</p>
-        <p className="text-xl font-bold leading-8 text-foreground sm:text-2xl">
-          {guest.label}　{guest.name}
-        </p>
+        <div className="flex items-center">
+          <span className="text-xl font-bold leading-8 text-foreground sm:text-2xl">
+            {guest.label}
+          </span>
+          <span
+            className="mx-3 h-[21px] w-px shrink-0 bg-foreground"
+            aria-hidden="true"
+          />
+          <span className="text-xl font-bold leading-8 text-foreground sm:text-2xl">
+            {guest.name}
+          </span>
+        </div>
         <span className="mt-1 inline-flex h-[23px] w-[115px] items-center justify-center rounded-[20px] bg-[#969696] text-sm font-bold text-white">
           プロフィール
         </span>
