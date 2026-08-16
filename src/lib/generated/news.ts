@@ -29,4 +29,36 @@ published: true
 externalUrl: "https://www.city.sabae.fukui.jp/event/sonota/SogoSeisakumirasapo.html"
 ---
 `,
+  "2026-08-20-dance-contest-recruitment": `---
+title: "「ダンスショーケースコンテスト」参加チームを募集しています"
+date: "2026-08-20"
+category: "recruitment"
+published: true
+externalUrl: "https://form.run/@sabaemiraifes2026-dance"
+---
+`,
+  "2026-08-20-special-stage-guests-2nd": `---
+title: "スペシャルステージ出演ゲスト第2弾を公開しました"
+date: "2026-08-20"
+category: "general"
+published: true
+href: "/#tgc-stage"
+---
+
+スペシャルステージ出演ゲスト第2弾を公開しました。
+
+[さばえミライのかがやきコレクション produced by TGC の詳細はこちら](/#tgc-stage)
+`,
+  "2026-08-20-ticket-application-start": `---
+title: "スペシャルステージの入場券お申込みを開始しました"
+date: "2026-08-20"
+category: "general"
+published: true
+href: "/ticket"
+---
+
+スペシャルステージの入場券お申込みを開始しました。
+
+[入場券申込概要はこちら](/ticket)
+`,
 };

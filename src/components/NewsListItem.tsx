@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
-import { NewsItem, getCategoryLabel } from "@/lib/news";
+import { NewsItem, getCategoryLabel, getNewsLink } from "@/lib/news";
 import { withBasePath } from "@/lib/basePath";
 
 interface NewsListItemProps {
@@ -40,14 +40,13 @@ export function NewsArrowIcon({ className }: { className?: string }) {
 
 export function NewsListItem({ news }: NewsListItemProps) {
   const formattedDate = format(new Date(news.date), "yyyy.MM.dd");
-  const href = news.externalUrl ?? `/news/${news.slug}`;
-  const isExternal = Boolean(news.externalUrl);
+  const { href, openInNewTab } = getNewsLink(news);
 
   return (
     <Link
       href={href}
-      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className="group relative flex min-h-[83px] flex-col justify-center rounded-[20px] bg-white px-7 py-5 shadow-[var(--shadow-card)] transition-[box-shadow,transform] hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)] lg:min-h-[115px] lg:px-7 lg:py-6"
+      {...(openInNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="group relative flex h-full min-h-[135px] flex-col rounded-[20px] bg-white px-[30px] py-[15px] shadow-[var(--shadow-card)] transition-[box-shadow,transform] hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)] lg:min-h-[203px] lg:px-8 lg:py-[27px]"
     >
       <time
         dateTime={news.date}
@@ -55,7 +54,7 @@ export function NewsListItem({ news }: NewsListItemProps) {
       >
         {formattedDate}
       </time>
-      <p className="mt-2 line-clamp-2 pr-8 text-base font-medium text-foreground transition-colors group-hover:text-primary lg:mt-3 lg:pr-10 lg:text-xl lg:font-normal">
+      <p className="mt-2 pr-8 text-base font-medium leading-[22px] text-foreground transition-colors group-hover:text-primary lg:mt-3 lg:pr-10 lg:text-xl lg:leading-[30px]">
         {news.title}
       </p>
       <span className="mt-2 inline-block w-fit self-start rounded-full bg-sky/40 px-2.5 py-0.5 text-xs font-medium text-primary">

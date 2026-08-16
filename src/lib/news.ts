@@ -10,6 +10,7 @@ export interface NewsFrontmatter {
   date: string;
   category: NewsCategory;
   published: boolean;
+  href?: string;
   externalUrl?: string;
 }
 
@@ -20,7 +21,20 @@ export interface NewsItem {
   category: NewsCategory;
   published: boolean;
   excerpt: string;
+  href?: string;
   externalUrl?: string;
+}
+
+export function getNewsLink(news: NewsItem): { href: string; openInNewTab: boolean } {
+  if (news.href) {
+    return { href: news.href, openInNewTab: false };
+  }
+
+  if (news.externalUrl) {
+    return { href: news.externalUrl, openInNewTab: true };
+  }
+
+  return { href: `/news/${news.slug}`, openInNewTab: false };
 }
 
 export interface NewsDetail extends NewsItem {
@@ -76,6 +90,7 @@ function toNewsItem({ slug, frontmatter, content }: ParsedNewsFile): NewsItem {
     category: frontmatter.category,
     published: frontmatter.published,
     excerpt: createExcerpt(content),
+    href: frontmatter.href,
     externalUrl: frontmatter.externalUrl,
   };
 }

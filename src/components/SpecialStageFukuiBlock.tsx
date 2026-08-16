@@ -68,7 +68,7 @@ export function SpecialStageFukuiBlock({ stage }: SpecialStageFukuiBlockProps) {
         </div>
 
         <p
-          className={`mt-3 text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:mt-4 lg:text-[32px] lg:leading-[46px] ${textInset}`}
+          className={`mt-3 text-[20px] font-bold leading-[46px] text-primary lg:mt-4 lg:text-[26px] ${textInset}`}
         >
           {stage.subtitle}
         </p>

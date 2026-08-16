@@ -6,6 +6,7 @@ import { ExternalRedirect } from "@/components/ExternalRedirect";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { NewsPageBackground } from "@/components/NewsPageBackground";
+import { withBasePath } from "@/lib/basePath";
 import { getAllNewsSlugs, getCategoryLabel, getNewsBySlug } from "@/lib/news";
 import { getSiteConfig } from "@/lib/site";
 
@@ -46,6 +47,10 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
 
   if (!news) {
     notFound();
+  }
+
+  if (news.href) {
+    return <ExternalRedirect url={withBasePath(news.href)} />;
   }
 
   if (news.externalUrl) {
