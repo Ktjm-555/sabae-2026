@@ -96,43 +96,68 @@ export function SpecialStageDanceContestBlock({
 
   return (
     <article id={stage.id} className="@container scroll-mt-24 flex flex-col">
-      <div>
-        <h3 className="text-[24px] font-bold leading-[46px] text-primary lg:text-[26px]">
-          {stage.subtitle}
-        </h3>
+      <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between lg:gap-6">
+        <div className="flex min-w-0 flex-1 flex-col">
+          <h3 className="text-[24px] font-bold leading-[46px] text-primary lg:text-[26px]">
+            {stage.subtitle}
+          </h3>
 
-        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
+          <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
 
-        <div className="mt-4 lg:mt-5 lg:flex lg:items-start lg:justify-between lg:gap-8">
-          <p className="whitespace-pre-line text-base font-medium leading-8 text-foreground sm:text-lg lg:max-w-[808px] lg:flex-1 lg:text-xl lg:leading-8">
+          <p className="mt-4 whitespace-pre-line text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:max-w-[808px] lg:text-xl lg:leading-8">
             {stage.description}
           </p>
 
-          {flyers.length > 0 ? (
-            <FlyerPreview
-              flyers={flyers}
-              className="mt-6 hidden shrink-0 items-start gap-3 lg:mt-0 lg:flex"
-            />
+          {buttons.length > 0 ? (
+            <div className="mt-5 hidden flex-1 flex-col justify-end lg:flex">
+              <div className="flex flex-row items-center justify-start gap-3">
+                {applicationButton ? (
+                  <VenueAreaButton
+                    href={applicationButton.href}
+                    label={applicationButton.label}
+                    external={applicationButton.external}
+                    download={applicationButton.download}
+                    className="min-w-[283px]"
+                  />
+                ) : null}
+                {downloadButton ? (
+                  <VenueAreaButton
+                    href={downloadButton.href}
+                    label={downloadButton.label}
+                    external={downloadButton.external}
+                    download={downloadButton.download}
+                    className="min-w-[283px]"
+                  />
+                ) : null}
+              </div>
+            </div>
           ) : null}
         </div>
+
+        {flyers.length > 0 ? (
+          <FlyerPreview
+            flyers={flyers}
+            className="hidden shrink-0 items-start gap-5 self-start lg:flex"
+          />
+        ) : null}
       </div>
 
       {buttons.length > 0 ? (
-        <div className="mt-8 flex flex-col items-center gap-6 lg:mt-10 lg:flex-row lg:items-start lg:justify-start lg:gap-3">
+        <div className="mt-4 flex flex-col items-center gap-6 lg:hidden">
           {applicationButton ? (
             <VenueAreaButton
               href={applicationButton.href}
               label={applicationButton.label}
               external={applicationButton.external}
               download={applicationButton.download}
-              className="min-w-[223px] lg:min-w-[283px]"
+              className="min-w-[223px]"
             />
           ) : null}
 
           {flyers.length > 0 ? (
             <FlyerPreview
               flyers={flyers}
-              className="flex items-start justify-center gap-3 lg:hidden"
+              className="flex items-start justify-center gap-4"
             />
           ) : null}
 
@@ -142,7 +167,7 @@ export function SpecialStageDanceContestBlock({
               label={downloadButton.label}
               external={downloadButton.external}
               download={downloadButton.download}
-              className="min-w-[223px] lg:min-w-[283px]"
+              className="min-w-[223px]"
             />
           ) : null}
         </div>
