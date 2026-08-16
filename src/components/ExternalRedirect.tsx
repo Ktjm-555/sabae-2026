@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 
 export function ExternalRedirect({ url }: { url: string }) {
+  const isExternal = url.startsWith("http://") || url.startsWith("https://");
+
   useEffect(() => {
     window.location.replace(url);
   }, [url]);
@@ -10,7 +12,7 @@ export function ExternalRedirect({ url }: { url: string }) {
   return (
     <main className="flex min-h-dvh items-center justify-center px-4">
       <p className="text-center text-foreground">
-        外部サイトへ移動しています…
+        {isExternal ? "外部サイトへ移動しています…" : "ページへ移動しています…"}
         <br />
         <a href={url} className="mt-2 inline-block font-bold text-primary underline">
           移動しない場合はこちら

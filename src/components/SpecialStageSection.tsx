@@ -1,10 +1,12 @@
 import { SpecialStageYellowWaveTop } from "@/components/SpecialStageYellowWaveTop";
 import { SectionTitle } from "@/components/SectionTitle";
+import { VenueAreaButton } from "@/components/VenueAreaButton";
 import { SpecialStageAreaLabel } from "@/components/SpecialStageAreaLabel";
 import { SpecialStageDanceContestBlock } from "@/components/SpecialStageDanceContestBlock";
 import { SpecialStageDateBar } from "@/components/SpecialStageDateBar";
 import { SpecialStageFukuiBlock } from "@/components/SpecialStageFukuiBlock";
 import { SpecialStageLdhBlock } from "@/components/SpecialStageLdhBlock";
+import { SpecialStageShinakoBlock } from "@/components/SpecialStageShinakoBlock";
 import { SpecialStageTgcBlock } from "@/components/SpecialStageTgcBlock";
 // import { SpecialStageWankoSobaBlock } from "@/components/SpecialStageWankoSobaBlock";
 import { VenueMapWaveBottom } from "@/components/VenueMapWaveBottom";
@@ -16,6 +18,7 @@ export function SpecialStageSection() {
   const fashionShow = stages.find((stage) => stage.id === "fashion-show");
   const tgcStage = stages.find((stage) => stage.id === "tgc-stage");
   const ldhStage = stages.find((stage) => stage.id === "ldh-workshop");
+  const shinakoStage = stages.find((stage) => stage.id === "shinako-world-live");
   const danceContest = stages.find((stage) => stage.id === "dance-contest");
   // const wankoSoba = stages.find((stage) => stage.id === "wanko-soba");
 
@@ -33,10 +36,28 @@ export function SpecialStageSection() {
           </p>
           <SectionTitle title="スペシャルステージ" subtitle="SPECIAL STAGE" />
 
-          <p className="mx-auto max-w-[1296px] whitespace-pre-line text-left text-base font-medium leading-8 text-foreground min-[801px]:text-center sm:text-lg lg:text-xl lg:leading-8">
-            {`ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！
-※17日(土)は事前申込制／詳細は決まり次第お知らせいたします。`}
-          </p>
+          <div className="mx-auto max-w-[1296px]">
+            <div className="mb-4 flex justify-center sm:mb-5 lg:mb-6">
+              <span className="inline-flex h-6 min-w-[74px] items-center justify-center rounded-[20px] bg-gold px-3 text-sm font-bold text-white lg:h-[30px] lg:min-w-[106px] lg:px-4 lg:text-xl">
+                13:00～
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-5 sm:gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-7">
+              <p className="w-full max-w-[622px] text-left text-base font-medium leading-8 text-foreground sm:text-lg lg:text-xl">
+                <span className="whitespace-pre-line lg:hidden">
+                  {`ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！
+※17日(土)は事前申込制`}
+                </span>
+                <span className="hidden lg:block">
+                  ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！※17日(土)は事前申込制
+                </span>
+              </p>
+              <div className="shrink-0">
+                <VenueAreaButton href="/ticket" label="入場券のお申込みはこちら" />
+              </div>
+            </div>
+          </div>
 
           <div className="mx-auto mt-10 flex max-w-[1296px] flex-col gap-14 sm:mt-12 sm:gap-16 lg:mt-14 lg:gap-20">
             {fashionShow?.dateBar ? (
@@ -68,6 +89,21 @@ export function SpecialStageSection() {
                   />
                 </div>
                 <SpecialStageLdhBlock stage={ldhStage} />
+              </div>
+            ) : null}
+
+            {shinakoStage?.dateBar ? (
+              <div className="flex flex-col gap-8 lg:gap-10">
+                <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                  <SpecialStageDateBar
+                    date={shinakoStage.dateBar.date}
+                    day={shinakoStage.dateBar.day}
+                    title={shinakoStage.dateBar.title}
+                    titleHighlight={shinakoStage.dateBar.titleHighlight}
+                    titleSpLine2={shinakoStage.dateBar.titleSpLine2}
+                  />
+                </div>
+                <SpecialStageShinakoBlock stage={shinakoStage} />
               </div>
             ) : null}
           </div>

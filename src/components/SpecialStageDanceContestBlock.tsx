@@ -1,46 +1,83 @@
 import Image from "next/image";
 import { VenueAreaButton } from "@/components/VenueAreaButton";
 import { withBasePath } from "@/lib/basePath";
-import type { SpecialStage, SpecialStageGuest } from "@/lib/specialStages";
+import type {
+  SpecialStage,
+  SpecialStageFlyer,
+  SpecialStageGuest,
+} from "@/lib/specialStages";
 
 interface SpecialStageDanceContestBlockProps {
   stage: SpecialStage;
+}
+
+function FlyerPreview({
+  flyers,
+  className,
+}: {
+  flyers: SpecialStageFlyer[];
+  className?: string;
+}) {
+  if (flyers.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className={className}>
+      {flyers.map((flyer) => (
+        <div
+          key={flyer.image}
+          className="overflow-hidden rounded-[20px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]"
+        >
+          <Image
+            src={withBasePath(flyer.image)}
+            alt={flyer.imageAlt ?? "チラシ"}
+            width={222}
+            height={316}
+            className="h-auto w-[177px] lg:w-[222px]"
+            sizes="(max-width: 1024px) 177px, 222px"
+          />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function GuestCard({ guest }: { guest: SpecialStageGuest }) {
   const imageAlt = guest.imageAlt ?? `${guest.label} ${guest.name}`;
 
   return (
-    <article className="flex flex-col gap-4 min-[1061px]:flex-row min-[1061px]:gap-6">
-      <div className="w-full shrink-0 min-[1061px]:w-[304px]">
+    <article className="flex flex-row items-start gap-4 sm:gap-6">
+      <div className="relative aspect-[357/330] w-[calc((100%-1rem)/2)] shrink-0 self-start overflow-hidden rounded-[20px] sm:w-[calc((100%-1.5rem)/2)] lg:aspect-[607/496] lg:w-[calc((100cqw-4.5rem)/4)]">
         <Image
           src={withBasePath(guest.image)}
           alt={imageAlt}
-          width={607}
-          height={454}
-          className="h-auto w-full rounded-[20px]"
-          sizes="(max-width: 768px) 100vw, (max-width: 1060px) 45vw, 304px"
+          fill
+          className="object-cover"
+          sizes="(max-width: 1024px) 45vw, 25vw"
         />
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <p className="text-xs font-medium leading-8 text-foreground">{guest.role}</p>
-        <div className="flex items-center">
-          <span className="text-xl font-bold leading-8 text-foreground sm:text-2xl">
+        <p className="text-xs font-medium leading-none text-foreground sm:text-sm sm:leading-snug lg:text-xs lg:leading-8">
+          {guest.role}
+        </p>
+        <div className="mt-1 flex items-center sm:mt-1.5 lg:mt-0.5">
+          <span className="text-base font-bold leading-none text-foreground sm:text-xl lg:text-2xl lg:leading-8">
             {guest.label}
           </span>
           <span
-            className="mx-3 h-[21px] w-px shrink-0 bg-foreground"
+            className="mx-2 h-3.5 w-px shrink-0 bg-foreground sm:h-4 lg:mx-3 lg:h-[21px]"
             aria-hidden="true"
           />
-          <span className="text-xl font-bold leading-8 text-foreground sm:text-2xl">
+          <span className="text-base font-bold leading-none text-foreground sm:text-xl lg:text-2xl lg:leading-8">
             {guest.name}
           </span>
         </div>
-        <span className="mt-1 inline-flex h-[23px] w-[115px] items-center justify-center rounded-[20px] bg-[#969696] text-sm font-bold text-white">
+        <span className="mt-3 inline-flex h-4 w-[78px] shrink-0 items-center justify-center self-start rounded-[20px] bg-[#969696] text-[10px] font-bold leading-none text-white lg:mt-2 lg:h-[23px] lg:w-[115px] lg:text-sm">
           プロフィール
         </span>
-        <p className="mt-3 text-[13px] font-medium leading-[21px] text-foreground">
+        <p className="mt-2 text-sm font-medium leading-6 text-foreground sm:text-base sm:leading-7 lg:text-[13px] lg:leading-[21px]">
           {guest.bio}
         </p>
       </div>
@@ -52,52 +89,67 @@ export function SpecialStageDanceContestBlock({
   stage,
 }: SpecialStageDanceContestBlockProps) {
   const guests = stage.guests ?? [];
-
-  const illustration = stage.illustration ? (
-    <Image
-      src={withBasePath(stage.illustration)}
-      alt={stage.illustrationAlt ?? stage.subtitle}
-      width={139}
-      height={309}
-      className="h-auto w-[100px] sm:w-[120px] lg:w-[139px]"
-      sizes="139px"
-    />
-  ) : null;
+  const flyers = stage.flyers ?? [];
+  const buttons =
+    stage.buttons ?? (stage.button ? [stage.button] : []);
+  const [applicationButton, downloadButton] = buttons;
 
   return (
-    <article id={stage.id} className="scroll-mt-24 flex flex-col">
-      <div className="relative">
-        <div className="lg:pr-40 xl:pr-44">
-          <h3 className="text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:text-[32px] lg:leading-[46px]">
-            {stage.subtitle}
-          </h3>
+    <article id={stage.id} className="@container scroll-mt-24 flex flex-col">
+      <div>
+        <h3 className="text-[24px] font-bold leading-[46px] text-primary lg:text-[26px]">
+          {stage.subtitle}
+        </h3>
 
-          <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
+        <div className="mt-3 border-b border-[#dcdcdc] lg:mt-4" />
 
-          <p className="mt-4 whitespace-pre-line text-base font-medium leading-8 text-foreground sm:text-lg lg:mt-5 lg:text-xl lg:leading-8">
+        <div className="mt-4 lg:mt-5 lg:flex lg:items-start lg:justify-between lg:gap-8">
+          <p className="whitespace-pre-line text-base font-medium leading-8 text-foreground sm:text-lg lg:max-w-[808px] lg:flex-1 lg:text-xl lg:leading-8">
             {stage.description}
           </p>
-        </div>
 
-        {illustration ? (
-          <div className="pointer-events-none absolute top-0 right-0 hidden lg:block">
-            {illustration}
-          </div>
-        ) : null}
+          {flyers.length > 0 ? (
+            <FlyerPreview
+              flyers={flyers}
+              className="mt-6 hidden shrink-0 items-start gap-3 lg:mt-0 lg:flex"
+            />
+          ) : null}
+        </div>
       </div>
 
-      {stage.button ? (
-        <div className="mt-8 flex justify-center lg:mt-10 lg:justify-start">
-          <VenueAreaButton
-            href={stage.button.href}
-            label={stage.button.label}
-            external={stage.button.external}
-          />
+      {buttons.length > 0 ? (
+        <div className="mt-8 flex flex-col items-center gap-6 lg:mt-10 lg:flex-row lg:items-start lg:justify-start lg:gap-3">
+          {applicationButton ? (
+            <VenueAreaButton
+              href={applicationButton.href}
+              label={applicationButton.label}
+              external={applicationButton.external}
+              download={applicationButton.download}
+              className="min-w-[223px] lg:min-w-[283px]"
+            />
+          ) : null}
+
+          {flyers.length > 0 ? (
+            <FlyerPreview
+              flyers={flyers}
+              className="flex items-start justify-center gap-3 lg:hidden"
+            />
+          ) : null}
+
+          {downloadButton ? (
+            <VenueAreaButton
+              href={downloadButton.href}
+              label={downloadButton.label}
+              external={downloadButton.external}
+              download={downloadButton.download}
+              className="min-w-[223px] lg:min-w-[283px]"
+            />
+          ) : null}
         </div>
       ) : null}
 
       {guests.length > 0 ? (
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-6 min-[1061px]:mt-14 min-[1061px]:gap-x-16 min-[1061px]:gap-y-12">
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:mt-14 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
           {guests.map((guest) => (
             <GuestCard key={`${guest.label}-${guest.name}`} guest={guest} />
           ))}
