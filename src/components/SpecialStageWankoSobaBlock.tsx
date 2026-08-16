@@ -24,7 +24,7 @@ export function SpecialStageWankoSobaBlock({
     <article id={stage.id} className="scroll-mt-24 flex flex-col">
       <div className="relative">
         <div className="lg:pr-[340px] xl:pr-[360px]">
-          <h3 className="text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:text-[32px] lg:leading-[46px]">
+          <h3 className="text-2xl font-bold leading-[46px] text-primary lg:text-[26px]">
             <span className="lg:hidden">
               鯖江青年会議所イベント
               <br />

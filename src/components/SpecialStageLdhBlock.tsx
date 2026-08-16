@@ -33,9 +33,9 @@ function PerformerCard({ performer }: { performer: SpecialStagePerformer }) {
 
   return (
     <div className="@container">
-      <div className="relative aspect-[178/164] overflow-hidden rounded-[20px] bg-[#f3f2f9] lg:aspect-[304/227]">
+      <div className="relative aspect-[356/329] w-full lg:aspect-[607/496]">
         {performer.comingSoon ? (
-          <div className="flex h-full items-center justify-center px-4 text-center font-display text-[24px] font-normal leading-8 whitespace-pre-line text-[#868686] lg:text-[32px] lg:leading-[46px]">
+          <div className="flex h-full items-center justify-center rounded-[20px] bg-[#f3f2f9] px-4 text-center font-display text-[24px] font-normal leading-8 whitespace-pre-line text-[#868686] lg:text-[32px] lg:leading-[46px]">
             {"COMING\nSOON"}
           </div>
         ) : performer.image ? (
@@ -44,18 +44,16 @@ function PerformerCard({ performer }: { performer: SpecialStagePerformer }) {
               <Image
                 src={withBasePath(performer.imageSp)}
                 alt={imageAlt}
-                width={356}
-                height={329}
-                className="h-full w-full object-cover lg:hidden"
+                fill
+                className="object-contain lg:hidden"
                 sizes="45vw"
               />
             ) : null}
             <Image
               src={withBasePath(performer.image)}
               alt={imageAlt}
-              width={609}
-              height={454}
-              className={`h-full w-full object-cover ${performer.imageSp ? "hidden lg:block" : ""}`}
+              fill
+              className={`object-contain ${performer.imageSp ? "hidden lg:block" : ""}`}
               sizes="(max-width: 1024px) 45vw, 305px"
             />
           </>
@@ -76,7 +74,7 @@ export function SpecialStageLdhBlock({ stage }: SpecialStageLdhBlockProps) {
 
   return (
     <article id={stage.id} className="scroll-mt-24 flex flex-col">
-      <h3 className="text-2xl font-bold leading-tight text-primary sm:text-[28px] lg:text-[32px] lg:leading-[46px]">
+      <h3 className="text-[24px] font-bold leading-[46px] text-primary lg:text-[26px] lg:leading-[39px]">
         {stage.subtitle}
       </h3>
 
@@ -87,7 +85,7 @@ export function SpecialStageLdhBlock({ stage }: SpecialStageLdhBlockProps) {
       </p>
 
       {performers.length > 0 ? (
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:mt-10 lg:grid-cols-4">
+        <div className="mt-4 grid grid-cols-2 items-start gap-x-4 gap-y-4 sm:gap-x-6 sm:gap-y-6 lg:mt-5 lg:grid-cols-4">
           {performers.map((performer, index) => (
             <PerformerCard key={`${performer.name ?? performer.image ?? "performer"}-${index}`} performer={performer} />
           ))}

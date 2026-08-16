@@ -22,6 +22,12 @@ export type SpecialStageButton = {
   label: string;
   href: string;
   external?: boolean;
+  download?: boolean;
+};
+
+export type SpecialStageFlyer = {
+  image: string;
+  imageAlt?: string;
 };
 
 export type SpecialStageGuest = {
@@ -53,12 +59,15 @@ export type SpecialStage = {
   subtitle: string;
   description: string;
   image?: string;
+  imageSp?: string;
   imageAlt?: string;
   models?: SpecialStageModel[];
   performers?: SpecialStagePerformer[];
   illustration?: string;
   illustrationAlt?: string;
   button?: SpecialStageButton;
+  buttons?: SpecialStageButton[];
+  flyers?: SpecialStageFlyer[];
   guests?: SpecialStageGuest[];
 };
 

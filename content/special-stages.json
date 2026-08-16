@@ -25,10 +25,34 @@
     "description": "鯖江が世界に誇る“眼鏡”を取り入れたコーディネートで、TGCモデルが登場。一つひとつ丁寧に作られた眼鏡には、職人の高い技術と想いが込められています。モデルたちは、自分らしいスタイルとともに、鯖江のものづくりの魅力を発信します。",
     "models": [
       {
+        "name": "池田優斗（WILD BLUE）",
+        "image": "/images/special-stage/tgc-model-ikeda.png",
+        "imageSp": "/images/special-stage/tgc-model-ikeda-sp.png",
+        "imageAlt": "池田優斗（WILD BLUE）"
+      },
+      {
+        "name": "小國舞羽",
+        "image": "/images/special-stage/tgc-model-kokuni.png",
+        "imageSp": "/images/special-stage/tgc-model-kokuni-sp.png",
+        "imageAlt": "小國舞羽"
+      },
+      {
+        "name": "葛西杏也菜",
+        "image": "/images/special-stage/tgc-model-kasai.png",
+        "imageSp": "/images/special-stage/tgc-model-kasai-sp.png",
+        "imageAlt": "葛西杏也菜"
+      },
+      {
         "name": "なんり",
         "image": "/images/special-stage/tgc-model-nanri.png",
         "imageSp": "/images/special-stage/tgc-model-nanri-sp.png",
         "imageAlt": "なんり"
+      },
+      {
+        "name": "希空",
+        "image": "/images/special-stage/tgc-model-kikuu.png",
+        "imageSp": "/images/special-stage/tgc-model-kikuu-sp.png",
+        "imageAlt": "希空"
       },
       {
         "name": "MINAMI",
@@ -37,19 +61,16 @@
         "imageAlt": "MINAMI"
       },
       {
+        "name": "宮武颯（WILD BLUE）",
+        "image": "/images/special-stage/tgc-model-miyatake.png",
+        "imageSp": "/images/special-stage/tgc-model-miyatake-sp.png",
+        "imageAlt": "宮武颯（WILD BLUE）"
+      },
+      {
         "name": "米澤りあ",
         "image": "/images/special-stage/tgc-model-yonezawa-ria.png",
         "imageSp": "/images/special-stage/tgc-model-yonezawa-ria-sp.png",
         "imageAlt": "米澤りあ"
-      },
-      { "comingSoon": true },
-      { "comingSoon": true },
-      {
-        "image": "/images/special-stage/tgc-model-3-56586a.png",
-        "imageSp": "/images/special-stage/tgc-model-3-sp.png",
-        "imageAlt": "TGCモデル",
-        "tall": true,
-        "noBackground": true
       }
     ]
   },
@@ -89,6 +110,21 @@
     ]
   },
   {
+    "id": "shinako-world-live",
+    "dateBar": {
+      "date": "10.17",
+      "day": "sat",
+      "title": "しなこワールドLIVE"
+    },
+    "subtitle": "",
+    "description": "SNSで大人気のクリエイター・アーティスト「しなこ」がミライフェスに登場！\n歌って踊って、しなこと一緒に最高に盛り上がろう！",
+    "image": "/images/special-stage/shinako-world-live.png",
+    "imageSp": "/images/special-stage/shinako-world-live-sp.png",
+    "imageAlt": "しなこ",
+    "illustration": "/images/special-stage/shinako-world-live-illustration.png",
+    "illustrationAlt": "しなこワールドLIVE"
+  },
+  {
     "id": "dance-contest",
     "dateBar": {
       "date": "10.18",
@@ -98,13 +134,28 @@
     },
     "subtitle": "踊って魅せる！さばえのミライ",
     "description": "子どもたちがチームで創り上げたオリジナルダンスを披露するショーケースを、コンテスト形式で開催。\n振付や演出には「鯖江らしさ」を取り入れ、めがねのまちやものづくりなど、地域の魅力を表現します。ミライを担う子どもたちが届ける熱いパフォーマンスを、ぜひ会場でお楽しみください。",
-    "illustration": "/images/special-stage/dance-contest-illustration.png",
-    "illustrationAlt": "ダンスショーコンテスト",
-    "button": {
-      "label": "募集要項・参加申込",
-      "href": "https://form.run/@sabaemiraifes2026-dance",
-      "external": true
-    },
+    "buttons": [
+      {
+        "label": "募集要項・参加申込",
+        "href": "https://form.run/@sabaemiraifes2026-dance",
+        "external": true
+      },
+      {
+        "label": "チラシのダウンロード",
+        "href": "/files/dance-contest-flyer.pdf",
+        "download": true
+      }
+    ],
+    "flyers": [
+      {
+        "image": "/images/special-stage/dance-contest-flyer-front.png",
+        "imageAlt": "ダンスショーケースコンテストチラシ（表）"
+      },
+      {
+        "image": "/images/special-stage/dance-contest-flyer-back.png",
+        "imageAlt": "ダンスショーケースコンテストチラシ（裏）"
+      }
+    ],
     "guests": [
       {
         "label": "MC",
