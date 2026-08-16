@@ -113,12 +113,12 @@ function TicketInfoRowMobile({
 
   return (
     <div className={`border-t border-[#DCDCDC]${lastRowClassName}`}>
-      <div className="py-[10px]">
+      <div className="pt-[10px]">
         <div className="flex min-h-[58px] items-center justify-center bg-[#EFEFEF] px-2 text-center text-base font-bold leading-[26px] text-[#4B5563] whitespace-pre-line">
           {label}
         </div>
       </div>
-      <div className="py-5 text-base text-[#4B5563]">{children}</div>
+      <div className="py-5 text-sm text-[#4B5563]">{children}</div>
     </div>
   );
 }
@@ -146,7 +146,7 @@ function TicketSampleCard({
 
 function AreaSectionContent() {
   return (
-    <div className="space-y-4 text-base leading-[22px]">
+    <div className="space-y-4 leading-[22px]">
       <div>
         <p>会場内は、ステージ前方から以下の3つのエリアに分かれます。</p>
         <p>
@@ -208,7 +208,7 @@ function AreaSectionContent() {
 
 function NumberedList({ items }: { items: string[] }) {
   return (
-    <div className="text-base leading-7">
+    <div className="leading-7">
       {items.map((item, index) => {
         const [firstLine, ...restLines] = item.split("\n");
         return (
@@ -229,7 +229,7 @@ function NumberedList({ items }: { items: string[] }) {
 
 function BulletedList({ items }: { items: string[] }) {
   return (
-    <div className="text-base leading-7">
+    <div className="leading-7">
       {items.map((item) => (
         <p key={item} className="flex gap-0">
           <span aria-hidden="true" className="shrink-0">
