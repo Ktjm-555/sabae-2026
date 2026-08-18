@@ -53,6 +53,14 @@ function TgcModelCard({ model }: { model: SpecialStageModel }) {
           className={`object-contain ${model.imageSp ? "hidden lg:block" : ""}`}
           sizes="(max-width: 1024px) 45vw, 250px"
         />
+        {model.imageCredit ? (
+          <p
+            className="pointer-events-none absolute inset-x-0 bottom-2 px-3 text-center text-[8px] font-medium leading-none text-foreground [text-shadow:1px_0_0_#fff,-1px_0_0_#fff,0_1px_0_#fff,0_-1px_0_#fff] lg:bottom-3 lg:px-4 lg:text-right lg:text-[10px]"
+            aria-hidden="true"
+          >
+            {model.imageCredit}
+          </p>
+        ) : null}
       </div>
 
       {model.name ? (

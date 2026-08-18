@@ -5,6 +5,7 @@ export type SpecialStageModel = {
   image?: string;
   imageSp?: string;
   imageAlt?: string;
+  imageCredit?: string;
   comingSoon?: boolean;
   tall?: boolean;
   noBackground?: boolean;
