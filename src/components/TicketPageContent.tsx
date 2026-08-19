@@ -150,7 +150,7 @@ function AreaSectionContent() {
       <div>
         <p>会場内は、ステージ前方から以下の3つのエリアに分かれます。</p>
         <p>
-          ① 鯖江市内園児エリア
+          ① 鯖江市内キッズエリア
           <br />
           ② 鯖江市内親子エリア
           <br />
@@ -159,7 +159,7 @@ function AreaSectionContent() {
       </div>
 
       <div>
-        <p className="font-bold">①鯖江市内園児エリア</p>
+        <p className="font-bold">①鯖江市内キッズエリア</p>
         <p className="pl-4 font-bold">
           EXILE BE HAPPY TETSUYAさんたちと一緒に「さばえハッピーダンス」を踊ろう！
         </p>
@@ -304,7 +304,7 @@ function buildTicketRows(content: TicketContent): TicketRow[] {
             1. 開場時間（12:00）になりましたら、以下の順番でエリア内へご案内します。
             <br />
             <span className="pl-4 font-bold">
-              ① 鯖江市内園児エリア
+              ① 鯖江市内キッズエリア
               <br />
               　② 鯖江市内親子エリア
               <br />
