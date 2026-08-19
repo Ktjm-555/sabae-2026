@@ -115,15 +115,16 @@
     "dateBar": {
       "date": "10.17",
       "day": "sat",
-      "title": "しなこワールドLIVE"
+      "title": "ARTIST LIVE"
     },
     "subtitle": "",
     "description": "SNSで大人気のクリエイター・アーティスト「しなこ」がミライフェスに登場！\n歌って踊って、しなこと一緒に最高に盛り上がろう！",
     "image": "/images/special-stage/shinako-world-live.png",
     "imageSp": "/images/special-stage/shinako-world-live-sp.png",
     "imageAlt": "しなこ",
+    "imageName": "しなこ",
     "illustration": "/images/special-stage/shinako-world-live-illustration.png",
-    "illustrationAlt": "しなこワールドLIVE"
+    "illustrationAlt": "ARTIST LIVE"
   },
   {
     "id": "dance-contest",
