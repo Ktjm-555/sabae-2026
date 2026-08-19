@@ -62,6 +62,7 @@ export type SpecialStage = {
   image?: string;
   imageSp?: string;
   imageAlt?: string;
+  imageName?: string;
   models?: SpecialStageModel[];
   performers?: SpecialStagePerformer[];
   illustration?: string;

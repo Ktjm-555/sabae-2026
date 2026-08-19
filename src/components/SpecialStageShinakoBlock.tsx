@@ -8,7 +8,7 @@ interface SpecialStageShinakoBlockProps {
 
 export function SpecialStageShinakoBlock({ stage }: SpecialStageShinakoBlockProps) {
   const imageAlt = stage.imageAlt ?? "しなこ";
-  const illustrationAlt = stage.illustrationAlt ?? "しなこワールドLIVE";
+  const illustrationAlt = stage.illustrationAlt ?? "ARTIST LIVE";
 
   const photo = stage.image ? (
     <div className="relative aspect-[356/329] w-[calc((100%-1rem)/2)] shrink-0 sm:w-[calc((100%-1.5rem)/2)] lg:aspect-[607/496] lg:w-[calc((100cqw-4.5rem)/4)]">
@@ -63,8 +63,13 @@ export function SpecialStageShinakoBlock({ stage }: SpecialStageShinakoBlockProp
         </p>
 
         {photo ? (
-          <div className="order-2 flex w-full justify-center lg:order-1 lg:w-auto lg:justify-start">
+          <div className="order-2 flex w-full flex-col items-center lg:order-1 lg:w-auto lg:items-start">
             {photo}
+            {stage.imageName ? (
+              <p className="mt-2 w-[calc((100%-1rem)/2)] text-center text-base font-medium text-foreground sm:w-[calc((100%-1.5rem)/2)] sm:text-xl lg:w-[calc((100cqw-4.5rem)/4)]">
+                {stage.imageName}
+              </p>
+            ) : null}
           </div>
         ) : null}
 
