@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { AsobiAreaSection } from "@/components/AsobiAreaSection";
+import { GourmetAreaSection } from "@/components/GourmetAreaSection";
 import { Header } from "@/components/Header";
 import { NewsPageBackground } from "@/components/NewsPageBackground";
-import { SpecialStageDateBar } from "@/components/SpecialStageDateBar";
 
 export const metadata: Metadata = {
   title: "ブース一覧",
@@ -32,17 +33,10 @@ export default function BoothsPage() {
 
               <div className="overflow-hidden rounded-[20px] bg-white lg:rounded-[40px]">
                 <div className="px-4 pb-4 pt-5 sm:px-6 lg:px-[42px] lg:pb-6 lg:pt-8">
-                  <section id="gourmet" className="scroll-mt-24">
-                    <div className="-mx-4 sm:-mx-6 lg:mx-0">
-                      <SpecialStageDateBar
-                        date="10.17"
-                        day="sat"
-                        endDate="10.18"
-                        endDay="sun"
-                        title="グルメエリア"
-                      />
-                    </div>
-                  </section>
+                  <div className="flex flex-col gap-10 lg:gap-14">
+                    <AsobiAreaSection />
+                    <GourmetAreaSection />
+                  </div>
                 </div>
               </div>
             </div>
