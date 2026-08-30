@@ -17,7 +17,10 @@
   },
   "navigation": [
     { "label": "トップ", "href": "/" },
-    { "label": "お知らせ", "href": "/news" }
+    { "label": "お知らせ", "href": "/news" },
+    { "label": "ステージイベント", "href": "/#special-stage" },
+    { "label": "ブース一覧", "href": "/booths" },
+    { "label": "会場マップ", "href": "/#venue-map" }
   ],
   "contact": {
     "general": {

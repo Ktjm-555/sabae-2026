@@ -3,9 +3,42 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
+
+function parseNavHref(href: string) {
+  const hashIndex = href.indexOf("#");
+  if (hashIndex === -1) {
+    return { path: href, hash: null as string | null };
+  }
+
+  return {
+    path: href.slice(0, hashIndex) || "/",
+    hash: href.slice(hashIndex + 1),
+  };
+}
+
+function normalizePathname(pathname: string) {
+  if (!pathname || pathname === "/") {
+    return "/";
+  }
+
+  return pathname.replace(/\/$/, "");
+}
+
+function isNavItemActive(pathname: string, href: string) {
+  const { path, hash } = parseNavHref(href);
+  if (hash) {
+    return false;
+  }
+
+  return normalizePathname(pathname) === normalizePathname(path);
+}
+
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
 
 function SocialIcon({
   type,
@@ -44,8 +77,45 @@ export function Header({ overlay }: HeaderProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const isHome = pathname === "/";
+  const isHome = normalizePathname(pathname) === "/";
   const isOverlay = overlay ?? isHome;
+
+  useEffect(() => {
+    if (!isHome) {
+      return;
+    }
+
+    const hash = window.location.hash.slice(1);
+    if (!hash) {
+      return;
+    }
+
+    requestAnimationFrame(() => scrollToSection(hash));
+  }, [isHome, pathname]);
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    closeMobileMenu = false,
+  ) => {
+    const { path, hash } = parseNavHref(href);
+
+    if (isHome) {
+      if (hash) {
+        event.preventDefault();
+        scrollToSection(hash);
+        window.history.pushState(null, "", href);
+      } else if (normalizePathname(path) === "/") {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", "/");
+      }
+    }
+
+    if (closeMobileMenu) {
+      setIsOpen(false);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full">
@@ -77,13 +147,14 @@ export function Header({ overlay }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 className={`text-base font-bold transition-colors ${
-                  pathname === item.href ? "text-primary" : "text-foreground"
+                  isNavItemActive(pathname, item.href) ? "text-primary" : "text-foreground"
                 }`}
+                onClick={(event) => handleNavClick(event, item.href)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="ml-1 flex items-center gap-4 border-l border-border pl-6">
+            <div className="flex items-center gap-4">
               <Link
                 href={site.social.twitter}
                 className="text-primary transition-opacity hover:opacity-70"
@@ -154,9 +225,9 @@ export function Header({ overlay }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   className={`text-base font-bold transition-colors ${
-                    pathname === item.href ? "text-primary" : "text-foreground"
+                    isNavItemActive(pathname, item.href) ? "text-primary" : "text-foreground"
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(event) => handleNavClick(event, item.href, true)}
                 >
                   {item.label}
                 </Link>
