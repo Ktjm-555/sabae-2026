@@ -47,11 +47,25 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionTitle title="ミライフェスとは" subtitle="ABOUT" />
 
-          <div className="relative z-10 mx-auto max-w-[1127px] rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:px-12 lg:py-10">
-            <p className="whitespace-pre-line text-base font-medium leading-[1.8] text-foreground lg:text-xl lg:font-normal">
-              <span className="block font-bold">{site.tagline}</span>
-              {site.aboutDescription}
-            </p>
+          <div className="relative z-10 mx-auto grid max-w-[1127px] gap-5 lg:grid-cols-[575fr_533fr] lg:gap-[19px]">
+            <div className="rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:px-12 lg:py-10">
+              <p className="whitespace-pre-line text-base font-medium leading-8 text-foreground lg:text-xl">
+                <span className="block font-bold">{site.tagline}</span>
+                {site.aboutDescription}
+              </p>
+            </div>
+
+            <div className="rounded-[20px] bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-8 lg:px-12 lg:py-10">
+              <div className="text-base font-medium leading-8 text-foreground lg:text-xl">
+                <p className="font-bold">{site.aboutRainPolicyTitle}</p>
+                {site.aboutRainPolicyItems.map((item) => (
+                  <p key={item.label}>
+                    <span className="font-bold">{item.label}</span>
+                    {item.text}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <AreasWaveTop className="relative z-[1] -mt-[200px] lg:-mt-36" />
