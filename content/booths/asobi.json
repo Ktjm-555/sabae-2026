@@ -1,0 +1,141 @@
+[
+  {
+    "id": "jieitai-kids",
+    "title": "自衛隊キッズ体験",
+    "exhibitor": "自衛隊福井地方協力本部",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "image": "/images/booths/asobi/jieitai-kids.png",
+    "imageAlt": "自衛隊キッズ体験",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": -31, "width": 294, "height": 196 },
+      "sp": { "x": -48, "y": -4, "width": 246, "height": 164 }
+    }
+  },
+  {
+    "id": "shooting-lockon",
+    "title": "本格的エアーソフトガンでの、射撃体験！",
+    "exhibitor": "射撃処ロックon",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "image": "/images/booths/asobi/shooting-lockon.png",
+    "imageAlt": "本格的エアーソフトガンでの、射撃体験！",
+    "imageCrop": {
+      "desktop": { "x": -1, "y": -38, "width": 295, "height": 393 },
+      "sp": { "x": -1, "y": -15, "width": 155, "height": 207 }
+    }
+  },
+  {
+    "id": "fire-experience",
+    "title": "火事から命を守ろう！ 消火と煙体験",
+    "exhibitor": "鯖江･丹生消防組合",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "image": "/images/booths/asobi/fire-experience.png",
+    "imageAlt": "火事から命を守ろう！ 消火と煙体験",
+    "imageCrop": {
+      "desktop": { "x": -42, "y": -13, "width": 352, "height": 235 },
+      "sp": { "x": -52, "y": -6, "width": 253, "height": 169 }
+    }
+  },
+  {
+    "id": "molkky",
+    "title": "モルック体験会",
+    "exhibitor": "鯖江市モルック協会",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "image": "/images/booths/asobi/molkky.png",
+    "imageAlt": "モルック体験会",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": -54, "width": 294, "height": 302 },
+      "sp": { "x": -14, "y": -5, "width": 187, "height": 192 }
+    }
+  },
+  {
+    "id": "yuruibasho",
+    "title": "あそべる！だがしや  ゆるいばしょ",
+    "exhibitor": "ゆるいばしょ",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "image": "/images/booths/asobi/yuruibasho.png",
+    "imageAlt": "あそべる！だがしや  ゆるいばしょ",
+    "imageCrop": {
+      "desktop": { "x": -33, "y": -43, "width": 330, "height": 220 },
+      "sp": { "x": -59, "y": 0, "width": 231, "height": 154 }
+    }
+  },
+  {
+    "id": "sabae-police",
+    "title": "地域の安全・安心を守る警察の仕事",
+    "exhibitor": "鯖江警察署",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "image": "/images/booths/asobi/sabae-police.png",
+    "imageAlt": "地域の安全・安心を守る警察の仕事",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": -16, "width": 362, "height": 241 },
+      "sp": { "x": -26, "y": -3, "width": 245, "height": 163 }
+    }
+  },
+  {
+    "id": "esports",
+    "title": "eスポーツ体験！",
+    "exhibitor": "合同会社Overclock",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "imageAlt": "eスポーツ体験！"
+  },
+  {
+    "id": "parkour-drop",
+    "title": "パルクール体験",
+    "exhibitor": "dr0p",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "image": "/images/booths/asobi/parkour-drop.png",
+    "imageAlt": "パルクール体験",
+    "imageCrop": {
+      "desktop": { "x": -25, "y": -8, "width": 320, "height": 213 },
+      "sp": { "x": -71, "y": 0, "width": 242, "height": 161 }
+    }
+  },
+  {
+    "id": "flying-disc",
+    "title": "みんなでフライングディスク！ニュースポーツ体験",
+    "exhibitor": "鯖江市スポーツ推進委員協議会",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "みんなでフライングディスク！ニュースポーツ体験"
+  },
+  {
+    "id": "newsports",
+    "title": "ニュースポーツをやってみよう！",
+    "exhibitor": "NPO法人 越前市障がいスポーツクラブ",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "ニュースポーツをやってみよう！"
+  },
+  {
+    "id": "freethrow",
+    "title": "フリースローで当てよう！観戦チケット抽選会",
+    "exhibitor": "㈱福井ブローウィンズ",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "フリースローで当てよう！観戦チケット抽選会"
+  },
+  {
+    "id": "power-shovel",
+    "title": "パワーショベルでボールすくい",
+    "exhibitor": "太平造園",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "パワーショベルでボールすくい"
+  }
+]
