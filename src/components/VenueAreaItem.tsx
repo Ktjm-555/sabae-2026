@@ -20,6 +20,9 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
       ? "lg:-right-[calc(48/52*12%)]"
       : "";
 
+  const showButton =
+    Boolean(area.buttonLabel) && area.id !== "mystery-rally";
+
   const imageBlock = (
     // SPでは画像は下に固定、PCでは、左右交互になる
     <div
@@ -93,6 +96,15 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
       >
         {area.description}
       </p>
+      {showButton ? (
+        <div className={`mt-3 hidden lg:flex lg:justify-start ${textInset}`}>
+          <VenueAreaButton
+            href={area.buttonHref}
+            label={area.buttonLabel}
+            external={area.buttonExternal}
+          />
+        </div>
+      ) : null}
     </div>
   );
 
@@ -103,6 +115,15 @@ export function VenueAreaItem({ area }: VenueAreaItemProps) {
     >
       {imageBlock}
       {textBlock}
+      {showButton ? (
+        <div className="order-3 mt-6 flex justify-center lg:hidden">
+          <VenueAreaButton
+            href={area.buttonHref}
+            label={area.buttonLabel}
+            external={area.buttonExternal}
+          />
+        </div>
+      ) : null}
     </article>
   );
 }
