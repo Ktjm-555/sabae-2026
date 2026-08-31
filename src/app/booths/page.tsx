@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { AsobiAreaSection } from "@/components/AsobiAreaSection";
+import { BoothAreaSection } from "@/components/BoothAreaSection";
 import { GourmetAreaSection } from "@/components/GourmetAreaSection";
 import { Header } from "@/components/Header";
 import { NewsPageBackground } from "@/components/NewsPageBackground";
@@ -34,6 +35,7 @@ export default function BoothsPage() {
               <div className="overflow-hidden rounded-[20px] bg-white lg:rounded-[40px]">
                 <div className="px-4 pb-4 pt-5 sm:px-6 lg:px-[42px] lg:pb-6 lg:pt-8">
                   <div className="flex flex-col gap-10 lg:gap-14">
+                    <BoothAreaSection />
                     <AsobiAreaSection />
                     <GourmetAreaSection />
                   </div>

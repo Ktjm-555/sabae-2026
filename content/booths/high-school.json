@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sabae-coca-cafe",
+    "title": "サバコーカフェ",
+    "squareNumber": "05",
+    "squareColor": "#4A3A93",
+    "imageAlt": "サバコーカフェ"
+  },
+  {
+    "id": "rescue-quiz",
+    "title": "クイズと体験で学ぶ！レスキューのひみつ",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "クイズと体験で学ぶ！レスキューのひみつ"
+  },
+  {
+    "id": "futsuu",
+    "title": "「ふつうってなに？」",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "「ふつうってなに？」"
+  },
+  {
+    "id": "self-care-video",
+    "title": "セルフケア動画プロジェクト",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "セルフケア動画プロジェクト"
+  },
+  {
+    "id": "yasai-aisaiya",
+    "title": "野菜愛菜家",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "野菜愛菜家"
+  },
+  {
+    "id": "paper-cup-top",
+    "title": "紙コップでコマ作り",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "紙コップでコマ作り"
+  },
+  {
+    "id": "superball-scoop",
+    "title": "スーパーボールすくい",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "スーパーボールすくい"
+  },
+  {
+    "id": "sabae-baseball",
+    "title": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）"
+  }
+]
