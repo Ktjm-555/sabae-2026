@@ -6,8 +6,11 @@ import { BoothDetailModal } from "@/components/BoothDetailModal";
 import { withBasePath } from "@/lib/basePath";
 import type { BoothBooth } from "@/lib/booths";
 
+type ImageSpFit = "width" | "contain" | "cover";
+
 interface BoothBoothCardProps {
   booth: BoothBooth;
+  defaultImageSpFit?: ImageSpFit;
 }
 
 type FigmaCrop = {
@@ -36,6 +39,7 @@ function scaleCropUniform(
   from: { width: number; height: number },
   to: { width: number; height: number },
   fit: "width" | "contain" | "cover" = "width",
+  align: "center" | "top" = "center",
 ): FigmaCrop {
   const scale =
     fit === "contain"
@@ -46,11 +50,12 @@ function scaleCropUniform(
   const width = crop.width * scale;
   const height = crop.height * scale;
   const bleed = fit === "cover" ? 1 : 0;
+  const topAligned = fit === "cover" && align === "top";
   return {
     x: (fit === "width" ? crop.x * scale : (to.width - width) / 2) - bleed,
-    y: (to.height - height) / 2 - bleed,
+    y: topAligned ? 0 : (to.height - height) / 2 - bleed,
     width: width + bleed * 2,
-    height: height + bleed * 2,
+    height: height + bleed * (topAligned ? 1 : 2),
   };
 }
 
@@ -62,6 +67,7 @@ function FigmaCropImage({
   className,
   sizes,
   backgroundColor = "#D9D9D9",
+  clipFringe = false,
 }: {
   src: string;
   alt: string;
@@ -70,19 +76,22 @@ function FigmaCropImage({
   className: string;
   sizes: string;
   backgroundColor?: string;
+  clipFringe?: boolean;
 }) {
   return (
     <div
       className={`relative overflow-hidden ${className}`}
       style={{ backgroundColor }}
     >
-      <div className="absolute" style={cropStyle(crop, clip)}>
+      <div className="absolute overflow-hidden" style={cropStyle(crop, clip)}>
         <Image
           src={withBasePath(src)}
           alt={alt}
           fill
           sizes={sizes}
-          className="object-cover"
+          className={
+            clipFringe ? "object-cover scale-[1.04]" : "object-cover"
+          }
         />
       </div>
     </div>
@@ -106,17 +115,21 @@ function SquareBadge({
   );
 }
 
-export function BoothBoothCard({ booth }: BoothBoothCardProps) {
+export function BoothBoothCard({
+  booth,
+  defaultImageSpFit = "width",
+}: BoothBoothCardProps) {
   const [open, setOpen] = useState(false);
   const desktopCrop = booth.imageCrop?.desktop;
   const note = booth.note;
   const noteColor = booth.noteColor;
   const exhibitor = booth.exhibitor;
   const hasDetail = booth.detail != null;
-  const spFit =
+  const spFit: ImageSpFit =
     booth.imageSpFit === "contain" || booth.imageSpFit === "cover"
       ? booth.imageSpFit
-      : "width";
+      : defaultImageSpFit;
+  const spAlign = booth.imageSpAlign === "top" ? "top" : "center";
 
   return (
     <article
@@ -146,6 +159,7 @@ export function BoothBoothCard({ booth }: BoothBoothCardProps) {
             className="aspect-[294/164] shrink-0 rounded-t-[20px] max-md:hidden"
             sizes="(max-width: 1023px) 50vw, 294px"
             backgroundColor={booth.imageBackgroundColor}
+            clipFringe={booth.imageClipFringe}
           />
           <FigmaCropImage
             src={booth.image}
@@ -155,15 +169,17 @@ export function BoothBoothCard({ booth }: BoothBoothCardProps) {
               CLIP_DESKTOP,
               CLIP_SP,
               spFit,
+              spAlign,
             )}
             clip={CLIP_SP}
             className="hidden h-[157px] w-[150px] shrink-0 rounded-r-[20px] max-md:order-2 max-md:block"
             sizes="150px"
             backgroundColor={
-              booth.imageSpFit === "contain"
+              booth.imageSpFit === "contain" && !booth.imageBackgroundColor
                 ? undefined
                 : booth.imageBackgroundColor
             }
+            clipFringe={booth.imageClipFringe}
           />
         </>
       ) : (

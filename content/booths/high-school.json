@@ -4,7 +4,10 @@
     "title": "サバコーカフェ",
     "squareNumber": "05",
     "squareColor": "#4A3A93",
-    "imageAlt": "サバコーカフェ"
+    "imageAlt": "サバコーカフェ",
+    "detail": {
+      "body": "スカッシュを販売します"
+    }
   },
   {
     "id": "rescue-quiz",
@@ -13,7 +16,10 @@
     "squareColor": "#1F935C",
     "note": "※17日(土)のみ",
     "noteColor": "#0B5AB1",
-    "imageAlt": "クイズと体験で学ぶ！レスキューのひみつ"
+    "imageAlt": "クイズと体験で学ぶ！レスキューのひみつ",
+    "detail": {
+      "body": "•トリアージについての資料説明とクイズ\n•模擬応急処置体験\n•実物のトリアージに触れる"
+    }
   },
   {
     "id": "futsuu",
@@ -22,41 +28,59 @@
     "squareColor": "#F5A200",
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
-    "imageAlt": "「ふつうってなに？」"
+    "imageAlt": "「ふつうってなに？」",
+    "detail": {
+      "body": "無意識の偏見や思い込み（アンコンシャス･バイアス）を自覚してもらうため、その人が思うふつうの家族を書いて貼ってもらいます。"
+    }
   },
   {
     "id": "self-care-video",
     "title": "セルフケア動画プロジェクト",
     "squareNumber": "02",
     "squareColor": "#1F935C",
-    "imageAlt": "セルフケア動画プロジェクト"
+    "imageAlt": "セルフケア動画プロジェクト",
+    "detail": {
+      "body": "「セルフケア」の啓発動画を作成し、視聴してもらうことで、セルフケアの理解を深めます。"
+    }
   },
   {
     "id": "yasai-aisaiya",
     "title": "野菜愛菜家",
     "squareNumber": "02",
     "squareColor": "#1F935C",
-    "imageAlt": "野菜愛菜家"
+    "imageAlt": "野菜愛菜家",
+    "detail": {
+      "body": "子どもたちの苦手な野菜についての情報などを掲示し、それを使った料理を提供することで、野菜に対する理解を深めます。"
+    }
   },
   {
     "id": "paper-cup-top",
     "title": "紙コップでコマ作り",
     "squareNumber": "06",
     "squareColor": "#CE386A",
-    "imageAlt": "紙コップでコマ作り"
+    "imageAlt": "紙コップでコマ作り",
+    "detail": {
+      "body": "紙コップを使って、親子でコマを作るワークショップを開催し、親子の関わりを増やしてもらいます。"
+    }
   },
   {
     "id": "superball-scoop",
     "title": "スーパーボールすくい",
     "squareNumber": "06",
     "squareColor": "#CE386A",
-    "imageAlt": "スーパーボールすくい"
+    "imageAlt": "スーパーボールすくい",
+    "detail": {
+      "body": "未就園児と小学生に、いろいろな道具（お玉やスプーン、箸など）を使って、スーパーボールをすくってもらいます。"
+    }
   },
   {
     "id": "sabae-baseball",
     "title": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）",
     "squareNumber": "06",
     "squareColor": "#CE386A",
-    "imageAlt": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）"
+    "imageAlt": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）",
+    "detail": {
+      "body": "野球人口の拡大と地域のニーズに応えるため、年間11回開催している野球教室の取り組みを紹介します。また、ストラックアウトも実施します。"
+    }
   }
 ]

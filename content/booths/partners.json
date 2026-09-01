@@ -3,13 +3,30 @@
     "id": "tbd-sdgs",
     "title": "未定",
     "exhibitor": "さばえSDGs部",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
     "imageAlt": "未定",
+    "detail": {
+      "links": {
+        "hp": "https://www.sabae-sdgs.jp/sdgsclub",
+        "instagram": "https://www.instagram.com/sdgs.bu/"
+      }
+    },
     "image": "/images/booths/partners/tbd-sdgs.png",
     "imageCrop": {
-      "desktop": { "x": 0, "y": 0, "width": 294, "height": 164 },
-      "sp": { "x": 0, "y": 0, "width": 150, "height": 157 }
-    },
-    "squarePending": true
+      "desktop": {
+        "x": 0,
+        "y": 0,
+        "width": 294,
+        "height": 164
+      },
+      "sp": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 157
+      }
+    }
   },
   {
     "id": "sabae-seni-accessory",
@@ -18,6 +35,13 @@
     "squareNumber": "08",
     "squareColor": "#B17F44",
     "imageAlt": "鯖江市産のレースを使ってアクセサリーづくり体験！",
+    "detail": {
+      "body": "レースは使い放題！！\n当日はレース商品の販売も行います。",
+      "links": {
+        "hp": "https://store.sabaeseni.com",
+        "instagram": "https://www.instagram.com/sabaeseni.official/"
+      }
+    },
     "image": "/images/booths/partners/sabae-seni-accessory.png",
     "imageCrop": {
       "desktop": {
@@ -41,6 +65,12 @@
     "squareNumber": "02",
     "squareColor": "#1F935C",
     "imageAlt": "観葉植物･盆栽販売＆植え替え",
+    "detail": {
+      "body": "観葉植物、盆栽などを販売。\n植え替え講習会も。",
+      "links": {
+        "instagram": "https://www.instagram.com/n_m_kyoko/"
+      }
+    },
     "image": "/images/booths/partners/niwamasa.png",
     "imageCrop": {
       "desktop": {
@@ -66,6 +96,12 @@
     "imageAlt": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
     "imageBackgroundColor": "#F8F8F8",
     "imageSpFit": "cover",
+    "detail": {
+      "body": "車のフロントガラスに付いていた接着剤を抽出してできたインクを使って、キーホルダーやプレートに色塗りをします。\n\n一部、ディンプルアートの作品販売もいたします。",
+      "links": {
+        "hp": "https://gift-carina.com/"
+      }
+    },
     "image": "/images/booths/partners/carina.png",
     "imageCrop": {
       "desktop": {
@@ -89,6 +125,13 @@
     "squareNumber": "02",
     "squareColor": "#1F935C",
     "imageAlt": "100年歩ける体をつくる！SDGs健康みらい学校",
+    "detail": {
+      "body": "子どもたちの健やかな成長と、ご家族の持続可能な健康づくりをサポートする体験型ブースです。\n\n近年、スマホやタブレットの普及により、親子で姿勢悪化や運動能力の低下が地域でも課題となっています。\n\n当ブースでは、家族でゲーム感覚で楽しく参加できる「姿勢バランス測定」を実施し、自分の体の状態を「自分ごと」として体感してもらいます。",
+      "links": {
+        "hp": "https://tsuzichiro.com/",
+        "instagram": "https://www.instagram.com/saoc11039/"
+      }
+    },
     "image": "/images/booths/partners/tsuji-chiropractic.png",
     "imageCrop": {
       "desktop": {
@@ -113,6 +156,13 @@
     "squareColor": "#4A3A93",
     "imageAlt": "独自開発、繭から生まれた天然保湿成分「ピュアセリシン™」配合化粧品",
     "imageSpFit": "contain",
+    "detail": {
+      "body": "「コモエース化粧品」は、繊維産業の盛んな福井県で130年以上続く絹づくりの現場から生まれた、敏感肌のためのスキンケアブランドです。\n\n当日はピュアセリシン™の原料体験をご用意しております。驚きの保湿力をご体感ください。",
+      "links": {
+        "hp": "https://store.seiren.com",
+        "instagram": "https://www.instagram.com/comoace_official/"
+      }
+    },
     "image": "/images/booths/partners/seiren-cosmetics.png",
     "imageCrop": {
       "desktop": {
@@ -136,6 +186,12 @@
     "squareNumber": "05",
     "squareColor": "#4A3A93",
     "imageAlt": "和紙を染めよう",
+    "detail": {
+      "body": "誰でもチャレンジできる、越前和紙 おり染めワークショップ。\n大判和紙や和紙小物も販売します。",
+      "links": {
+        "instagram": "https://www.instagram.com/macchann_ichoukoubou/"
+      }
+    },
     "image": "/images/booths/partners/ichou-kobo.png",
     "imageCrop": {
       "desktop": {
@@ -159,10 +215,27 @@
     "squareNumber": "07",
     "squareColor": "#29714F",
     "imageAlt": "天然素材100％！環境にやさしいヤシ殻マット",
+    "detail": {
+      "body": "ヤシ殻から生まれた屋外用ロールマット『コイヤーグラウンド®︎』の展示",
+      "links": {
+        "hp": "https://www.coirground.jp/",
+        "instagram": "https://www.instagram.com/coir_ground_japan/"
+      }
+    },
     "image": "/images/booths/partners/coir-ground.png",
     "imageCrop": {
-      "desktop": { "x": 0, "y": 0, "width": 294, "height": 164 },
-      "sp": { "x": 0, "y": 0, "width": 150, "height": 157 }
+      "desktop": {
+        "x": 0,
+        "y": 0,
+        "width": 294,
+        "height": 164
+      },
+      "sp": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 157
+      }
     }
   },
   {
@@ -174,6 +247,12 @@
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
     "imageAlt": "オリジナルジグソーパズル体験",
+    "detail": {
+      "body": "•小児がんなど重い病気で闘病中の子どもが描いた絵をもとに制作したオリジナルのジグソーパズル遊び体験を通して、闘病をがんばっている子どもたちの存在に気付いてもらうとともに、子どもの絵の力を感じてもらう。\n\n•全国のご支援者さまから寄せられた支援物品（手作り品）の販売を行う。",
+      "links": {
+        "hp": "https://www.fukuikinderhospiz.com/"
+      }
+    },
     "image": "/images/booths/partners/fukui-hospice.png",
     "imageCrop": {
       "desktop": {
@@ -200,7 +279,7 @@
     "noteColor": "#E60012",
     "imageAlt": "地元の木を使って山を守ろう！木工教室",
     "detail": {
-      "body": "•「めがね入れ」を作る木工教室と森のはなし\n①10:00～ ②11:00～ ③13:00～ ④14:00～ ⑤15:00～（各回10個）\n•森林･林業に関するパネル展示"
+      "body": "•「めがね入れ」を作る木工教室と森のはなし\n①10:00～ ②11:00～ ③13:00～ ④14:00～ ⑤15:00～（各回10個）\n\n•森林･林業に関するパネル展示"
     },
     "image": "/images/booths/partners/tannan-forestry.png",
     "imageCrop": {
@@ -225,6 +304,12 @@
     "squareNumber": "03",
     "squareColor": "#F5A200",
     "imageAlt": "生きものカードゲーム体験＆ベルマーク回収",
+    "detail": {
+      "body": "色合わせをベースにしたカードゲームで、自分だけのランドスケープ（世界）を完成させる体験。\n\nボランティアの入り口としてのベルマーク収集。",
+      "links": {
+        "hp": "https://sabae-npo.org/"
+      }
+    },
     "image": "/images/booths/partners/sabae-npo-support.png",
     "imageCrop": {
       "desktop": {
@@ -248,6 +333,13 @@
     "squareNumber": "07",
     "squareColor": "#29714F",
     "imageAlt": "ペットボトル楽器でモンスターを倒そう！",
+    "detail": {
+      "body": "ペットボトルに空気をつめこみ楽器に変身させる体験や、楽器を奏でて海ごみモンスターを退治するゲームができます。",
+      "links": {
+        "hp": "https://miraimigaki0.stars.ne.jp/",
+        "instagram": "https://www.instagram.com/miraimigaki_ethical_game/"
+      }
+    },
     "image": "/images/booths/partners/miraimigaki.png",
     "imageCrop": {
       "desktop": {
@@ -271,6 +363,12 @@
     "squareNumber": "07",
     "squareColor": "#29714F",
     "imageAlt": "ハザイをアップサイクル！",
+    "detail": {
+      "body": "製造工程で出てくるハザイを使用して作成したカードケース、バッグ、レジャーシートのほか、アウトドアにピッタリな難燃ドッグウェア、難燃焚火ウェアなどを数多く販売予定です。\n\nワークショップについては、ハザイを使用した子ども向けワークショップを実施予定。どなたでも参加可能です。",
+      "links": {
+        "hp": "https://kanbo.co.jp/"
+      }
+    },
     "image": "/images/booths/partners/kanbo-plus.png",
     "imageCrop": {
       "desktop": {
@@ -294,6 +392,15 @@
     "squareNumber": "07",
     "squareColor": "#29714F",
     "imageAlt": "アクアクララ SDGs給水ステーション",
+    "detail": {
+      "body": "①マイボトルへの給水スポット\n②廃材（古紙･廃ボトル）を利用した輪投げチャレンジ",
+      "links": {
+        "hp": "https://fukui.aquaclara-web.jp/",
+        "twitter": "https://x.com/aquashopf",
+        "facebook": "https://www.facebook.com/p/%E3%82%A2%E3%82%AF%E3%82%A2%E3%82%AF%E3%83%A9%E3%83%A9_%E3%82%A2%E3%82%AF%E3%82%A2%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E7%A6%8F%E4%BA%95-100083355608109/",
+        "instagram": "https://www.instagram.com/aquashop_fukui/"
+      }
+    },
     "image": "/images/booths/partners/aqua-clara.png",
     "imageCrop": {
       "desktop": {
@@ -317,6 +424,12 @@
     "squareNumber": "05",
     "squareColor": "#4A3A93",
     "imageAlt": "越前漆器販売＆絵付け体験",
+    "detail": {
+      "body": "越前漆器の販売。\n体験は簡単にできる絵付け体験（スタンプ蒔絵あり）を実施。",
+      "links": {
+        "hp": "https://www.echizen.or.jp/"
+      }
+    },
     "image": "/images/booths/partners/echizen-shikki.png",
     "imageCrop": {
       "desktop": {
@@ -340,6 +453,9 @@
     "squareNumber": "06",
     "squareColor": "#CE386A",
     "imageAlt": "カッキーパンダくんとエコサバで柿を活用しよう！",
+    "detail": {
+      "body": "鯖江市で展開されている「#かきもぎアクション」に連動。収穫して食べきれない柿があればお持ちください。欲しい方に配布し、里山の資源を活用します。\n\nおうちの柿の木で困っている人も、ご相談ください。\n\n【カッキーパンダくん】\nみんなが収穫した柿をジャムや干し柿に変身させるよ。クマさんやサルさんがまちに来ないよう、里山を守っているんだ！"
+    },
     "image": "/images/booths/partners/eco-saba.png",
     "imageCrop": {
       "desktop": {
@@ -365,6 +481,12 @@
     "imageAlt": "食べるアート！サクサククッキーを可愛くデコろう",
     "imageBackgroundColor": "#1F8FFD",
     "imageSpFit": "cover",
+    "detail": {
+      "body": "子どもから大人まで簡単に楽しめるアイシングクッキー体験のほか、お土産にうれしい焼き菓子や数量限定のチーズケーキの販売をします。",
+      "links": {
+        "instagram": "https://www.instagram.com/ao.sweets/"
+      }
+    },
     "image": "/images/booths/partners/tezukuri-sweets-ao.png",
     "imageCrop": {
       "desktop": {
@@ -388,6 +510,14 @@
     "squareNumber": "07",
     "squareColor": "#29714F",
     "imageAlt": "捨てない未来へ！木屑でつくる香り袋",
+    "detail": {
+      "body": "鯖江市の伝統工芸である漆器の製造過程で発生する木屑を活用し、オリジナルの香り袋（サシェ）を制作するワークショップ「SABAE WOOD AROMA」を実施します。\n\n麻袋に自由に絵や模様を描き、その中に木屑を入れてアロマを加えることで、自分だけの香り袋を作ることができます。\n\nまた、鯖江市の企業、㈱キッソオと共同開発したペット用アクセサリー「Umenowa」の展示も行います。",
+      "links": {
+        "hp": "https://umegorin.com/sabae/",
+        "instagram": "https://www.instagram.com/sabae.wg/",
+        "twitter": "https://x.com/sabae_wg"
+      }
+    },
     "image": "/images/booths/partners/tsudajuku-ume.png",
     "imageCrop": {
       "desktop": {
@@ -413,6 +543,9 @@
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
     "imageAlt": "明治安田の健康チェック！",
+    "detail": {
+      "body": "簡単に健康状態を測定できる機器を用いて、健康に関するリスクや改善策についての情報提供を行い、皆さまの健康意識の向上に貢献します。"
+    },
     "image": "/images/booths/partners/meiji-yasuda.png",
     "imageCrop": {
       "desktop": {
@@ -438,6 +571,9 @@
     "imageAlt": "眼育(めいく)さばえ応援ねこピンチ",
     "imageBackgroundColor": "#F3DCE2",
     "imageSpFit": "cover",
+    "detail": {
+      "body": "「眼育さばえ」の活動内容の展示と、「眼育さばえ」を応援する資金のための、ねこピンチの販売をします。"
+    },
     "image": "/images/booths/partners/niigata-iryo.png",
     "imageCrop": {
       "desktop": {
@@ -461,6 +597,12 @@
     "squareNumber": "06",
     "squareColor": "#CE386A",
     "imageAlt": "ぬりえで英語あそび",
+    "detail": {
+      "body": "ぬりえからアルファベットを探してお菓子をプレゼント。\n希望の方には無料体験レッスンのお知らせ、受付も可能です。",
+      "links": {
+        "instagram": "https://www.instagram.com/peppykidsclub_kanazawa/"
+      }
+    },
     "image": "/images/booths/partners/peppys-kids.png",
     "imageCrop": {
       "desktop": {
@@ -486,6 +628,9 @@
     "note": "※17日(土)のみ",
     "noteColor": "#0B5AB1",
     "imageAlt": "ミライのお金学習 ～クイズに挑戦＆マイカードお絵かき～",
+    "detail": {
+      "body": "子ども向け金融[お金]クイズとクレジットカードお絵かき体験（先着順数量限定）"
+    },
     "image": "/images/booths/partners/orient-corp.png",
     "imageCrop": {
       "desktop": {
@@ -508,7 +653,16 @@
     "exhibitor": "KISSO",
     "squareNumber": "08",
     "squareColor": "#B17F44",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
     "imageAlt": "めがねバングルワークショップ",
+    "detail": {
+      "body": "アセテートのメガネパーツを熱で曲げてバングルにします。",
+      "links": {
+        "hp": "https://kissojapan.com/",
+        "instagram": "https://www.instagram.com/kisso_official/"
+      }
+    },
     "image": "/images/booths/partners/kisso.png",
     "imageCrop": {
       "desktop": {
@@ -533,6 +687,13 @@
     "squareColor": "#B17F44",
     "imageAlt": "わ！ふくい®︎〜福井を着る。未来を作る。",
     "imageBackgroundColor": "#B69B78",
+    "imageSpAlign": "top",
+    "detail": {
+      "body": "①めがねフェス衣装の展示\n②外国人着物体験の写真展示\n③酒井家住宅、着物体験の紹介\n④ふっこちゃんコーナー\n⑤SDGsとのつながりを紹介",
+      "links": {
+        "instagram": "https://www.instagram.com/itotohari_kimono/"
+      }
+    },
     "image": "/images/booths/partners/ito-tower.png",
     "imageCrop": {
       "desktop": {
@@ -556,6 +717,12 @@
     "squareNumber": "02",
     "squareColor": "#1F935C",
     "imageAlt": "いざという時のためみんなで備えよう！",
+    "detail": {
+      "body": "パネルで防災啓発／防災グッズの販売",
+      "links": {
+        "hp": "https://midori-bousai.com"
+      }
+    },
     "image": "/images/booths/partners/midori-bosai.png",
     "imageCrop": {
       "desktop": {
@@ -579,6 +746,14 @@
     "squareNumber": "03",
     "squareColor": "#F5A200",
     "imageAlt": "映画「きみの音が見えたとき」",
+    "imageBackgroundColor": "#271C1A",
+    "imageSpFit": "contain",
+    "detail": {
+      "body": "映画「きみの音が見えたとき」のパネル展示／チラシ配布",
+      "links": {
+        "hp": "https://www.movie-kimioto.com/"
+      }
+    },
     "image": "/images/booths/partners/kimiot.png",
     "imageCrop": {
       "desktop": {
@@ -602,6 +777,12 @@
     "squareNumber": "03",
     "squareColor": "#F5A200",
     "imageAlt": "シェアサイクルで変わる?! さばえのスローカブルなミライ",
+    "detail": {
+      "body": "最近、鯖江の街なかで見かけるようになった緑色のシェアサイクル「LUUP（ループ）」。\nこの新しく「ゆっくりな移動体験」が、鯖江のまち歩きや暮らしを、もっと楽しく、もっと便利に（スローカブルに！）変える可能性を秘めています。\n皆さんと一緒にこれからの「さばえの移動と暮らし」を考える、楽しくてためになる企画を用意します！\n\n①【みる・ふれる】実際のLUUPを体感！\n②【えがく】未来の「さばえLUUPマップ」づくり\n③【アンケート】あなたの声が、まちの未来に直結！（※学生たちの卒業研究にも役立てられます！）",
+      "links": {
+        "hp": "https://www.fukui-ut.ac.jp/"
+      }
+    },
     "image": "/images/booths/partners/fukui-tech.png",
     "imageCrop": {
       "desktop": {
@@ -620,13 +801,16 @@
   },
   {
     "id": "kofu-tourism",
-    "title": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合",
+    "title": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合✨",
     "exhibitor": "甲府市･甲府市観光協会",
     "squareNumber": "03",
     "squareColor": "#F5A200",
     "note": "※17日(土)のみ",
     "noteColor": "#0B5AB1",
-    "imageAlt": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合",
+    "imageAlt": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合✨",
+    "detail": {
+      "body": "〇甲府之証認定商品を含めた特産品の販売\n〇宝石すくい＆オリジナルキーホルダーづくり\n〇特産品が当たるガチャガチャガチャ(商品購入者)\n〇甲府市地場産業クイズ"
+    },
     "image": "/images/booths/partners/kofu-tourism.png",
     "imageCrop": {
       "desktop": {
@@ -650,6 +834,11 @@
     "squareNumber": "03",
     "squareColor": "#F5A200",
     "imageAlt": "体験しよう！地層処分",
+    "detail": {
+      "links": {
+        "hp": "https://www.numo.or.jp/chisoushobun/ichikarashiritai/"
+      }
+    },
     "image": "/images/booths/partners/numo.png",
     "imageCrop": {
       "desktop": {
@@ -675,6 +864,13 @@
     "imageAlt": "本みくじ＆ミライ本棚",
     "imageBackgroundColor": "#F73202",
     "imageSpFit": "cover",
+    "imageClipFringe": true,
+    "detail": {
+      "body": "出張本棚でさまざまな本をご紹介します(販売)。\nおみくじ感覚で普段選ばない本をマッチングさせる【本みくじ】では、新しい一冊との出会いを楽しんでください。\n「ミライ本棚」と題して、模造紙に未来に残したい本や大人になっても読みたい本、子どもに今後読んで欲しい本などを来場者の皆さんに書き込んでもらい、一緒にひとつの本棚をつくります。",
+      "links": {
+        "instagram": "https://www.instagram.com/kineno_books/"
+      }
+    },
     "image": "/images/booths/partners/kine-bookstore.png",
     "imageCrop": {
       "desktop": {
@@ -699,6 +895,12 @@
     "squareColor": "#B17F44",
     "imageAlt": "さばえ＊まちなか芸術祭2026",
     "imageSpFit": "cover",
+    "detail": {
+      "body": "さばえ＊まちなか芸術祭（10/3～10/25 開催）\n\n西山公園内に展示されている野外アートをめぐるクイズラリーを実施",
+      "links": {
+        "hp": "https://www.city.sabae.fukui.jp/kosodate_kyoiku/manabenoyakata/bunkaka.html"
+      }
+    },
     "image": "/images/booths/partners/machinaka-art.png",
     "imageCrop": {
       "desktop": {
@@ -722,6 +924,9 @@
     "squareNumber": "08",
     "squareColor": "#B17F44",
     "imageAlt": "地域つなぐラボ",
+    "detail": {
+      "body": "•日本旅行が運営しているファンコミサイト「地域つなぐラボ」の鯖江ファン新規獲得・コミュニティへの会員登録促進のために、鯖江市の魅力を発信。\n•子どもも体験できるコンテンツを通したヒアリング。\n•アンケートの実施。"
+    },
     "image": "/images/booths/partners/nta.png",
     "imageCrop": {
       "desktop": {

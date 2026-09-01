@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { BoothDetailModal } from "@/components/BoothDetailModal";
 import { withBasePath } from "@/lib/basePath";
-import type { GourmetBooth } from "@/lib/booths";
+import type { BoothBooth, GourmetBooth } from "@/lib/booths";
 
 interface GourmetBoothCardProps {
   booth: GourmetBooth;
@@ -56,11 +60,29 @@ function FigmaCropImage({
 }
 
 export function GourmetBoothCard({ booth }: GourmetBoothCardProps) {
+  const [open, setOpen] = useState(false);
   const desktopCrop = booth.imageCrop?.desktop;
   const spCrop = booth.imageCrop?.sp;
+  const hasDetail = booth.detail != null;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:min-h-[157px] max-md:flex-row max-md:pl-4">
+    <article
+      className={`relative flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:min-h-[157px] max-md:flex-row max-md:pl-4 ${
+        hasDetail
+          ? "cursor-pointer transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)]"
+          : ""
+      }`}
+    >
+      {hasDetail ? (
+        <button
+          type="button"
+          className="absolute inset-0 z-10 cursor-pointer rounded-[20px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          aria-label={`${booth.title}の詳細`}
+        />
+      ) : null}
       {booth.image && desktopCrop && spCrop ? (
         <>
           <FigmaCropImage
@@ -91,6 +113,13 @@ export function GourmetBoothCard({ booth }: GourmetBoothCardProps) {
       <h3 className="flex flex-1 px-[10px] pb-4 pt-2 text-base font-bold leading-[26px] text-[#4B5563] max-md:order-1 max-md:min-w-0 max-md:px-0 max-md:pb-4 max-md:pr-5 max-md:pt-3.5 max-md:text-sm max-md:leading-6">
         {booth.title}
       </h3>
+      {hasDetail ? (
+        <BoothDetailModal
+          booth={booth as BoothBooth}
+          open={open}
+          onClose={() => setOpen(false)}
+        />
+      ) : null}
     </article>
   );
 }

@@ -2,12 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { withBasePath } from "@/lib/basePath";
 import type { BoothBooth } from "@/lib/booths";
 import { getSabaeActionContent } from "@/lib/sabaeAction";
-import { getSiteConfig } from "@/lib/site";
 
 interface BoothDetailModalProps {
   booth: BoothBooth;
@@ -52,6 +51,45 @@ function CloseIcon() {
   );
 }
 
+function HomeIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 30 32" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M15.8169 0.335736C15.7097 0.229312 15.5824 0.144877 15.4422 0.0872658C15.302 0.0296548 15.1518 0 15 0C14.8482 0 14.698 0.0296548 14.5578 0.0872658C14.4176 0.144877 14.2903 0.229312 14.1831 0.335736L0.336925 14.0491C0.229844 14.1555 0.144971 14.2817 0.0871596 14.4205C0.029348 14.5593 -0.000268961 14.7081 1.84037e-06 14.8582V30.8572C1.84037e-06 31.1603 0.121567 31.451 0.337955 31.6653C0.554344 31.8796 0.847829 32 1.15385 32H11.5385C11.8445 32 12.138 31.8796 12.3544 31.6653C12.5707 31.451 12.6923 31.1603 12.6923 30.8572V21.7149H17.3077V30.8572C17.3077 31.1603 17.4293 31.451 17.6456 31.6653C17.862 31.8796 18.1555 32 18.4615 32H28.8462C29.1522 32 29.4457 31.8796 29.662 31.6653C29.8784 31.451 30 31.1603 30 30.8572V14.8582C30.0003 14.7081 29.9707 14.5593 29.9128 14.4205C29.855 14.2817 29.7702 14.1555 29.6631 14.0491L26.5385 10.9568V3.4304C26.5385 3.12731 26.4169 2.83664 26.2005 2.62233C25.9841 2.40801 25.6906 2.28761 25.3846 2.28761H23.0769C22.7709 2.28761 22.4774 2.40801 22.261 2.62233C22.0446 2.83664 21.9231 3.12731 21.9231 3.4304V6.38564L15.8169 0.335736ZM2.30769 29.7144V15.3313L15 2.76072L27.6923 15.3313V29.7144H19.6154V20.5722C19.6154 20.2691 19.4938 19.9784 19.2774 19.7641C19.061 19.5498 18.7676 19.4294 18.4615 19.4294H11.5385C11.2324 19.4294 10.939 19.5498 10.7226 19.7641C10.5062 19.9784 10.3846 20.2691 10.3846 20.5722V29.7144H2.30769Z" />
+    </svg>
+  );
+}
+
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
+const LINK_ITEMS = [
+  { key: "hp", label: "ホームページ", Icon: HomeIcon },
+  { key: "twitter", label: "X（Twitter）", Icon: XIcon },
+  { key: "instagram", label: "Instagram", Icon: InstagramIcon },
+  { key: "facebook", label: "Facebook", Icon: FacebookIcon },
+] as const;
+
 function ActionLabel() {
   return (
     <>
@@ -75,12 +113,23 @@ function ActionLabel() {
 export function BoothDetailModal({ booth, open, onClose }: BoothDetailModalProps) {
   const titleId = useId();
   const dialogRef = useRef<HTMLDivElement>(null);
-  const site = getSiteConfig();
+  const [mounted, setMounted] = useState(false);
   const action = getSabaeActionContent().items.find(
     (item) => item.num === booth.squareNumber,
   );
   const desktopCrop = booth.imageCrop?.desktop;
   const body = booth.detail?.body;
+  const links = booth.detail?.links;
+  const socialLinks = LINK_ITEMS.flatMap((item) => {
+    const href = links?.[item.key];
+    return href ? [{ ...item, href }] : [];
+  });
+  const showMeta = Boolean(booth.note || booth.exhibitor);
+  const showFooter = socialLinks.length > 0 || Boolean(action);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -103,7 +152,7 @@ export function BoothDetailModal({ booth, open, onClose }: BoothDetailModalProps
     };
   }, [open, onClose]);
 
-  if (!open || typeof document === "undefined") {
+  if (!open || !mounted) {
     return null;
   }
 
@@ -118,10 +167,11 @@ export function BoothDetailModal({ booth, open, onClose }: BoothDetailModalProps
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className="relative my-auto flex w-full max-w-[370px] flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.25)] outline-none md:max-w-[900px]"
+        className="relative my-auto w-full max-w-[370px] isolate overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.25)] outline-none md:max-w-[900px]"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-start justify-between gap-4 px-[13px] pt-4 md:px-8 md:pt-[19px]">
+        <div className="max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain">
+          <div className="flex items-start justify-between gap-4 px-[13px] pt-4 md:px-8 md:pt-[19px]">
           <h2
             id={titleId}
             className="min-w-0 flex-1 text-[18px] font-bold leading-[27px] text-[#4B5563] md:text-2xl md:leading-[48px]"
@@ -146,13 +196,20 @@ export function BoothDetailModal({ booth, open, onClose }: BoothDetailModalProps
               className="relative aspect-[294/164] overflow-hidden rounded-[20px]"
               style={{ backgroundColor: booth.imageBackgroundColor ?? "#D9D9D9" }}
             >
-              <div className="absolute" style={cropStyle(desktopCrop, CLIP_DESKTOP)}>
+              <div
+                className="absolute overflow-hidden"
+                style={cropStyle(desktopCrop, CLIP_DESKTOP)}
+              >
                 <Image
                   src={withBasePath(booth.image)}
                   alt={booth.imageAlt}
                   fill
                   sizes="(max-width: 767px) 344px, 836px"
-                  className="object-cover"
+                  className={
+                    booth.imageClipFringe
+                      ? "object-cover scale-[1.04]"
+                      : "object-cover"
+                  }
                 />
               </div>
             </div>
@@ -164,95 +221,86 @@ export function BoothDetailModal({ booth, open, onClose }: BoothDetailModalProps
         </div>
 
         {body ? (
-          <p className="whitespace-pre-line px-[13px] pt-4 text-xs leading-6 text-[#4B5563] md:px-8 md:pt-[25px] md:text-base md:leading-8">
-            {body}
-          </p>
+          <div
+            className={`space-y-1.5 px-[13px] pt-4 text-xs leading-5 text-[#4B5563] md:space-y-2 md:px-8 md:pt-[25px] md:text-base md:leading-7 ${
+              showMeta || showFooter ? "" : "pb-4 md:pb-6"
+            }`}
+          >
+            {body.split(/\n\n+/).map((paragraph, index) => (
+              <p key={index} className="whitespace-pre-line">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         ) : null}
 
-        <div className="mt-4 flex items-center justify-between gap-3 px-[13px] md:mt-6 md:px-8">
-          {booth.note ? (
-            <p
-              className="shrink-0 text-[13px] leading-[26px] md:text-lg md:leading-[26px]"
-              style={{ color: booth.noteColor }}
-            >
-              {booth.note}
-            </p>
-          ) : (
-            <span />
-          )}
-          {booth.exhibitor ? (
-            <p className="min-w-0 text-right text-[13px] leading-[26px] text-[#4B5563] md:text-lg md:leading-[26px]">
-              {booth.exhibitor}
-            </p>
-          ) : null}
-        </div>
-
-        <div className="mt-4 border-t border-[#DCDCDC] md:mt-5" />
-
-        <div className="flex items-center justify-between gap-3 px-[13px] py-2.5 md:px-8 md:py-2.5">
-          <div className="relative h-5 w-[106px] shrink-0 md:h-8 md:w-[162px]">
-            <Image
-              src={withBasePath("/images/booths/modal-sns.svg")}
-              alt=""
-              width={162}
-              height={32}
-              className="h-full w-full"
-            />
-            <div className="absolute inset-0 flex">
-              <Link
-                href="/"
-                className="flex-1"
-                aria-label="トップページ"
-                onClick={onClose}
-              />
-              <Link
-                href={site.social.twitter}
-                className="flex-1"
-                aria-label="X（Twitter）"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
-              <Link
-                href={site.social.instagram}
-                className="flex-1"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
-              <Link
-                href={site.social.facebook}
-                className="flex-1"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
-            </div>
+        {showMeta ? (
+          <div className="mt-4 flex items-center justify-between gap-3 px-[13px] md:mt-6 md:px-8">
+            {booth.note ? (
+              <p
+                className="shrink-0 text-[13px] leading-[26px] md:text-lg md:leading-[26px]"
+                style={{ color: booth.noteColor }}
+              >
+                {booth.note}
+              </p>
+            ) : (
+              <span />
+            )}
+            {booth.exhibitor ? (
+              <p className="min-w-0 whitespace-pre-line text-right text-[13px] leading-[26px] text-[#4B5563] md:text-lg md:leading-[26px]">
+                {booth.exhibitor}
+              </p>
+            ) : null}
           </div>
+        ) : null}
 
-          {action ? (
-            <div className="flex shrink-0 items-center gap-1.5 md:gap-3">
-              <ActionLabel />
-              <span
-                className="h-7 w-px shrink-0 bg-[#DCDCDC] md:h-[54px]"
-                aria-hidden="true"
-              />
-              <Image
-                src={withBasePath(action.image)}
-                alt=""
-                width={60}
-                height={60}
-                className="size-[31px] shrink-0 md:size-[60px]"
-              />
-              <div className="shrink-0">
-                <p className="text-[13px] font-bold leading-[19.5px] text-[#B8B8B8] md:text-xl md:leading-6">
-                  {action.num}
-                </p>
-                <p className="whitespace-nowrap text-[9px] leading-[12.5px] text-[#4B5563] md:text-base md:leading-6">
-                  {action.text}
-                </p>
+        {showFooter ? (
+          <>
+            <div className="mt-4 border-t border-[#DCDCDC] md:mt-5" />
+
+            <div className="flex items-center justify-between gap-3 px-[13px] py-2.5 md:px-8 md:py-2.5">
+              <div className="flex min-h-5 min-w-0 items-center gap-[7px] md:min-h-8 md:gap-3">
+                {socialLinks.map(({ key, href, label, Icon }) => (
+                  <Link
+                    key={key}
+                    href={href}
+                    className="shrink-0 text-[#0B5AB1] transition-opacity hover:opacity-80"
+                    aria-label={label}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="size-5 md:size-8" />
+                  </Link>
+                ))}
               </div>
+
+              {action ? (
+                <div className="flex shrink-0 items-center gap-1.5 md:gap-3">
+                  <ActionLabel />
+                  <span
+                    className="h-7 w-px shrink-0 bg-[#DCDCDC] md:h-[54px]"
+                    aria-hidden="true"
+                  />
+                  <Image
+                    src={withBasePath(action.image)}
+                    alt=""
+                    width={60}
+                    height={60}
+                    className="size-[31px] shrink-0 md:size-[60px]"
+                  />
+                  <div className="shrink-0">
+                    <p className="text-[13px] font-bold leading-[19.5px] text-[#B8B8B8] md:text-xl md:leading-6">
+                      {action.num}
+                    </p>
+                    <p className="whitespace-nowrap text-[9px] leading-[12.5px] text-[#4B5563] md:text-base md:leading-6">
+                      {action.text}
+                    </p>
+                  </div>
+                </div>
+              ) : null}
             </div>
-          ) : null}
+          </>
+        ) : null}
         </div>
       </div>
     </div>,

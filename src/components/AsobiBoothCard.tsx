@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { BoothDetailModal } from "@/components/BoothDetailModal";
 import { withBasePath } from "@/lib/basePath";
-import type { AsobiBooth } from "@/lib/booths";
+import type { AsobiBooth, BoothBooth } from "@/lib/booths";
 
 interface AsobiBoothCardProps {
   booth: AsobiBooth;
@@ -75,13 +79,31 @@ function SquareBadge({
 }
 
 export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
+  const [open, setOpen] = useState(false);
   const desktopCrop = booth.imageCrop?.desktop;
   const spCrop = booth.imageCrop?.sp;
   const note = "note" in booth ? booth.note : undefined;
   const noteColor = "noteColor" in booth ? booth.noteColor : undefined;
+  const hasDetail = booth.detail != null;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:h-[157px] max-md:flex-row max-md:pl-4">
+    <article
+      className={`relative flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:h-[157px] max-md:flex-row max-md:pl-4 ${
+        hasDetail
+          ? "cursor-pointer transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)]"
+          : ""
+      }`}
+    >
+      {hasDetail ? (
+        <button
+          type="button"
+          className="absolute inset-0 z-10 cursor-pointer rounded-[20px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          aria-label={`${booth.title}の詳細`}
+        />
+      ) : null}
       {booth.image && desktopCrop && spCrop ? (
         <>
           <FigmaCropImage
@@ -143,6 +165,13 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
           ) : null}
         </div>
       </div>
+      {hasDetail ? (
+        <BoothDetailModal
+          booth={booth as BoothBooth}
+          open={open}
+          onClose={() => setOpen(false)}
+        />
+      ) : null}
     </article>
   );
 }

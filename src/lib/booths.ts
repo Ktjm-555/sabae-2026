@@ -13,8 +13,16 @@ type FigmaCrop = {
   height: number;
 };
 
+export type BoothDetailLinks = {
+  hp?: string;
+  twitter?: string;
+  instagram?: string;
+  facebook?: string;
+};
+
 export type BoothDetail = {
   body?: string;
+  links?: BoothDetailLinks;
 };
 
 export type BoothBooth = {
@@ -30,6 +38,8 @@ export type BoothBooth = {
   image?: string;
   imageBackgroundColor?: string;
   imageSpFit?: string;
+  imageSpAlign?: string;
+  imageClipFringe?: boolean;
   imageCrop?: {
     desktop: FigmaCrop;
     sp: FigmaCrop;
