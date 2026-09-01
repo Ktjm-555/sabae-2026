@@ -8,7 +8,7 @@
     "imageAlt": "ブースエリアの様子",
     "imagePosition": "left",
     "buttonLabel": "詳しくはこちら",
-    "buttonHref": "#",
+    "buttonHref": "/booths#booth",
     "buttonExternal": false
   },
   {
@@ -20,7 +20,7 @@
     "imageAlt": "アソビエリアの様子",
     "imagePosition": "right",
     "buttonLabel": "詳しくはこちら",
-    "buttonHref": "#",
+    "buttonHref": "/booths#asobi",
     "buttonExternal": false
   },
   {
@@ -32,7 +32,7 @@
     "imageAlt": "グルメエリアの様子",
     "imagePosition": "left",
     "buttonLabel": "詳しくはこちら",
-    "buttonHref": "#",
+    "buttonHref": "/booths#gourmet",
     "buttonExternal": false
   },
   {

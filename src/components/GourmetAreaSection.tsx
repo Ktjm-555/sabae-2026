@@ -6,7 +6,7 @@ export function GourmetAreaSection() {
   const booths = getGourmetBooths();
 
   return (
-    <section id="gourmet" className="scroll-mt-24">
+    <section id="gourmet" className="scroll-mt-28 lg:scroll-mt-32">
       <div className="-mx-4 sm:-mx-6 lg:mx-0">
         <SpecialStageDateBar
           date="10.17"

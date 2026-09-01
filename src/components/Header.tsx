@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { withBasePath } from "@/lib/basePath";
 import { getSiteConfig } from "@/lib/site";
 
@@ -36,8 +36,34 @@ function isNavItemActive(pathname: string, href: string) {
   return normalizePathname(pathname) === normalizePathname(path);
 }
 
+function jumpToSection(id: string) {
+  const el = document.getElementById(id);
+  if (!el) {
+    return;
+  }
+
+  const scrollMarginTop = Number.parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+  const y = el.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+  window.scrollTo(0, Math.max(0, y));
+}
+
 function scrollToSection(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function waitForImages(root: ParentNode) {
+  const images = Array.from(root.querySelectorAll("img"));
+
+  return Promise.all(
+    images.map((img) =>
+      img.complete
+        ? Promise.resolve()
+        : new Promise<void>((resolve) => {
+            img.addEventListener("load", () => resolve(), { once: true });
+            img.addEventListener("error", () => resolve(), { once: true });
+          }),
+    ),
+  );
 }
 
 function SocialIcon({
@@ -80,18 +106,36 @@ export function Header({ overlay }: HeaderProps) {
   const isHome = normalizePathname(pathname) === "/";
   const isOverlay = overlay ?? isHome;
 
-  useEffect(() => {
-    if (!isHome) {
-      return;
-    }
-
+  useLayoutEffect(() => {
     const hash = window.location.hash.slice(1);
     if (!hash) {
       return;
     }
 
-    requestAnimationFrame(() => scrollToSection(hash));
-  }, [isHome, pathname]);
+    const html = document.documentElement;
+    const previousBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+
+    let cancelled = false;
+    const run = () => {
+      if (!cancelled) {
+        jumpToSection(hash);
+      }
+    };
+
+    run();
+    void waitForImages(document).then(() => {
+      run();
+      if (!cancelled) {
+        html.style.scrollBehavior = previousBehavior;
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      html.style.scrollBehavior = previousBehavior;
+    };
+  }, [pathname]);
 
   const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
