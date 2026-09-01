@@ -1,0 +1,741 @@
+[
+  {
+    "id": "tbd-sdgs",
+    "title": "未定",
+    "exhibitor": "さばえSDGs部",
+    "imageAlt": "未定",
+    "image": "/images/booths/partners/tbd-sdgs.png",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": 0, "width": 294, "height": 164 },
+      "sp": { "x": 0, "y": 0, "width": 150, "height": 157 }
+    },
+    "squarePending": true
+  },
+  {
+    "id": "sabae-seni-accessory",
+    "title": "鯖江市産のレースを使ってアクセサリーづくり体験！",
+    "exhibitor": "サバエセンイ㈱",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "鯖江市産のレースを使ってアクセサリーづくり体験！",
+    "image": "/images/booths/partners/sabae-seni-accessory.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -1,
+        "y": -67,
+        "width": 297,
+        "height": 297
+      },
+      "sp": {
+        "x": -0.51,
+        "y": -64.14,
+        "width": 151.53,
+        "height": 284.32
+      }
+    }
+  },
+  {
+    "id": "niwamasa",
+    "title": "観葉植物･盆栽販売＆植え替え",
+    "exhibitor": "庭匡 ーNiwamasaー",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "観葉植物･盆栽販売＆植え替え",
+    "image": "/images/booths/partners/niwamasa.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 0,
+        "y": -109,
+        "width": 295,
+        "height": 393
+      },
+      "sp": {
+        "x": 0.0,
+        "y": -104.35,
+        "width": 150.51,
+        "height": 376.23
+      }
+    }
+  },
+  {
+    "id": "carina",
+    "title": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
+    "exhibitor": "CARINA",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
+    "imageBackgroundColor": "#F8F8F8",
+    "imageSpFit": "cover",
+    "image": "/images/booths/partners/carina.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 44,
+        "y": -69,
+        "width": 233,
+        "height": 291
+      },
+      "sp": {
+        "x": 22.45,
+        "y": -66.05,
+        "width": 118.88,
+        "height": 278.58
+      }
+    }
+  },
+  {
+    "id": "tsuji-chiropractic",
+    "title": "100年歩ける体をつくる！SDGs健康みらい学校",
+    "exhibitor": "つじカイロプラクティック院",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "100年歩ける体をつくる！SDGs健康みらい学校",
+    "image": "/images/booths/partners/tsuji-chiropractic.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -1,
+        "y": -112,
+        "width": 297,
+        "height": 420
+      },
+      "sp": {
+        "x": -0.51,
+        "y": -107.22,
+        "width": 151.53,
+        "height": 402.07
+      }
+    }
+  },
+  {
+    "id": "seiren-cosmetics",
+    "title": "独自開発、繭から生まれた天然保湿成分「ピュアセリシン™」配合化粧品",
+    "exhibitor": "セーレン㈱ コモエース化粧品",
+    "squareNumber": "05",
+    "squareColor": "#4A3A93",
+    "imageAlt": "独自開発、繭から生まれた天然保湿成分「ピュアセリシン™」配合化粧品",
+    "imageSpFit": "contain",
+    "image": "/images/booths/partners/seiren-cosmetics.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 58,
+        "y": -7,
+        "width": 179,
+        "height": 203
+      },
+      "sp": {
+        "x": 29.59,
+        "y": -6.7,
+        "width": 91.33,
+        "height": 194.34
+      }
+    }
+  },
+  {
+    "id": "ichou-kobo",
+    "title": "和紙を染めよう",
+    "exhibitor": "いちょう工房",
+    "squareNumber": "05",
+    "squareColor": "#4A3A93",
+    "imageAlt": "和紙を染めよう",
+    "image": "/images/booths/partners/ichou-kobo.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -58,
+        "y": -8,
+        "width": 409,
+        "height": 205
+      },
+      "sp": {
+        "x": -29.59,
+        "y": -7.66,
+        "width": 208.67,
+        "height": 196.25
+      }
+    }
+  },
+  {
+    "id": "coir-ground",
+    "title": "天然素材100％！環境にやさしいヤシ殻マット",
+    "exhibitor": "コイヤーグラウンド･ジャパン",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "天然素材100％！環境にやさしいヤシ殻マット",
+    "image": "/images/booths/partners/coir-ground.png",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": 0, "width": 294, "height": 164 },
+      "sp": { "x": 0, "y": 0, "width": 150, "height": 157 }
+    }
+  },
+  {
+    "id": "fukui-hospice",
+    "title": "オリジナルジグソーパズル体験",
+    "exhibitor": "NPO法人ふくいこどもホスピス",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "オリジナルジグソーパズル体験",
+    "image": "/images/booths/partners/fukui-hospice.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 0,
+        "y": -24,
+        "width": 294,
+        "height": 221
+      },
+      "sp": {
+        "x": 0.0,
+        "y": -22.98,
+        "width": 150.0,
+        "height": 211.57
+      }
+    }
+  },
+  {
+    "id": "tannan-forestry",
+    "title": "地元の木を使って山を守ろう！木工教室",
+    "exhibitor": "福井県丹南農林総合事務所林業部",
+    "squareNumber": "05",
+    "squareColor": "#4A3A93",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "地元の木を使って山を守ろう！木工教室",
+    "detail": {
+      "body": "•「めがね入れ」を作る木工教室と森のはなし\n①10:00～ ②11:00～ ③13:00～ ④14:00～ ⑤15:00～（各回10個）\n•森林･林業に関するパネル展示"
+    },
+    "image": "/images/booths/partners/tannan-forestry.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -24,
+        "y": -48,
+        "width": 363,
+        "height": 272
+      },
+      "sp": {
+        "x": -12.24,
+        "y": -45.95,
+        "width": 185.2,
+        "height": 260.39
+      }
+    }
+  },
+  {
+    "id": "sabae-npo-support",
+    "title": "生きものカードゲーム体験＆ベルマーク回収",
+    "exhibitor": "認定NPO法人さばえNPOサポート",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "imageAlt": "生きものカードゲーム体験＆ベルマーク回収",
+    "image": "/images/booths/partners/sabae-npo-support.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -3,
+        "y": -15,
+        "width": 300,
+        "height": 226
+      },
+      "sp": {
+        "x": -1.53,
+        "y": -14.36,
+        "width": 153.06,
+        "height": 216.35
+      }
+    }
+  },
+  {
+    "id": "miraimigaki",
+    "title": "ペットボトル楽器でモンスターを倒そう！",
+    "exhibitor": "miraimigaki",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "ペットボトル楽器でモンスターを倒そう！",
+    "image": "/images/booths/partners/miraimigaki.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -3,
+        "y": -11,
+        "width": 314,
+        "height": 306
+      },
+      "sp": {
+        "x": -1.53,
+        "y": -10.53,
+        "width": 160.2,
+        "height": 292.94
+      }
+    }
+  },
+  {
+    "id": "kanbo-plus",
+    "title": "ハザイをアップサイクル！",
+    "exhibitor": "カンボウプラス㈱",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "ハザイをアップサイクル！",
+    "image": "/images/booths/partners/kanbo-plus.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 0,
+        "y": -24,
+        "width": 296,
+        "height": 222
+      },
+      "sp": {
+        "x": 0.0,
+        "y": -22.98,
+        "width": 151.02,
+        "height": 212.52
+      }
+    }
+  },
+  {
+    "id": "aqua-clara",
+    "title": "アクアクララ SDGs給水ステーション",
+    "exhibitor": "食協同組合 アクアショップふくい",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "アクアクララ SDGs給水ステーション",
+    "image": "/images/booths/partners/aqua-clara.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -37,
+        "width": 304,
+        "height": 270
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -35.42,
+        "width": 155.1,
+        "height": 258.48
+      }
+    }
+  },
+  {
+    "id": "echizen-shikki",
+    "title": "越前漆器販売＆絵付け体験",
+    "exhibitor": "越前漆器協同組合",
+    "squareNumber": "05",
+    "squareColor": "#4A3A93",
+    "imageAlt": "越前漆器販売＆絵付け体験",
+    "image": "/images/booths/partners/echizen-shikki.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -2,
+        "y": -12,
+        "width": 299,
+        "height": 210
+      },
+      "sp": {
+        "x": -1.02,
+        "y": -11.49,
+        "width": 152.55,
+        "height": 201.04
+      }
+    }
+  },
+  {
+    "id": "eco-saba",
+    "title": "カッキーパンダくんとエコサバで柿を活用しよう！",
+    "exhibitor": "鯖江市環境まちづくり委員会",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "カッキーパンダくんとエコサバで柿を活用しよう！",
+    "image": "/images/booths/partners/eco-saba.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -31,
+        "y": -17,
+        "width": 333,
+        "height": 182
+      },
+      "sp": {
+        "x": -15.82,
+        "y": -16.27,
+        "width": 169.9,
+        "height": 174.23
+      }
+    }
+  },
+  {
+    "id": "tezukuri-sweets-ao",
+    "title": "食べるアート！サクサククッキーを可愛くデコろう",
+    "exhibitor": "手作りスイーツあお",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "食べるアート！サクサククッキーを可愛くデコろう",
+    "imageBackgroundColor": "#1F8FFD",
+    "imageSpFit": "cover",
+    "image": "/images/booths/partners/tezukuri-sweets-ao.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 64,
+        "y": 0,
+        "width": 167,
+        "height": 165
+      },
+      "sp": {
+        "x": 32.65,
+        "y": 0.0,
+        "width": 85.2,
+        "height": 157.96
+      }
+    }
+  },
+  {
+    "id": "tsudajuku-ume",
+    "title": "捨てない未来へ！木屑でつくる香り袋",
+    "exhibitor": "津田塾大学 梅五輪プロジェクト\n鯖江ワーキンググループ",
+    "squareNumber": "07",
+    "squareColor": "#29714F",
+    "imageAlt": "捨てない未来へ！木屑でつくる香り袋",
+    "image": "/images/booths/partners/tsudajuku-ume.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -61,
+        "width": 302,
+        "height": 403
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -58.4,
+        "width": 154.08,
+        "height": 385.8
+      }
+    }
+  },
+  {
+    "id": "meiji-yasuda",
+    "title": "明治安田の健康チェック！",
+    "exhibitor": "明治安田生命保険相互会社",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "note": "※18日(日)のみ",
+    "noteColor": "#E60012",
+    "imageAlt": "明治安田の健康チェック！",
+    "image": "/images/booths/partners/meiji-yasuda.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -42,
+        "width": 301,
+        "height": 259
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -40.21,
+        "width": 153.57,
+        "height": 247.95
+      }
+    }
+  },
+  {
+    "id": "niigata-iryo",
+    "title": "眼育(めいく)さばえ応援ねこピンチ",
+    "exhibitor": "新潟医療福祉大学",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "眼育(めいく)さばえ応援ねこピンチ",
+    "imageBackgroundColor": "#F3DCE2",
+    "imageSpFit": "cover",
+    "image": "/images/booths/partners/niigata-iryo.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 59,
+        "y": 0,
+        "width": 164,
+        "height": 164
+      },
+      "sp": {
+        "x": 30.1,
+        "y": 0.0,
+        "width": 83.67,
+        "height": 157.0
+      }
+    }
+  },
+  {
+    "id": "peppys-kids",
+    "title": "ぬりえで英語あそび",
+    "exhibitor": "子ども英会話ペッピーキッズクラブ",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "ぬりえで英語あそび",
+    "image": "/images/booths/partners/peppys-kids.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -7,
+        "y": -7,
+        "width": 330,
+        "height": 248
+      },
+      "sp": {
+        "x": -3.57,
+        "y": -6.7,
+        "width": 168.37,
+        "height": 237.41
+      }
+    }
+  },
+  {
+    "id": "orient-corp",
+    "title": "ミライのお金学習 ～クイズに挑戦＆マイカードお絵かき～",
+    "exhibitor": "㈱オリエントコーポレーション",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "ミライのお金学習 ～クイズに挑戦＆マイカードお絵かき～",
+    "image": "/images/booths/partners/orient-corp.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -16,
+        "y": -3,
+        "width": 310,
+        "height": 169
+      },
+      "sp": {
+        "x": -8.16,
+        "y": -2.87,
+        "width": 158.16,
+        "height": 161.79
+      }
+    }
+  },
+  {
+    "id": "kisso",
+    "title": "めがねバングルワークショップ",
+    "exhibitor": "KISSO",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "めがねバングルワークショップ",
+    "image": "/images/booths/partners/kisso.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -83,
+        "width": 303,
+        "height": 455
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -79.46,
+        "width": 154.59,
+        "height": 435.58
+      }
+    }
+  },
+  {
+    "id": "ito-tower",
+    "title": "わ！ふくい®︎〜福井を着る。未来を作る。",
+    "exhibitor": "いと塔はり",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "わ！ふくい®︎〜福井を着る。未来を作る。",
+    "imageBackgroundColor": "#B69B78",
+    "image": "/images/booths/partners/ito-tower.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 73,
+        "y": 0,
+        "width": 149,
+        "height": 213
+      },
+      "sp": {
+        "x": 37.24,
+        "y": 0.0,
+        "width": 76.02,
+        "height": 203.91
+      }
+    }
+  },
+  {
+    "id": "midori-bosai",
+    "title": "いざという時のためみんなで備えよう！",
+    "exhibitor": "㈱ミドリ防災",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "いざという時のためみんなで備えよう！",
+    "image": "/images/booths/partners/midori-bosai.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -1,
+        "y": -17,
+        "width": 297,
+        "height": 214
+      },
+      "sp": {
+        "x": -0.51,
+        "y": -16.27,
+        "width": 151.53,
+        "height": 204.87
+      }
+    }
+  },
+  {
+    "id": "kimiot",
+    "title": "映画「きみの音が見えたとき」",
+    "exhibitor": "合同会社きみおと",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "imageAlt": "映画「きみの音が見えたとき」",
+    "image": "/images/booths/partners/kimiot.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -1,
+        "y": -6,
+        "width": 305,
+        "height": 193
+      },
+      "sp": {
+        "x": -0.51,
+        "y": -5.74,
+        "width": 155.61,
+        "height": 184.76
+      }
+    }
+  },
+  {
+    "id": "fukui-tech",
+    "title": "シェアサイクルで変わる?! さばえのスローカブルなミライ",
+    "exhibitor": "福井工業大学 まちづくりデザインセンター",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "imageAlt": "シェアサイクルで変わる?! さばえのスローカブルなミライ",
+    "image": "/images/booths/partners/fukui-tech.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 74,
+        "y": -66,
+        "width": 147,
+        "height": 259
+      },
+      "sp": {
+        "x": 37.76,
+        "y": -63.18,
+        "width": 75.0,
+        "height": 247.95
+      }
+    }
+  },
+  {
+    "id": "kofu-tourism",
+    "title": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合",
+    "exhibitor": "甲府市･甲府市観光協会",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合",
+    "image": "/images/booths/partners/kofu-tourism.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 0,
+        "y": 0,
+        "width": 322,
+        "height": 181
+      },
+      "sp": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 164.29,
+        "height": 173.27
+      }
+    }
+  },
+  {
+    "id": "numo",
+    "title": "体験しよう！地層処分",
+    "exhibitor": "原子力発電環境整備機構（NUMO）",
+    "squareNumber": "03",
+    "squareColor": "#F5A200",
+    "imageAlt": "体験しよう！地層処分",
+    "image": "/images/booths/partners/numo.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -24,
+        "width": 302,
+        "height": 201
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -22.98,
+        "width": 154.08,
+        "height": 192.42
+      }
+    }
+  },
+  {
+    "id": "kine-bookstore",
+    "title": "本みくじ＆ミライ本棚",
+    "exhibitor": "シェア型本屋 きねの書店",
+    "squareNumber": "02",
+    "squareColor": "#1F935C",
+    "imageAlt": "本みくじ＆ミライ本棚",
+    "imageBackgroundColor": "#F73202",
+    "imageSpFit": "cover",
+    "image": "/images/booths/partners/kine-bookstore.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 34,
+        "y": -28,
+        "width": 225,
+        "height": 225
+      },
+      "sp": {
+        "x": 17.35,
+        "y": -26.8,
+        "width": 114.8,
+        "height": 215.4
+      }
+    }
+  },
+  {
+    "id": "machinaka-art",
+    "title": "さばえ＊まちなか芸術祭2026",
+    "exhibitor": "鯖江市教育委員会文化課",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "さばえ＊まちなか芸術祭2026",
+    "imageSpFit": "cover",
+    "image": "/images/booths/partners/machinaka-art.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 71,
+        "y": -17,
+        "width": 152,
+        "height": 184
+      },
+      "sp": {
+        "x": 36.22,
+        "y": -16.27,
+        "width": 77.55,
+        "height": 176.15
+      }
+    }
+  },
+  {
+    "id": "nta",
+    "title": "地域つなぐラボ",
+    "exhibitor": "㈱日本旅行",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "地域つなぐラボ",
+    "image": "/images/booths/partners/nta.png",
+    "imageCrop": {
+      "desktop": {
+        "x": 0,
+        "y": 0,
+        "width": 328,
+        "height": 246
+      },
+      "sp": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 167.35,
+        "height": 235.5
+      }
+    }
+  }
+]
