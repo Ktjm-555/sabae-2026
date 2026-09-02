@@ -88,7 +88,7 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
 
   return (
     <article
-      className={`relative flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:h-[157px] max-md:flex-row max-md:pl-4 ${
+      className={`relative flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:h-[157px] max-md:flex-row max-md:pl-4 max-md:[text-size-adjust:100%] ${
         hasDetail
           ? "cursor-pointer transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)]"
           : ""
@@ -119,7 +119,7 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
             alt={booth.imageAlt}
             crop={spCrop}
             clip={CLIP_SP}
-            className="hidden h-[157px] w-[150px] shrink-0 rounded-r-[20px] max-md:order-2 max-md:block"
+            className="hidden h-[157px] w-[150px] min-w-0 shrink rounded-r-[20px] max-md:order-2 max-md:block"
             sizes="150px"
           />
         </>
@@ -130,7 +130,7 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
               <span className="text-lg font-bold text-[#838383]">NO IMAGE</span>
             </div>
           </div>
-          <div className="relative hidden h-[157px] w-[150px] shrink-0 rounded-r-[20px] bg-[#D9D9D9] max-md:order-2 max-md:block">
+          <div className="relative hidden h-[157px] w-[150px] min-w-0 shrink rounded-r-[20px] bg-[#D9D9D9] max-md:order-2 max-md:block">
             <div className="flex h-full items-center justify-center">
               <span className="text-lg font-bold text-[#838383]">NO IMAGE</span>
             </div>
@@ -138,18 +138,18 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
         </>
       )}
 
-      <div className="flex flex-1 flex-col justify-between gap-[15px] px-[10px] pb-4 pt-2 max-md:order-1 max-md:min-w-0 max-md:gap-0 max-md:px-0 max-md:pb-3 max-md:pt-3.5 max-md:pr-5">
-        <h3 className="min-h-[49px] text-base font-bold leading-[26px] text-[#4B5563] max-md:min-h-0 max-md:text-sm max-md:leading-6">
+      <div className="flex flex-1 flex-col justify-between gap-[15px] px-[10px] pb-4 pt-2 max-md:order-1 max-md:h-full max-md:min-w-[170px] max-md:flex-1 max-md:gap-0 max-md:overflow-hidden max-md:px-0 max-md:pb-3 max-md:pt-3.5">
+        <h3 className="min-h-[49px] text-base font-bold leading-[26px] text-[#4B5563] max-md:min-h-0 max-md:max-h-[72px] max-md:overflow-hidden max-md:pr-[18px] max-md:text-[14px] max-md:leading-[24px] max-md:line-clamp-3">
           {booth.title}
         </h3>
 
-        <div>
-          <p className="text-right text-sm leading-6 text-[#4B5563] max-md:text-left max-md:text-[11px] max-md:leading-[18px]">
+        <div className="max-md:mt-auto max-md:w-full max-md:max-w-[170px] max-md:shrink-0">
+          <p className="text-right text-sm leading-6 text-[#4B5563] max-md:text-left max-md:text-[11px] max-md:leading-[19px] max-md:line-clamp-2">
             {booth.exhibitor}
           </p>
 
-          <div className="flex items-center justify-end gap-0.5 max-md:justify-start">
-            <span className="text-xs leading-6 text-[#4B5563] max-md:text-[11px] max-md:leading-6">
+          <div className="flex flex-nowrap items-center justify-end gap-0.5 max-md:justify-start">
+            <span className="text-xs leading-6 text-[#4B5563] max-md:whitespace-nowrap max-md:text-[11px] max-md:leading-[20px]">
               {SQUARE_LABEL}
             </span>
             <SquareBadge number={booth.squareNumber} color={booth.squareColor} />
@@ -157,7 +157,7 @@ export function AsobiBoothCard({ booth }: AsobiBoothCardProps) {
 
           {note ? (
             <p
-              className="text-right text-xs leading-6 max-md:text-left max-md:text-[10px] max-md:leading-6"
+              className="text-right text-xs leading-6 max-md:text-left max-md:text-[10px] max-md:leading-[19px]"
               style={{ color: noteColor }}
             >
               {note}
