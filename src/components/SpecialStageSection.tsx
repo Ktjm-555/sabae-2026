@@ -37,7 +37,7 @@ export function SpecialStageSection() {
           <SectionTitle title="スペシャルステージ" subtitle="SPECIAL STAGE" />
 
           <div className="mx-auto max-w-[1296px]">
-            <div className="mb-4 flex justify-center sm:mb-5 lg:mb-6">
+            <div className="-mt-4 mb-4 flex justify-center sm:-mt-5 sm:mb-5 lg:-mt-6 lg:mb-6">
               <span className="inline-flex h-6 min-w-[74px] items-center justify-center rounded-[20px] bg-gold px-3 text-sm font-bold text-white lg:h-[30px] lg:min-w-[106px] lg:px-4 lg:text-xl">
                 13:00～
               </span>

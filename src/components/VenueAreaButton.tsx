@@ -31,7 +31,6 @@ export function VenueAreaButton({
   download = false,
   className,
 }: VenueAreaButtonProps) {
-  const resolvedHref = external ? href : withBasePath(href);
   const buttonClassName = [
     "inline-flex h-[39px] min-w-[166px] items-center justify-center gap-2 rounded-[80px] bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark lg:h-[49px] lg:min-w-[241px] lg:gap-5 lg:px-8 lg:text-xl",
     className,
@@ -45,7 +44,7 @@ export function VenueAreaButton({
 
   if (download) {
     return (
-      <a href={resolvedHref} className={buttonClassName} download>
+      <a href={withBasePath(href)} className={buttonClassName} download>
         {label}
         {arrow}
       </a>
@@ -56,7 +55,7 @@ export function VenueAreaButton({
   if (external) {
     return (
       <a
-        href={resolvedHref}
+        href={href}
         className={buttonClassName}
         target="_blank"
         rel="noopener noreferrer"
@@ -69,7 +68,7 @@ export function VenueAreaButton({
 
   return (
     <Link
-      href={resolvedHref}
+      href={href}
       className={buttonClassName}
       scroll={!href.includes("#")}
     >

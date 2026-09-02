@@ -45,7 +45,7 @@ export default function TicketPage() {
 
               <div className="overflow-hidden rounded-[20px] bg-white lg:rounded-[40px]">
                 <header className="px-4 pb-5 pt-5 sm:px-6 lg:px-[42px] lg:pb-6 lg:pt-8">
-                  <div className="mb-3 flex flex-wrap items-center gap-3">
+                  <div className="mb-2 flex flex-wrap items-center gap-3 lg:mb-3">
                     <time dateTime={content.date} className="font-display text-base font-bold text-primary">
                       {formattedDate}
                     </time>
@@ -53,10 +53,10 @@ export default function TicketPage() {
                       {content.category}
                     </span>
                   </div>
-                  <p className="font-display text-xl font-bold leading-8 text-primary lg:text-2xl">
+                  <p className="font-display text-base font-bold leading-6 text-primary lg:text-2xl lg:leading-8">
                     {content.projectLabel}
                   </p>
-                  <h1 className="mt-3 font-display text-[32px] font-bold leading-8 text-primary lg:mt-4 lg:text-[40px]">
+                  <h1 className="mt-2 font-display text-[22px] font-bold leading-8 text-primary lg:mt-4 lg:text-[40px]">
                     {content.title}
                   </h1>
                 </header>

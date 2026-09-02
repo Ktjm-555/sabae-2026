@@ -113,12 +113,12 @@ function TicketInfoRowMobile({
 
   return (
     <div className={`border-t border-[#DCDCDC]${lastRowClassName}`}>
-      <div className="py-[10px]">
+      <div className="pt-[10px]">
         <div className="flex min-h-[58px] items-center justify-center bg-[#EFEFEF] px-2 text-center text-base font-bold leading-[26px] text-[#4B5563] whitespace-pre-line">
           {label}
         </div>
       </div>
-      <div className="py-5 text-base text-[#4B5563]">{children}</div>
+      <div className="py-5 text-sm text-[#4B5563]">{children}</div>
     </div>
   );
 }
@@ -146,11 +146,11 @@ function TicketSampleCard({
 
 function AreaSectionContent() {
   return (
-    <div className="space-y-4 text-base leading-[22px]">
+    <div className="space-y-4 leading-[22px]">
       <div>
         <p>会場内は、ステージ前方から以下の3つのエリアに分かれます。</p>
         <p>
-          ① 鯖江市内園児エリア
+          ① 鯖江市内キッズエリア
           <br />
           ② 鯖江市内親子エリア
           <br />
@@ -159,47 +159,47 @@ function AreaSectionContent() {
       </div>
 
       <div>
-        <p className="font-bold">①鯖江市内園児エリア</p>
-        <p className="pl-4 font-bold">
-          EXILE BE HAPPY TETSUYAさんたちと一緒に「さばえハッピーダンス」を踊ろう！
+        <p className="font-bold">①鯖江市内キッズエリア</p>
+        <p className="font-bold">
+          　LDHダンスワークショップショーで「さばえハッピーダンス」を踊ろう！
         </p>
         <p className="font-bold">対象：</p>
-        <p className="pl-4">
-          鯖江市内の保育園・こども園・幼稚園に通う0～5歳児とそのご家族
+        <p>
+          　鯖江市内にお住まいの未就学児とそのご家族
           <br />
-          ※対象園児1人につき、保護者1人でお申込みください。
+          　※対象児1人につき、保護者1人でお申込みください。
           <br />
-          ※対象園児と同一世帯のご家族は、同行者として入場できます。
+          　※対象児と同一世帯のご家族は、同行者として入場できます。
         </p>
         <p className="font-bold">例：</p>
-        <p className="pl-4">
-          対象園児1人＋保護者(母)1人＋同行者(祖母､園児と小学生の兄弟)3人
+        <p>
+          　対象児1人＋保護者(母)1人＋同行者(祖母､小学生の兄弟)2人
           <br />
-          ※0～1歳児は、安全確保のため、抱っこひもでの入場をお願いします。
+          　※0～1歳児は、安全確保のため、抱っこひもでの入場をお願いします。
         </p>
       </div>
 
       <div>
         <p className="font-bold">②鯖江市内親子エリア</p>
         <p className="font-bold">対象：</p>
-        <p className="pl-4">
-          鯖江市内の小学6年生以下のお子さまとそのご家族
+        <p>
+          　鯖江市内にお住まいの小学1年生～6年生のお子さまとそのご家族
           <br />
-          ※対象のお子さまと同一世帯のご家族は、同行者として入場できます。
+          　※対象のお子さまと同一世帯のご家族は、同行者として入場できます。
         </p>
         <p className="font-bold">例：</p>
-        <p className="pl-4">
-          対象のお子さま1人＋保護者(父)1人＋同行者(中学生と高校生の姉妹)2人
+        <p>
+          　対象のお子さま1人＋保護者(父)1人＋同行者(中学生と高校生の姉妹)2人
         </p>
       </div>
 
       <div>
         <p className="font-bold">③一般エリア</p>
         <p className="font-bold">対象：</p>
-        <p className="pl-4">
-          ①･②の対象外の方、または同一世帯のご家族以外の方を同行者に含む方
+        <p>
+          　①･②の対象外の方、または同一世帯のご家族以外の方を同行者に含む方
           <br />
-          ※代表者1人につき、同行者3人まで入場できます。
+          　※代表者1人につき、同行者3人（計4人）まで入場できます。
         </p>
       </div>
     </div>
@@ -208,7 +208,7 @@ function AreaSectionContent() {
 
 function NumberedList({ items }: { items: string[] }) {
   return (
-    <div className="text-base leading-7">
+    <div className="leading-7">
       {items.map((item, index) => {
         const [firstLine, ...restLines] = item.split("\n");
         return (
@@ -229,7 +229,7 @@ function NumberedList({ items }: { items: string[] }) {
 
 function BulletedList({ items }: { items: string[] }) {
   return (
-    <div className="text-base leading-7">
+    <div className="leading-7">
       {items.map((item) => (
         <p key={item} className="flex gap-0">
           <span aria-hidden="true" className="shrink-0">
@@ -304,7 +304,7 @@ function buildTicketRows(content: TicketContent): TicketRow[] {
             1. 開場時間（12:00）になりましたら、以下の順番でエリア内へご案内します。
             <br />
             <span className="pl-4 font-bold">
-              ① 鯖江市内園児エリア
+              ① 鯖江市内キッズエリア
               <br />
               　② 鯖江市内親子エリア
               <br />
