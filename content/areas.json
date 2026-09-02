@@ -7,9 +7,9 @@
     "image": "/images/areas/booth-frame.png",
     "imageAlt": "ブースエリアの様子",
     "imagePosition": "left",
-    "buttonLabel": "出展者募集はこちら",
-    "buttonHref": "https://www.sabae-sdgs.jp/news/boothbosyu2026",
-    "buttonExternal": true
+    "buttonLabel": "詳しくはこちら",
+    "buttonHref": "/booths#booth",
+    "buttonExternal": false
   },
   {
     "id": "asobi",
@@ -20,7 +20,7 @@
     "imageAlt": "アソビエリアの様子",
     "imagePosition": "right",
     "buttonLabel": "詳しくはこちら",
-    "buttonHref": "#asobi",
+    "buttonHref": "/booths#asobi",
     "buttonExternal": false
   },
   {
@@ -32,7 +32,7 @@
     "imageAlt": "グルメエリアの様子",
     "imagePosition": "left",
     "buttonLabel": "詳しくはこちら",
-    "buttonHref": "#gourmet",
+    "buttonHref": "/booths#gourmet",
     "buttonExternal": false
   },
   {

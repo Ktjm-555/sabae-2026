@@ -67,7 +67,11 @@ export function VenueAreaButton({
   }
 
   return (
-    <Link href={href} className={buttonClassName}>
+    <Link
+      href={href}
+      className={buttonClassName}
+      scroll={!href.includes("#")}
+    >
       {label}
       {arrow}
     </Link>

@@ -73,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" data-scroll-behavior="smooth">
       <body
         className={`${notoSans.variable} ${mPlusRounded.variable} min-h-screen bg-white antialiased`}
       >

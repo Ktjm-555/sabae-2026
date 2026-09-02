@@ -1,6 +1,8 @@
 interface SpecialStageDateBarProps {
   date: string;
   day: string;
+  endDate?: string;
+  endDay?: string;
   title: string;
   titleHighlight?: string;
   titleSpLine2?: string;
@@ -29,9 +31,32 @@ function DateBarWaveSeparator() {
   );
 }
 
+function DateGroup({ date, day }: { date: string; day: string }) {
+  return (
+    <div className="flex items-baseline gap-1 lg:gap-1.5">
+      <span className="text-[32px] font-bold leading-none lg:text-4xl">{date}</span>
+      <span className="text-base font-bold leading-none sm:text-xl lg:text-2xl">{day}</span>
+    </div>
+  );
+}
+
+function DateRangeArrow() {
+  return (
+    <svg
+      className="h-[21px] w-[10px] shrink-0 text-white"
+      viewBox="0 0 10 21"
+      aria-hidden="true"
+    >
+      <polygon points="0,0 10,10.5 0,21" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function SpecialStageDateBar({
   date,
   day,
+  endDate,
+  endDay,
   title,
   titleHighlight,
   titleSpLine2,
@@ -53,9 +78,14 @@ export function SpecialStageDateBar({
 
   return (
     <div className="overflow-hidden bg-gradient-to-r from-[#66a8dc] via-[#a688bd] to-[#db99c1] py-4 sm:py-5 lg:flex lg:min-h-14 lg:items-center lg:rounded-[60px] lg:px-8 lg:py-0 lg:h-[76px]">
-      <div className="flex shrink-0 items-baseline justify-center gap-1.5 text-white sm:gap-2 lg:justify-start">
-        <span className="text-[32px] font-bold leading-none lg:text-4xl">{date}</span>
-        <span className="text-base font-bold leading-none sm:text-xl lg:text-2xl">{day}</span>
+      <div className="flex shrink-0 items-center justify-center gap-2.5 text-white lg:justify-start lg:gap-3">
+        <DateGroup date={date} day={day} />
+        {endDate && endDay ? (
+          <>
+            <DateRangeArrow />
+            <DateGroup date={endDate} day={endDay} />
+          </>
+        ) : null}
       </div>
 
       <div className="my-3 px-4 sm:px-6 lg:hidden">

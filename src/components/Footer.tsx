@@ -126,12 +126,14 @@ export function Footer() {
                     {site.contact.booth.phone}
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MailIcon />
-                  <a href={`mailto:${site.contact.booth.email}`} className="break-all hover:opacity-80">
-                    {site.contact.booth.email}
-                  </a>
-                </div>
+                {site.contact.booth.email && (
+                  <div className="flex items-center gap-2">
+                    <MailIcon />
+                    <a href={`mailto:${site.contact.booth.email}`} className="break-all hover:opacity-80">
+                      {site.contact.booth.email}
+                    </a>
+                  </div>
+                )}
               </div>
             </FooterSection>
 

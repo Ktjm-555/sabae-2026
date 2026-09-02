@@ -43,17 +43,22 @@ export function SpecialStageSection() {
               </span>
             </div>
 
-            <div className="flex flex-col items-center gap-5 sm:gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-7">
-              <p className="w-full max-w-[622px] text-left text-base font-medium leading-8 text-foreground sm:text-lg lg:text-xl">
-                <span className="whitespace-pre-line lg:hidden">
-                  {`ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！
+            <div className="flex flex-col items-center gap-5 sm:gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-7">
+              <div className="w-full max-w-[622px]">
+                <p className="text-left text-base font-medium leading-8 text-foreground sm:text-lg lg:text-xl">
+                  <span className="whitespace-pre-line lg:hidden">
+                    {`ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！
 ※17日(土)は事前申込制`}
-                </span>
-                <span className="hidden lg:block">
-                  ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！※17日(土)は事前申込制
-                </span>
-              </p>
-              <div className="shrink-0">
+                  </span>
+                  <span className="hidden lg:block">
+                    ファッションショー×トーク×ダンス 非日常感あふれるステージで鯖江の魅力を体感しよう！※17日(土)は事前申込制
+                  </span>
+                </p>
+                <p className="mt-1.5 text-left text-base font-medium leading-[26px] text-foreground">
+                  ※雨天時は「鯖江市総合体育館」へ会場変更。荒天中止の場合は10月15日(木) 17:00までに本サイト･SNSで発表いたします。
+                </p>
+              </div>
+              <div className="shrink-0 lg:pt-2">
                 <VenueAreaButton href="/ticket" label="入場券のお申込みはこちら" />
               </div>
             </div>
