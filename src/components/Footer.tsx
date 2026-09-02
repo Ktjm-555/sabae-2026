@@ -16,19 +16,6 @@ function PhoneIcon() {
   );
 }
 
-function MailIcon() {
-  return (
-    <Image
-      src={withBasePath("/images/mail.svg")}
-      alt=""
-      width={16}
-      height={16}
-      className="h-4 w-4 shrink-0"
-      aria-hidden="true"
-    />
-  );
-}
-
 function FooterWave() {
   return (
     <div className="relative -mb-px leading-none text-footer">
@@ -126,14 +113,6 @@ export function Footer() {
                     {site.contact.booth.phone}
                   </a>
                 </div>
-                {site.contact.booth.email && (
-                  <div className="flex items-center gap-2">
-                    <MailIcon />
-                    <a href={`mailto:${site.contact.booth.email}`} className="break-all hover:opacity-80">
-                      {site.contact.booth.email}
-                    </a>
-                  </div>
-                )}
               </div>
             </FooterSection>
 
