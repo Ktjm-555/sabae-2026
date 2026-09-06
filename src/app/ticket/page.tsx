@@ -43,7 +43,7 @@ export default function TicketPage() {
                 </Link>
               </nav>
 
-              <div className="overflow-hidden rounded-[20px] bg-white lg:rounded-[40px]">
+              <div className="overflow-hidden rounded-[20px] bg-white shadow-[var(--shadow-card)]">
                 <header className="px-4 pb-5 pt-5 sm:px-6 lg:px-[42px] lg:pb-6 lg:pt-8">
                   <div className="mb-2 flex flex-wrap items-center gap-3 lg:mb-3">
                     <time dateTime={content.date} className="font-display text-base font-bold text-primary">

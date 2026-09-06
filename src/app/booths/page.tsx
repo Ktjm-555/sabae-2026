@@ -32,8 +32,8 @@ export default function BoothsPage() {
                 </Link>
               </nav>
 
-              <div className="overflow-hidden rounded-[20px] bg-white lg:rounded-[40px]">
-                <div className="px-4 pb-4 pt-5 sm:px-6 lg:px-[42px] lg:pb-6 lg:pt-8">
+              <div className="overflow-hidden rounded-[20px] bg-white lg:overflow-visible lg:rounded-none lg:bg-transparent">
+                <div className="px-4 pb-4 pt-5 sm:px-6 lg:px-0 lg:pb-0 lg:pt-0">
                   <div className="flex flex-col gap-10 lg:gap-14">
                     <BoothAreaSection />
                     <AsobiAreaSection />

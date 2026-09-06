@@ -4,7 +4,7 @@ import { withBasePath } from "@/lib/basePath";
 
 export function NewsPageBackground({ children }: { children: ReactNode }) {
   return (
-    <div className="relative bg-white lg:bg-sky">
+    <div className="relative bg-white">
       {/* SP — bg_sp.jpg（804×1680） */}
       <div
         className="pointer-events-none absolute inset-0 bg-top bg-no-repeat lg:hidden"
@@ -15,8 +15,8 @@ export function NewsPageBackground({ children }: { children: ReactNode }) {
         aria-hidden="true"
       />
 
-      {/* PC — bg.jpg（3490×2146） */}
-      <div className="pointer-events-none absolute inset-0 hidden lg:block">
+      {/* PC — bg.jpg（3490×2146）。画面の上端に固定し、ページの長さに合わせて引き伸ばさない */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[100dvh] lg:block">
         <Image
           src={withBasePath("/images/bg.jpg")}
           alt=""

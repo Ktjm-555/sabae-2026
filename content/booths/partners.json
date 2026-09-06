@@ -809,7 +809,7 @@
     "noteColor": "#0B5AB1",
     "imageAlt": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合✨",
     "detail": {
-      "body": "〇甲府之証認定商品を含めた特産品の販売\n〇宝石すくい＆オリジナルキーホルダーづくり\n〇特産品が当たるガチャガチャガチャ(商品購入者)\n〇甲府市地場産業クイズ"
+      "body": "〇甲府之証認定商品を含めた特産品の販売\n〇宝石すくい＆オリジナルキーホルダーづくり\n〇特産品が当たるガチャガチャ(商品購入者)\n〇甲府市地場産業クイズ"
     },
     "image": "/images/booths/partners/kofu-tourism.png",
     "imageCrop": {
@@ -835,8 +835,10 @@
     "squareColor": "#F5A200",
     "imageAlt": "体験しよう！地層処分",
     "detail": {
+      "body": "【参加無料】ふしぎがいっぱい！あそんで学ぼう♪地層処分のしくみを楽しく体験できるブースです！\n\nつくる： かんたん！ベントナイト入りバスボムづくり\n\nのる： ジオ･ラボ号でミライの処分場を見に行こう！（ジオ･ラボ号はグルメエリアそば）\n\nまわす： 電気のクイズラリーに挑戦してガチャガチャを回そう！",
       "links": {
-        "hp": "https://www.numo.or.jp/chisoushobun/ichikarashiritai/"
+        "hp": "https://www.numo.or.jp/chisoushobun/ichikarashiritai/",
+        "instagram": "https://www.instagram.com/numo_geolabo/"
       }
     },
     "image": "/images/booths/partners/numo.png",
@@ -940,6 +942,22 @@
         "y": 0.0,
         "width": 167.35,
         "height": 235.5
+      }
+    }
+  },
+  {
+    "id": "matsubara-nosepad",
+    "title": "めがね工房",
+    "exhibitor": "松原蝶製作所",
+    "squareNumber": "01",
+    "squareColor": "#EC799F",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "めがね工房",
+    "detail": {
+      "body": "めがねの素材（アセテート）を使ったキーホルダー作りや、バングル作り体験を行います。",
+      "links": {
+        "hp": "https://matsubara-nosepad.co.jp/"
       }
     }
   }
