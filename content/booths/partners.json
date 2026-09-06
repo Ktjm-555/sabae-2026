@@ -944,5 +944,21 @@
         "height": 235.5
       }
     }
+  },
+  {
+    "id": "matsubara-nosepad",
+    "title": "めがね工房",
+    "exhibitor": "松原蝶製作所",
+    "squareNumber": "01",
+    "squareColor": "#EC799F",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "imageAlt": "めがね工房",
+    "detail": {
+      "body": "めがねの素材（アセテート）を使ったキーホルダー作りや、バングル作り体験を行います。",
+      "links": {
+        "hp": "https://matsubara-nosepad.co.jp/"
+      }
+    }
   }
 ]
