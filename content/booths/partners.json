@@ -835,8 +835,10 @@
     "squareColor": "#F5A200",
     "imageAlt": "体験しよう！地層処分",
     "detail": {
+      "body": "【参加無料】ふしぎがいっぱい！あそんで学ぼう♪地層処分のしくみを楽しく体験できるブースです！\n\nつくる： かんたん！ベントナイト入りバスボムづくり\n\nのる： ジオ･ラボ号でミライの処分場を見に行こう！（ジオ･ラボ号はグルメエリアそば）\n\nまわす： 電気のクイズラリーに挑戦してガチャガチャを回そう！",
       "links": {
-        "hp": "https://www.numo.or.jp/chisoushobun/ichikarashiritai/"
+        "hp": "https://www.numo.or.jp/chisoushobun/ichikarashiritai/",
+        "instagram": "https://www.instagram.com/numo_geolabo/"
       }
     },
     "image": "/images/booths/partners/numo.png",
