@@ -124,7 +124,6 @@ export function BoothBoothCard({
   const note = booth.note;
   const noteColor = booth.noteColor;
   const exhibitor = booth.exhibitor;
-  const hasDetail = booth.detail != null;
   const spFit: ImageSpFit =
     booth.imageSpFit === "contain" || booth.imageSpFit === "cover"
       ? booth.imageSpFit
@@ -133,22 +132,16 @@ export function BoothBoothCard({
 
   return (
     <article
-      className={`relative flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] max-md:h-[157px] max-md:flex-row max-md:pl-4 max-md:[text-size-adjust:100%] ${
-        hasDetail
-          ? "cursor-pointer transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)]"
-          : ""
-      }`}
+      className="relative flex h-full cursor-pointer flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)] max-md:h-[157px] max-md:flex-row max-md:pl-4 max-md:[text-size-adjust:100%]"
     >
-      {hasDetail ? (
-        <button
-          type="button"
-          className="absolute inset-0 z-10 cursor-pointer rounded-[20px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          onClick={() => setOpen(true)}
-          aria-haspopup="dialog"
-          aria-expanded={open}
-          aria-label={`${booth.title}の詳細`}
-        />
-      ) : null}
+      <button
+        type="button"
+        className="absolute inset-0 z-10 cursor-pointer rounded-[20px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        onClick={() => setOpen(true)}
+        aria-haspopup="dialog"
+        aria-expanded={open}
+        aria-label={`${booth.title}の詳細`}
+      />
       {booth.image && desktopCrop ? (
         <>
           <FigmaCropImage
@@ -238,13 +231,11 @@ export function BoothBoothCard({
           ) : null}
         </div>
       </div>
-      {hasDetail ? (
-        <BoothDetailModal
-          booth={booth}
-          open={open}
-          onClose={() => setOpen(false)}
-        />
-      ) : null}
+      <BoothDetailModal
+        booth={booth}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </article>
   );
 }

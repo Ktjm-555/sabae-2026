@@ -1,30 +1,32 @@
 [
   {
     "id": "tbd-sdgs",
-    "title": "未定",
+    "title": "ミライへつなげよう！ACTION∞ -エイト- なさばえの魅力",
     "exhibitor": "さばえSDGs部",
     "squareNumber": "08",
     "squareColor": "#B17F44",
-    "imageAlt": "未定",
+    "imageAlt": "ミライへつなげよう！ACTION∞ -エイト- なさばえの魅力",
     "detail": {
+      "body": "学生目線で鯖江の魅力を紹介する小冊子の配布と、来場者が自由に参加できる「さばえのミライ」メッセージボードを設置します。",
       "links": {
         "hp": "https://www.sabae-sdgs.jp/sdgsclub",
         "instagram": "https://www.instagram.com/sdgs.bu/"
       }
     },
     "image": "/images/booths/partners/tbd-sdgs.png",
+    "imageSpFit": "cover",
     "imageCrop": {
       "desktop": {
-        "x": 0,
-        "y": 0,
-        "width": 294,
-        "height": 164
+        "x": -4,
+        "y": -6,
+        "width": 303,
+        "height": 170
       },
       "sp": {
-        "x": 0,
-        "y": 0,
-        "width": 150,
-        "height": 157
+        "x": -2.04,
+        "y": -5.74,
+        "width": 154.59,
+        "height": 162.74
       }
     }
   },
@@ -55,6 +57,35 @@
         "y": -64.14,
         "width": 151.53,
         "height": 284.32
+      }
+    }
+  },
+  {
+    "id": "yamani-hoyatei-yamuni",
+    "title": "山うに作り体験",
+    "exhibitor": "山うにの里 ほやっ停",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "山うに作り体験",
+    "detail": {
+      "body": "鯖江市河和田地区で300年以上にわたって受け継がれてきた伝統食「山うに」作りを体験できます。",
+      "links": {
+        "hp": "https://echizentai.com"
+      }
+    },
+    "image": "/images/booths/partners/yamani-hoyatei-yamuni.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -2,
+        "y": -58,
+        "width": 300,
+        "height": 450
+      },
+      "sp": {
+        "x": -1.02,
+        "y": -55.52,
+        "width": 153.06,
+        "height": 430.79
       }
     }
   },
@@ -454,7 +485,11 @@
     "squareColor": "#CE386A",
     "imageAlt": "カッキーパンダくんとエコサバで柿を活用しよう！",
     "detail": {
-      "body": "鯖江市で展開されている「#かきもぎアクション」に連動。収穫して食べきれない柿があればお持ちください。欲しい方に配布し、里山の資源を活用します。\n\nおうちの柿の木で困っている人も、ご相談ください。\n\n【カッキーパンダくん】\nみんなが収穫した柿をジャムや干し柿に変身させるよ。クマさんやサルさんがまちに来ないよう、里山を守っているんだ！"
+      "body": "鯖江市で展開されている「#かきもぎアクション」に連動。収穫して食べきれない柿があればお持ちください。欲しい方に配布し、里山の資源を活用します。\n\nおうちの柿の木で困っている人も、ご相談ください。\n\n【カッキーパンダくん】\nみんなが収穫した柿をジャムや干し柿に変身させるよ。クマさんやサルさんがまちに来ないよう、里山を守っているんだ！",
+      "links": {
+        "instagram": "https://www.instagram.com/sabae_kanmachi/",
+        "facebook": "https://www.facebook.com/sabae.kanmachi/"
+      }
     },
     "image": "/images/booths/partners/eco-saba.png",
     "imageCrop": {
@@ -959,6 +994,59 @@
       "links": {
         "hp": "https://matsubara-nosepad.co.jp/"
       }
+    },
+    "image": "/images/booths/partners/matsubara-nosepad.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -4,
+        "y": -104,
+        "width": 301,
+        "height": 411
+      },
+      "sp": {
+        "x": -2.04,
+        "y": -99.54,
+        "width": 153.57,
+        "height": 393.46
+      }
     }
+  },
+  {
+    "id": "koshino-network-myaco",
+    "title": "みゃこクイズ＆VTuber体験をしてみよう",
+    "exhibitor": "こしの都ネットワーク㈱",
+    "squareNumber": "06",
+    "squareColor": "#CE386A",
+    "imageAlt": "みゃこクイズ＆VTuber体験をしてみよう",
+    "detail": {
+      "body": "VTuber 越乃みゃこちゃんに関するクイズに挑戦して、お菓子をゲットしよう♪\nあなたの顔や体の動きにあわせてキャラクターが動く「VTuber体験」も楽しめます！",
+      "links": {
+        "hp": "https://koshinomiyako.jp/community_channel/vtuber_koshino_myaco/",
+        "twitter": "https://x.com/koshino_myaco"
+      }
+    },
+    "image": "/images/booths/partners/koshino-network-myaco.png",
+    "imageCrop": {
+      "desktop": {
+        "x": -2,
+        "y": -2,
+        "width": 297,
+        "height": 167
+      },
+      "sp": {
+        "x": -1.02,
+        "y": -1.91,
+        "width": 151.53,
+        "height": 159.74
+      }
+    }
+  },
+  {
+    "id": "sabae-toshi-seibi-lesser-panda",
+    "title": "レッサーパンダPRブース",
+    "exhibitor": "鯖江市都市整備部",
+    "squareNumber": "08",
+    "squareColor": "#B17F44",
+    "imageAlt": "レッサーパンダPRブース"
   }
 ]
