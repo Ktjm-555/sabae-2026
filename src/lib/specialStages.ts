@@ -50,7 +50,9 @@ export type SpecialStage = {
     titleHighlight?: string;
     titleSpLine2?: string;
     titleSpCompact?: boolean;
+    titleSpTwoLineUntilLg?: boolean;
     titleHighlightNoSpace?: boolean;
+    titleLong?: boolean;
   };
   badge?: string;
   title?: string;

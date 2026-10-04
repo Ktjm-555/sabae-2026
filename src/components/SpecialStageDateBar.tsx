@@ -7,7 +7,9 @@ interface SpecialStageDateBarProps {
   titleHighlight?: string;
   titleSpLine2?: string;
   titleSpCompact?: boolean;
+  titleSpTwoLineUntilLg?: boolean;
   titleHighlightNoSpace?: boolean;
+  titleLong?: boolean;
 }
 
 // セクション区切りの日付とタイトルのバーのV字
@@ -61,11 +63,13 @@ export function SpecialStageDateBar({
   titleHighlight,
   titleSpLine2,
   titleSpCompact = false,
+  titleSpTwoLineUntilLg = false,
   titleHighlightNoSpace = false,
+  titleLong = false,
 }: SpecialStageDateBarProps) {
   const titleSpLine1 =
     titleSpLine2 && title.endsWith(titleSpLine2)
-      ? title.slice(0, title.length - titleSpLine2.length)
+      ? title.slice(0, title.length - titleSpLine2.length).trimEnd()
       : title;
   const fullTitle = titleHighlight
     ? titleHighlightNoSpace
@@ -109,18 +113,26 @@ export function SpecialStageDateBar({
             </>
           ) : titleSpLine2 ? (
             <>
-              <div className="min-[460px]:hidden">
+              <div className={titleSpTwoLineUntilLg ? "lg:hidden" : "min-[460px]:hidden"}>
                 <p className={spTitleClassName}>{titleSpLine1}</p>
                 <p className={`mt-1 ${spTitleClassName} leading-tight`}>{titleSpLine2}</p>
               </div>
-              <p className={`hidden min-[460px]:block ${spTitleClassName}`}>{title}</p>
+              {titleSpTwoLineUntilLg ? null : (
+                <p className={`hidden min-[460px]:block ${spTitleClassName}`}>{title}</p>
+              )}
             </>
           ) : (
             <p className={spTitleClassName}>{title}</p>
           )}
         </div>
 
-        <p className="hidden font-bold leading-[30px] lg:block lg:text-[30px] @[750px]:text-[34px] @[820px]:text-[36px]">
+        <p
+          className={
+            titleLong
+              ? "hidden whitespace-nowrap font-bold leading-[30px] lg:block lg:text-[clamp(22px,2.5vw,36px)]"
+              : "hidden font-bold leading-[30px] lg:block lg:text-[30px] @[750px]:text-[34px] @[820px]:text-[36px]"
+          }
+        >
           {fullTitle}
         </p>
       </div>

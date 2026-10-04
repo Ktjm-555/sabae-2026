@@ -194,6 +194,38 @@
     ]
   },
   {
+    "id": "echizen-lacquerware-festa",
+    "dateBar": {
+      "date": "10.18",
+      "day": "sun",
+      "title": "鯖江青年会議所コラボ企画 越前漆器まるごとフェスタ",
+      "titleSpLine2": "越前漆器まるごとフェスタ",
+      "titleSpCompact": true,
+      "titleSpTwoLineUntilLg": true,
+      "titleLong": true
+    },
+    "subtitle": "伝統と楽しさが集うイベント",
+    "description": "越前漆器の魅力をまるごと体験できるブースが大集合！\n越前漆器を「見て、触れて、使って」――\n鯖江の伝統を、ミライにつなごう！",
+    "buttons": [
+      {
+        "label": "わんこそば体験 参加申込",
+        "href": "https://docs.google.com/forms/d/e/1FAIpQLScE4tPKsTJLPIjOypPlVA_cwwR-tcT0TJwoHnR0Jj2Pl0hDnQ/viewform",
+        "external": true
+      },
+      {
+        "label": "チラシのダウンロード",
+        "href": "/files/echizen-lacquerware-festa-flyer.pdf",
+        "download": true
+      }
+    ],
+    "flyers": [
+      {
+        "image": "/images/special-stage/echizen-lacquerware-festa-flyer.jpg",
+        "imageAlt": "越前漆器まるごとフェスタチラシ"
+      }
+    ]
+  },
+  {
     "id": "wanko-soba",
     "dateBar": {
       "date": "10.18",
