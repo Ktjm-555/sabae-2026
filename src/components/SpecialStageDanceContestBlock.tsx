@@ -9,6 +9,7 @@ import type {
 
 interface SpecialStageDanceContestBlockProps {
   stage: SpecialStage;
+  omitAnchor?: boolean;
 }
 
 function FlyerPreview({
@@ -87,6 +88,7 @@ function GuestCard({ guest }: { guest: SpecialStageGuest }) {
 
 export function SpecialStageDanceContestBlock({
   stage,
+  omitAnchor = false,
 }: SpecialStageDanceContestBlockProps) {
   const guests = stage.guests ?? [];
   const flyers = stage.flyers ?? [];
@@ -95,7 +97,10 @@ export function SpecialStageDanceContestBlock({
   const [applicationButton, downloadButton] = buttons;
 
   return (
-    <article id={stage.id} className="@container scroll-mt-24 flex flex-col">
+    <article
+      {...(omitAnchor ? {} : { id: stage.id })}
+      className="@container scroll-mt-24 flex flex-col"
+    >
       <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between lg:gap-6">
         <div className="flex min-w-0 flex-1 flex-col">
           <h3 className="text-[24px] font-bold leading-[46px] text-primary lg:text-[26px]">

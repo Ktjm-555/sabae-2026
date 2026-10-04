@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
+import { NewsItemLink } from "@/components/NewsItemLink";
 import { NewsItem, getCategoryLabel, getNewsLink } from "@/lib/news";
 import { withBasePath } from "@/lib/basePath";
 
@@ -43,9 +44,9 @@ export function NewsListItem({ news }: NewsListItemProps) {
   const { href, openInNewTab } = getNewsLink(news);
 
   return (
-    <Link
+    <NewsItemLink
       href={href}
-      {...(openInNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      openInNewTab={openInNewTab}
       className="group relative flex h-full min-h-[135px] flex-col rounded-[20px] bg-white px-[30px] py-[15px] shadow-[var(--shadow-card)] transition-[box-shadow,transform] hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)] lg:min-h-[203px] lg:px-8 lg:py-[27px]"
     >
       <time
@@ -63,7 +64,7 @@ export function NewsListItem({ news }: NewsListItemProps) {
       <NewsArrowIcon
         className={`absolute top-1/2 right-6 -translate-y-1/2 transition-transform group-hover:translate-x-0.5 lg:right-7 ${newsArrowIconSizeClass}`}
       />
-    </Link>
+    </NewsItemLink>
   );
 }
 

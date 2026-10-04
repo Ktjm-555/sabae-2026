@@ -20,6 +20,9 @@ export function SpecialStageSection() {
   const ldhStage = stages.find((stage) => stage.id === "ldh-workshop");
   const shinakoStage = stages.find((stage) => stage.id === "shinako-world-live");
   const danceContest = stages.find((stage) => stage.id === "dance-contest");
+  const lacquerwareFesta = stages.find(
+    (stage) => stage.id === "echizen-lacquerware-festa",
+  );
   // const wankoSoba = stages.find((stage) => stage.id === "wanko-soba");
 
   return (
@@ -157,21 +160,45 @@ export function SpecialStageSection() {
       {danceContest?.dateBar ? (
         <section className="relative z-[11] -mt-6 bg-background-yellow sm:-mt-8 lg:-mt-px">
           <div className="mx-auto max-w-[1400px] px-4 pt-2 sm:px-6 sm:pt-2 lg:px-8 lg:pt-2">
-            <div className="flex flex-col gap-8 lg:gap-10">
-              <SpecialStageAreaLabel date="10.18" day="sun" />
+            <div className="flex flex-col gap-14 sm:gap-16 lg:gap-20">
+              <div className="flex flex-col gap-8 lg:gap-10">
+                <SpecialStageAreaLabel date="10.18" day="sun" />
 
-              <div className="-mx-4 sm:-mx-6 lg:mx-0">
-                <SpecialStageDateBar
-                  date={danceContest.dateBar.date}
-                  day={danceContest.dateBar.day}
-                  title={danceContest.dateBar.title}
-                  titleHighlight={danceContest.dateBar.titleHighlight}
-                  titleSpLine2={danceContest.dateBar.titleSpLine2}
-                  titleSpCompact={danceContest.dateBar.titleSpCompact}
-                  titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
-                />
+                <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                  <SpecialStageDateBar
+                    date={danceContest.dateBar.date}
+                    day={danceContest.dateBar.day}
+                    title={danceContest.dateBar.title}
+                    titleHighlight={danceContest.dateBar.titleHighlight}
+                    titleSpLine2={danceContest.dateBar.titleSpLine2}
+                    titleSpCompact={danceContest.dateBar.titleSpCompact}
+                    titleHighlightNoSpace={danceContest.dateBar.titleHighlightNoSpace}
+                  />
+                </div>
+                <SpecialStageDanceContestBlock stage={danceContest} />
               </div>
-              <SpecialStageDanceContestBlock stage={danceContest} />
+
+              {lacquerwareFesta?.dateBar ? (
+                <div
+                  id={lacquerwareFesta.id}
+                  className="scroll-mt-28 flex flex-col gap-8 lg:scroll-mt-32 lg:gap-10"
+                >
+                  <div className="-mx-4 sm:-mx-6 lg:mx-0">
+                    <SpecialStageDateBar
+                      date={lacquerwareFesta.dateBar.date}
+                      day={lacquerwareFesta.dateBar.day}
+                      title={lacquerwareFesta.dateBar.title}
+                      titleHighlight={lacquerwareFesta.dateBar.titleHighlight}
+                      titleSpLine2={lacquerwareFesta.dateBar.titleSpLine2}
+                      titleSpCompact={lacquerwareFesta.dateBar.titleSpCompact}
+                      titleSpTwoLineUntilLg={lacquerwareFesta.dateBar.titleSpTwoLineUntilLg}
+                      titleHighlightNoSpace={lacquerwareFesta.dateBar.titleHighlightNoSpace}
+                      titleLong={lacquerwareFesta.dateBar.titleLong}
+                    />
+                  </div>
+                  <SpecialStageDanceContestBlock stage={lacquerwareFesta} omitAnchor />
+                </div>
+              ) : null}
             </div>
 
             <div
