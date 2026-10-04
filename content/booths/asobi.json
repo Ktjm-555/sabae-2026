@@ -174,9 +174,14 @@
     "exhibitor": "㈱福井ブローウィンズ",
     "squareNumber": "06",
     "squareColor": "#CE386A",
-    "note": "※18日(日)のみ",
-    "noteColor": "#E60012",
+    "note": "※17日(土)のみ",
+    "noteColor": "#0B5AB1",
+    "image": "/images/booths/asobi/freethrow.png",
     "imageAlt": "フリースローで当てよう！観戦チケット抽選会",
+    "imageCrop": {
+      "desktop": {"x": -24, "y": -5, "width": 320, "height": 213},
+      "sp": {"x": -70, "y": 3, "width": 242, "height": 161}
+    },
     "detail": {
       "body": "小さいお子さま向けと中高生向けのバスケットゴールを設置します。\nプレゼントの用意あり。",
       "links": {
@@ -189,10 +194,15 @@
   {
     "id": "power-shovel",
     "title": "パワーショベルでボールすくい",
-    "exhibitor": "太平造園",
+    "exhibitor": "鯖江市造園業協会",
     "squareNumber": "06",
     "squareColor": "#CE386A",
+    "image": "/images/booths/asobi/power-shovel.png",
     "imageAlt": "パワーショベルでボールすくい",
+    "imageCrop": {
+      "desktop": {"x": -1, "y": -11, "width": 349, "height": 233},
+      "sp": {"x": -2, "y": -5, "width": 251, "height": 168}
+    },
     "detail": {}
   }
 ]
