@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { format } from "date-fns";
+import { NewsItemLink } from "@/components/NewsItemLink";
 import { NewsArrowIcon, newsArrowIconSizeClass } from "@/components/NewsListItem";
 import { NewsItem, getCategoryLabel, getNewsLink } from "@/lib/news";
 
@@ -13,9 +13,9 @@ export function NewsCard({ news }: NewsCardProps) {
 
   return (
     <article className="group relative h-full min-h-[135px] rounded-[20px] bg-white shadow-[var(--shadow-card)] transition-[box-shadow,transform] hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)] lg:min-h-[203px]">
-      <Link
+      <NewsItemLink
         href={href}
-        {...(openInNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        openInNewTab={openInNewTab}
         className="relative flex h-full flex-col px-[30px] py-[15px] lg:px-8 lg:py-[27px]"
       >
         <time dateTime={news.date} className="text-sm font-bold text-primary lg:text-lg">
@@ -30,7 +30,7 @@ export function NewsCard({ news }: NewsCardProps) {
         <NewsArrowIcon
           className={`absolute top-1/2 right-6 -translate-y-1/2 transition-transform group-hover:translate-x-0.5 lg:right-7 ${newsArrowIconSizeClass}`}
         />
-      </Link>
+      </NewsItemLink>
     </article>
   );
 }

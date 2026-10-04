@@ -179,7 +179,10 @@ export function SpecialStageSection() {
               </div>
 
               {lacquerwareFesta?.dateBar ? (
-                <div className="flex flex-col gap-8 lg:gap-10">
+                <div
+                  id={lacquerwareFesta.id}
+                  className="scroll-mt-28 flex flex-col gap-8 lg:scroll-mt-32 lg:gap-10"
+                >
                   <div className="-mx-4 sm:-mx-6 lg:mx-0">
                     <SpecialStageDateBar
                       date={lacquerwareFesta.dateBar.date}
@@ -193,7 +196,7 @@ export function SpecialStageSection() {
                       titleLong={lacquerwareFesta.dateBar.titleLong}
                     />
                   </div>
-                  <SpecialStageDanceContestBlock stage={lacquerwareFesta} />
+                  <SpecialStageDanceContestBlock stage={lacquerwareFesta} omitAnchor />
                 </div>
               ) : null}
             </div>

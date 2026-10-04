@@ -51,21 +51,6 @@ function scrollToSection(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function waitForImages(root: ParentNode) {
-  const images = Array.from(root.querySelectorAll("img"));
-
-  return Promise.all(
-    images.map((img) =>
-      img.complete
-        ? Promise.resolve()
-        : new Promise<void>((resolve) => {
-            img.addEventListener("load", () => resolve(), { once: true });
-            img.addEventListener("error", () => resolve(), { once: true });
-          }),
-    ),
-  );
-}
-
 function SocialIcon({
   type,
   className = "h-5 w-5",
@@ -117,22 +102,51 @@ export function Header({ overlay }: HeaderProps) {
     html.style.scrollBehavior = "auto";
 
     let cancelled = false;
-    const run = () => {
-      if (!cancelled) {
-        jumpToSection(hash);
+    let stableFrames = 0;
+    let timeoutId = 0;
+
+    const align = () => {
+      if (cancelled) {
+        return;
       }
+
+      const el = document.getElementById(hash);
+      if (!el) {
+        return;
+      }
+
+      const margin = Number.parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+      const top = el.getBoundingClientRect().top;
+      if (Math.abs(top - margin) > 2) {
+        jumpToSection(hash);
+        stableFrames = 0;
+        return;
+      }
+
+      stableFrames += 1;
     };
 
-    run();
-    void waitForImages(document).then(() => {
-      run();
-      if (!cancelled) {
+    const tick = () => {
+      align();
+      if (cancelled || stableFrames >= 4) {
         html.style.scrollBehavior = previousBehavior;
+        return;
       }
-    });
+
+      timeoutId = window.setTimeout(tick, 80);
+    };
+
+    align();
+    timeoutId = window.setTimeout(tick, 80);
+    const stopId = window.setTimeout(() => {
+      cancelled = true;
+      html.style.scrollBehavior = previousBehavior;
+    }, 1600);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(timeoutId);
+      window.clearTimeout(stopId);
       html.style.scrollBehavior = previousBehavior;
     };
   }, [pathname]);
