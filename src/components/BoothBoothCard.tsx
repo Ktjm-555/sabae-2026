@@ -11,6 +11,7 @@ type ImageSpFit = "width" | "contain" | "cover";
 interface BoothBoothCardProps {
   booth: BoothBooth;
   defaultImageSpFit?: ImageSpFit;
+  variant?: "default" | "compact";
 }
 
 type FigmaCrop = {
@@ -118,6 +119,7 @@ function SquareBadge({
 export function BoothBoothCard({
   booth,
   defaultImageSpFit = "width",
+  variant = "default",
 }: BoothBoothCardProps) {
   const [open, setOpen] = useState(false);
   const desktopCrop = booth.imageCrop?.desktop;
@@ -129,6 +131,51 @@ export function BoothBoothCard({
       ? booth.imageSpFit
       : defaultImageSpFit;
   const spAlign = booth.imageSpAlign === "top" ? "top" : "center";
+
+  if (variant === "compact") {
+    return (
+      <article className="relative flex h-full min-h-[121px] cursor-pointer flex-col overflow-hidden rounded-[20px] bg-white px-[10px] pb-[10px] pt-[9px] shadow-[0_0_4px_2px_rgba(0,0,0,0.1)] transition-shadow hover:shadow-[0_0_8px_2px_rgba(0,0,0,0.16)] max-md:[text-size-adjust:100%]">
+        <button
+          type="button"
+          className="absolute inset-0 z-10 cursor-pointer rounded-[20px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          onClick={() => setOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          aria-label={`${booth.title}の詳細`}
+        />
+        <h3 className="text-base font-bold leading-[26px] text-[#4B5563]">
+          {booth.title}
+        </h3>
+        <div className="mt-auto flex flex-col items-end">
+          {booth.squareNumber && booth.squareColor ? (
+            <div className="flex items-center justify-end gap-0.5">
+              <span className="whitespace-nowrap text-xs leading-6 text-[#4B5563]">
+                {SQUARE_LABEL}
+              </span>
+              <SquareBadge
+                number={booth.squareNumber}
+                color={booth.squareColor}
+              />
+            </div>
+          ) : null}
+          {note ? (
+            <p
+              className="text-right text-xs leading-6"
+              style={{ color: noteColor }}
+            >
+              {note}
+            </p>
+          ) : null}
+        </div>
+        <BoothDetailModal
+          booth={booth}
+          open={open}
+          onClose={() => setOpen(false)}
+          hideImage
+        />
+      </article>
+    );
+  }
 
   return (
     <article
