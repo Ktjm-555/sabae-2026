@@ -4,7 +4,12 @@
     "title": "サバコーカフェ",
     "squareNumber": "05",
     "squareColor": "#4A3A93",
+    "image": "/images/booths/high-school/sabae-coca-cafe.png",
     "imageAlt": "サバコーカフェ",
+    "imageCrop": {
+      "desktop": { "x": -4, "y": -171, "width": 302, "height": 403 },
+      "sp": { "x": 0, "y": -21.58, "width": 150, "height": 200.17 }
+    },
     "detail": {
       "body": "スカッシュを販売します"
     }
@@ -16,7 +21,12 @@
     "squareColor": "#1F935C",
     "note": "※17日(土)のみ",
     "noteColor": "#0B5AB1",
+    "image": "/images/booths/high-school/rescue-quiz.png",
     "imageAlt": "クイズと体験で学ぶ！レスキューのひみつ",
+    "imageCrop": {
+      "desktop": { "x": -1, "y": -5, "width": 295, "height": 197 },
+      "sp": { "x": -42.55, "y": 0, "width": 235.1, "height": 157 }
+    },
     "detail": {
       "body": "•トリアージについての資料説明とクイズ\n•模擬応急処置体験\n•実物のトリアージに触れる"
     }
@@ -28,7 +38,12 @@
     "squareColor": "#F5A200",
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
+    "image": "/images/booths/high-school/futsuu.png",
     "imageAlt": "「ふつうってなに？」",
+    "imageCrop": {
+      "desktop": { "x": -4, "y": -3, "width": 302, "height": 169 },
+      "sp": { "x": -65.28, "y": 0, "width": 280.56, "height": 157 }
+    },
     "detail": {
       "body": "無意識の偏見や思い込み（アンコンシャス･バイアス）を自覚してもらうため、その人が思うふつうの家族を書いて貼ってもらいます。"
     }
@@ -52,7 +67,12 @@
     "squareColor": "#1F935C",
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
+    "image": "/images/booths/high-school/yasai-aisaiya.png",
     "imageAlt": "野菜愛菜家",
+    "imageCrop": {
+      "desktop": { "x": -2, "y": -3, "width": 300, "height": 200 },
+      "sp": { "x": -42.75, "y": 0, "width": 235.5, "height": 157 }
+    },
     "detail": {
       "body": "子どもたちの苦手な野菜についての情報などを掲示し、それを使った料理を提供することで、野菜に対する理解を深めます。"
     }
@@ -76,7 +96,12 @@
     "squareColor": "#CE386A",
     "note": "※18日(日)のみ",
     "noteColor": "#E60012",
+    "image": "/images/booths/high-school/superball-scoop.png",
     "imageAlt": "スーパーボールすくい",
+    "imageCrop": {
+      "desktop": { "x": 0, "y": 0, "width": 294, "height": 220 },
+      "sp": { "x": -29.9, "y": 0, "width": 209.81, "height": 157 }
+    },
     "detail": {
       "body": "未就園児と小学生に、いろいろな道具（お玉やスプーン、箸など）を使って、スーパーボールをすくってもらいます。"
     }
@@ -86,7 +111,12 @@
     "title": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）",
     "squareNumber": "06",
     "squareColor": "#CE386A",
+    "image": "/images/booths/high-school/sabae-baseball.png",
     "imageAlt": "鯖江高校野球部の野球教室 SABA CHIL（サバチル）",
+    "imageCrop": {
+      "desktop": { "x": -8, "y": -133, "width": 306, "height": 408 },
+      "sp": { "x": 0, "y": -21.5, "width": 150, "height": 200 }
+    },
     "detail": {
       "body": "野球人口の拡大と地域のニーズに応えるため、年間11回開催している野球教室の取り組みを紹介します。また、ストラックアウトも実施します。"
     }
