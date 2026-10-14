@@ -1,6 +1,7 @@
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { withBasePath } from "@/lib/basePath";
 import { newsRawFiles } from "@/lib/generated/news";
 
 export type NewsCategory = "event" | "speaker" | "ticket" | "general" | "recruitment";
@@ -61,6 +62,7 @@ interface ParsedNewsFile {
 
 function createExcerpt(content: string): string {
   const plain = content
+    .replace(/!\[[^\]]*]\([^)]*\)/g, "")
     .replace(/^#+\s.+/gm, "")
     .replace(/\|.*\|/g, "")
     .replace(/[-*#>|]/g, "")
@@ -110,10 +112,15 @@ export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
   }
 
   const processed = await remark().use(html).process(newsFile.content);
+  const contentHtml = processed.toString().replace(
+    /(<img\b[^>]*\ssrc=["'])(\/[^"']+)(["'])/gi,
+    (_match, before: string, src: string, after: string) =>
+      `${before}${withBasePath(src)}${after}`,
+  );
 
   return {
     ...toNewsItem(newsFile),
-    contentHtml: processed.toString(),
+    contentHtml,
   };
 }
 
