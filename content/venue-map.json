@@ -2,6 +2,10 @@
   "mapImage": "/images/venue-map/venue-map-pc.png",
   "mapImageSp": "/images/venue-map/venue-map-sp.png",
   "mapAlt": "ミライフェス2026 会場マップ",
+  "detailButton": {
+    "label": "会場マップ詳細",
+    "href": "/files/map-schedule.pdf"
+  },
   "access": {
     "placeName": "西山公園",
     "address": "福井県鯖江市桜町3丁目8-10",

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import { SectionTitle } from "@/components/SectionTitle";
 import { StageScheduleSection } from "@/components/StageScheduleSection";
+import { VenueAreaButton } from "@/components/VenueAreaButton";
 import { buttonArrowIconSizeClass } from "@/components/NewsListItem";
 import { withBasePath } from "@/lib/basePath";
 import { getVenueMapConfig } from "@/lib/venueMap";
@@ -90,7 +91,7 @@ export function VenueMapSection() {
           <div>
             <SectionTitle title="会場マップ" subtitle="VENUE MAP" />
             <div className={`${cardClassName} overflow-hidden`}>
-              <div className="flex items-center justify-center px-4 py-5 sm:px-6 sm:py-6 lg:px-6 lg:py-8">
+              <div className="flex items-center justify-center px-4 pt-5 sm:px-6 sm:pt-6 lg:px-6 lg:pt-8">
                 {venueMap.mapImageSp ? (
                   <Image
                     src={withBasePath(venueMap.mapImageSp)}
@@ -108,6 +109,13 @@ export function VenueMapSection() {
                   height={729}
                   className={`h-auto w-full ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
                   sizes="625px"
+                />
+              </div>
+              <div className="flex justify-center px-4 pt-5 pb-6 sm:pt-6 lg:pt-7 lg:pb-8">
+                <VenueAreaButton
+                  href={venueMap.detailButton.href}
+                  label={venueMap.detailButton.label}
+                  download
                 />
               </div>
             </div>

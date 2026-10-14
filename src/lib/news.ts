@@ -13,6 +13,9 @@ export interface NewsFrontmatter {
   published: boolean;
   href?: string;
   externalUrl?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  priority?: number;
 }
 
 export interface NewsItem {
@@ -24,6 +27,9 @@ export interface NewsItem {
   excerpt: string;
   href?: string;
   externalUrl?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  priority?: number;
 }
 
 export function getNewsLink(news: NewsItem): { href: string; openInNewTab: boolean } {
@@ -94,6 +100,9 @@ function toNewsItem({ slug, frontmatter, content }: ParsedNewsFile): NewsItem {
     excerpt: createExcerpt(content),
     href: frontmatter.href,
     externalUrl: frontmatter.externalUrl,
+    buttonLabel: frontmatter.buttonLabel,
+    buttonHref: frontmatter.buttonHref,
+    priority: frontmatter.priority,
   };
 }
 
@@ -101,7 +110,14 @@ export function getAllNews(): NewsItem[] {
   return parseNewsFiles()
     .filter((item) => item.frontmatter.published)
     .map(toNewsItem)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => {
+      const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+      if (dateDiff !== 0) {
+        return dateDiff;
+      }
+
+      return (b.priority ?? 0) - (a.priority ?? 0);
+    });
 }
 
 export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
