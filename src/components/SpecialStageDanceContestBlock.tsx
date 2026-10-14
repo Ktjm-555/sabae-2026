@@ -113,6 +113,19 @@ export function SpecialStageDanceContestBlock({
             {stage.description}
           </p>
 
+          {stage.highlights && stage.highlights.length > 0 ? (
+            <ul className="mt-2 text-base font-medium leading-8 text-foreground sm:text-lg lg:max-w-[808px] lg:text-xl lg:leading-8">
+              {stage.highlights.map((item) => (
+                <li key={item} className="flex">
+                  <span aria-hidden="true" className="shrink-0">
+                    ・
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
           {buttons.length > 0 ? (
             <div className="mt-5 hidden flex-1 flex-col justify-end lg:flex">
               <div className="flex flex-row items-center justify-start gap-3">
