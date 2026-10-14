@@ -61,6 +61,7 @@ export type SpecialStage = {
   producedBy?: string;
   subtitle: string;
   description: string;
+  highlights?: string[];
   image?: string;
   imageSp?: string;
   imageAlt?: string;

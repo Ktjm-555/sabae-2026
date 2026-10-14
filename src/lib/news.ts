@@ -1,6 +1,7 @@
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { withBasePath } from "@/lib/basePath";
 import { newsRawFiles } from "@/lib/generated/news";
 
 export type NewsCategory = "event" | "speaker" | "ticket" | "general" | "recruitment";
@@ -12,6 +13,9 @@ export interface NewsFrontmatter {
   published: boolean;
   href?: string;
   externalUrl?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  priority?: number;
 }
 
 export interface NewsItem {
@@ -23,6 +27,9 @@ export interface NewsItem {
   excerpt: string;
   href?: string;
   externalUrl?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  priority?: number;
 }
 
 export function getNewsLink(news: NewsItem): { href: string; openInNewTab: boolean } {
@@ -61,6 +68,7 @@ interface ParsedNewsFile {
 
 function createExcerpt(content: string): string {
   const plain = content
+    .replace(/!\[[^\]]*]\([^)]*\)/g, "")
     .replace(/^#+\s.+/gm, "")
     .replace(/\|.*\|/g, "")
     .replace(/[-*#>|]/g, "")
@@ -92,6 +100,9 @@ function toNewsItem({ slug, frontmatter, content }: ParsedNewsFile): NewsItem {
     excerpt: createExcerpt(content),
     href: frontmatter.href,
     externalUrl: frontmatter.externalUrl,
+    buttonLabel: frontmatter.buttonLabel,
+    buttonHref: frontmatter.buttonHref,
+    priority: frontmatter.priority,
   };
 }
 
@@ -99,7 +110,14 @@ export function getAllNews(): NewsItem[] {
   return parseNewsFiles()
     .filter((item) => item.frontmatter.published)
     .map(toNewsItem)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => {
+      const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+      if (dateDiff !== 0) {
+        return dateDiff;
+      }
+
+      return (b.priority ?? 0) - (a.priority ?? 0);
+    });
 }
 
 export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
@@ -110,10 +128,15 @@ export async function getNewsBySlug(slug: string): Promise<NewsDetail | null> {
   }
 
   const processed = await remark().use(html).process(newsFile.content);
+  const contentHtml = processed.toString().replace(
+    /(<img\b[^>]*\ssrc=["'])(\/[^"']+)(["'])/gi,
+    (_match, before: string, src: string, after: string) =>
+      `${before}${withBasePath(src)}${after}`,
+  );
 
   return {
     ...toNewsItem(newsFile),
-    contentHtml: processed.toString(),
+    contentHtml,
   };
 }
 

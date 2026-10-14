@@ -6,6 +6,7 @@ import { ExternalRedirect } from "@/components/ExternalRedirect";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { NewsPageBackground } from "@/components/NewsPageBackground";
+import { VenueAreaButton } from "@/components/VenueAreaButton";
 import { withBasePath } from "@/lib/basePath";
 import { getAllNewsSlugs, getCategoryLabel, getNewsBySlug } from "@/lib/news";
 import { getSiteConfig } from "@/lib/site";
@@ -97,6 +98,17 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
                   className="prose-news text-base lg:text-xl"
                   dangerouslySetInnerHTML={{ __html: news.contentHtml }}
                 />
+
+                {news.buttonLabel && news.buttonHref ? (
+                  <div className="mt-10 flex justify-center lg:mt-12">
+                    <VenueAreaButton
+                      href={news.buttonHref}
+                      label={news.buttonLabel}
+                      external={news.buttonHref.startsWith("http")}
+                      className="!h-auto min-h-[39px] max-w-full !px-4 text-center leading-snug whitespace-normal lg:min-h-[49px] lg:!px-8 lg:whitespace-nowrap"
+                    />
+                  </div>
+                ) : null}
               </article>
             </div>
           </div>

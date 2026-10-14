@@ -2,6 +2,74 @@
   "mapImage": "/images/venue-map/venue-map-pc.png",
   "mapImageSp": "/images/venue-map/venue-map-sp.png",
   "mapAlt": "ミライフェス2026 会場マップ",
-  "parkingLabel": "周辺駐車場",
-  "parkingNote": "駐車場台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。"
+  "detailButton": {
+    "label": "会場マップ詳細",
+    "href": "/files/map-schedule.pdf"
+  },
+  "access": {
+    "placeName": "西山公園",
+    "address": "福井県鯖江市桜町3丁目8-10",
+    "mapUrl": "https://maps.app.goo.gl/SfQTXkVUWuFVCsv87",
+    "routes": [
+      {
+        "icon": "/images/access/icon-happiline.svg",
+        "text": "ハピライン鯖江駅から 徒歩15分"
+      },
+      {
+        "icon": "/images/access/icon-fukutetsu.svg",
+        "text": "福井鉄道 西山公園駅から 徒歩1分"
+      },
+      {
+        "icon": "/images/access/icon-bus.svg",
+        "text": "つつじバス 西山公園バス停から 徒歩1分"
+      },
+      {
+        "icon": "/images/access/icon-car.svg",
+        "text": "北陸自動車道 鯖江ICから 車で5分"
+      }
+    ],
+    "parkingTitle": "駐車場のご案内",
+    "freeLabel": "無料",
+    "freePlaces": [
+      {
+        "name": "鯖江市役所",
+        "address": "福井県鯖江市西山町13-1",
+        "mapUrl": "https://maps.app.goo.gl/qoYkgmQqAqeqSGWs8",
+        "suffix": "および西側周辺（13区画）"
+      },
+      {
+        "name": "ワイプラザ グルメ館鯖江店 屋上駐車場",
+        "address": "福井県鯖江市有定町3丁目1-1",
+        "mapUrl": "https://maps.app.goo.gl/3DbwcfNhVPTrGesh8",
+        "suffix": ""
+      }
+    ],
+    "locationButton": {
+      "label": "位置詳細",
+      "note": "（Googleマイマップ）",
+      "href": "https://www.google.com/maps/d/u/0/viewer?mid=1jbXYPVw1PKCTG6fv3piOkfmyskmMOZQ&ll=35.95245876338007%2C136.1815147794166&z=16"
+    },
+    "paidLabel": "有料",
+    "paidFee": "2時間以内無料／以降300円",
+    "paidPlaces": [
+      {
+        "name": "嚮陽会館前駐車場",
+        "address": "福井県鯖江市桜町2丁目7-48-1",
+        "mapUrl": "https://maps.app.goo.gl/45ECGRTee6pR9F6SA"
+      },
+      {
+        "name": "ふれあい広場駐車場",
+        "address": "福井県鯖江市桜町3丁目4-34-1",
+        "mapUrl": "https://maps.app.goo.gl/yqDrynQbDhYdVfoe9"
+      }
+    ],
+    "availabilityButton": {
+      "label": "満車・空車状況",
+      "href": "https://www.city.sabae.fukui.jp/kurashi_tetsuduki/kokyokotsu/chushajo_churinjo/Keikaku00000.html"
+    },
+    "notes": [
+      "※駐車場台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。",
+      "※シャトルバスの運行はございません。"
+    ]
+  }
 }

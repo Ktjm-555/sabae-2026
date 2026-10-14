@@ -206,12 +206,14 @@
     },
     "subtitle": "伝統と楽しさが集うイベント",
     "description": "越前漆器の魅力をまるごと体験できるブースが大集合！\n越前漆器を「見て、触れて、使って」――\n鯖江の伝統を、ミライにつなごう！",
+    "highlights": [
+      "B級バザー市",
+      "絵付け体験",
+      "利き漆器チャレンジ",
+      "お椀積み上げチャレンジ",
+      "端材クラフト"
+    ],
     "buttons": [
-      {
-        "label": "わんこそば体験 参加申込",
-        "href": "https://docs.google.com/forms/d/e/1FAIpQLScE4tPKsTJLPIjOypPlVA_cwwR-tcT0TJwoHnR0Jj2Pl0hDnQ/viewform",
-        "external": true
-      },
       {
         "label": "チラシのダウンロード",
         "href": "/files/echizen-lacquerware-festa-flyer.pdf",

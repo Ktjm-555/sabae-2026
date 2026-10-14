@@ -41,6 +41,18 @@
       @apply mb-4;
     }
 
+    p:has(img) {
+      @apply mb-8;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 820px;
+      height: auto;
+      margin-inline: auto;
+    }
+
     ul {
       @apply mb-4 list-disc pl-6;
     }

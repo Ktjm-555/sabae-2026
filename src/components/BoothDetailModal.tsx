@@ -12,7 +12,6 @@ interface BoothDetailModalProps {
   booth: BoothBooth;
   open: boolean;
   onClose: () => void;
-  hideImage?: boolean;
 }
 
 type FigmaCrop = {
@@ -115,7 +114,6 @@ export function BoothDetailModal({
   booth,
   open,
   onClose,
-  hideImage = false,
 }: BoothDetailModalProps) {
   const titleId = useId();
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -196,7 +194,6 @@ export function BoothDetailModal({
 
         <div className="mt-3 border-t border-[#DCDCDC] md:mt-[15px]" />
 
-        {hideImage ? null : (
         <div className="px-[13px] pt-[15px] md:px-8 md:pt-[25px]">
           {booth.image && desktopCrop ? (
             <div
@@ -226,15 +223,12 @@ export function BoothDetailModal({
             </div>
           )}
         </div>
-        )}
 
         {body ? (
           <div
-            className={`space-y-1.5 px-[13px] text-xs leading-5 text-[#4B5563] md:space-y-2 md:px-8 md:text-base md:leading-7 ${
-              hideImage
-                ? "pt-[15px] md:pt-[25px]"
-                : "pt-4 md:pt-[25px]"
-            } ${showMeta || showFooter ? "" : "pb-4 md:pb-6"}`}
+            className={`space-y-1.5 px-[13px] pt-4 text-xs leading-5 text-[#4B5563] md:space-y-2 md:px-8 md:pt-[25px] md:text-base md:leading-7 ${
+              showMeta || showFooter ? "" : "pb-4 md:pb-6"
+            }`}
           >
             {body.split(/\n\n+/).map((paragraph, index) => (
               <p key={index} className="whitespace-pre-line">

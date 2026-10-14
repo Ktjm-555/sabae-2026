@@ -64,7 +64,7 @@
     "id": "yamani-hoyatei-yamuni",
     "title": "山うに作り体験",
     "exhibitor": "山うにの里 ほやっ停",
-    "squareNumber": "08",
+    "squareNumber": "05",
     "squareColor": "#B17F44",
     "imageAlt": "山うに作り体験",
     "detail": {
@@ -115,37 +115,6 @@
         "y": -104.35,
         "width": 150.51,
         "height": 376.23
-      }
-    }
-  },
-  {
-    "id": "carina",
-    "title": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
-    "exhibitor": "CARINA",
-    "squareNumber": "07",
-    "squareColor": "#29714F",
-    "imageAlt": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
-    "imageBackgroundColor": "#F8F8F8",
-    "imageSpFit": "cover",
-    "detail": {
-      "body": "車のフロントガラスに付いていた接着剤を抽出してできたインクを使って、キーホルダーやプレートに色塗りをします。\n\n一部、ディンプルアートの作品販売もいたします。",
-      "links": {
-        "hp": "https://gift-carina.com/"
-      }
-    },
-    "image": "/images/booths/partners/carina.png",
-    "imageCrop": {
-      "desktop": {
-        "x": 44,
-        "y": -69,
-        "width": 233,
-        "height": 291
-      },
-      "sp": {
-        "x": 22.45,
-        "y": -66.05,
-        "width": 118.88,
-        "height": 278.58
       }
     }
   },
@@ -844,7 +813,7 @@
     "noteColor": "#0B5AB1",
     "imageAlt": "『宝石のまち』からやってきた‼ 甲府の良きモノ大集合✨",
     "detail": {
-      "body": "〇甲府之証認定商品を含めた特産品の販売\n〇宝石すくい＆オリジナルキーホルダーづくり\n〇特産品が当たるガチャガチャ(商品購入者)\n〇甲府市地場産業クイズ"
+      "body": "〇甲府之証認定商品を含めた特産品の販売\n〇宝石すくい＆オリジナルキーホルダーづくり\n〇甲府市地場産業クイズ"
     },
     "image": "/images/booths/partners/kofu-tourism.png",
     "imageCrop": {
