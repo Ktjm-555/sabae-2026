@@ -119,37 +119,6 @@
     }
   },
   {
-    "id": "carina",
-    "title": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
-    "exhibitor": "CARINA",
-    "squareNumber": "07",
-    "squareColor": "#29714F",
-    "imageAlt": "リサイクルから生まれた凸凹インクで塗るディンプルアート",
-    "imageBackgroundColor": "#F8F8F8",
-    "imageSpFit": "cover",
-    "detail": {
-      "body": "車のフロントガラスに付いていた接着剤を抽出してできたインクを使って、キーホルダーやプレートに色塗りをします。\n\n一部、ディンプルアートの作品販売もいたします。",
-      "links": {
-        "hp": "https://gift-carina.com/"
-      }
-    },
-    "image": "/images/booths/partners/carina.png",
-    "imageCrop": {
-      "desktop": {
-        "x": 44,
-        "y": -69,
-        "width": 233,
-        "height": 291
-      },
-      "sp": {
-        "x": 22.45,
-        "y": -66.05,
-        "width": 118.88,
-        "height": 278.58
-      }
-    }
-  },
-  {
     "id": "tsuji-chiropractic",
     "title": "100年歩ける体をつくる！SDGs健康みらい学校",
     "exhibitor": "つじカイロプラクティック院",
