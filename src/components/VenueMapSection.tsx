@@ -86,44 +86,46 @@ export function VenueMapSection() {
       <div className="mx-auto max-w-[1400px] scroll-mt-24 px-4 pt-16 sm:px-6 lg:px-8 lg:pt-[77px]">
         <div
           id="venue-map"
-          className="mx-auto grid max-w-[1294px] scroll-mt-24 gap-12 lg:grid-cols-2 lg:items-start lg:gap-11"
+          className="mx-auto grid max-w-[1294px] scroll-mt-24 gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-11"
         >
-          <div>
+          <div className="flex h-full flex-col">
             <SectionTitle title="会場マップ" subtitle="VENUE MAP" />
-            <div className={`${cardClassName} overflow-hidden`}>
-              <div className="flex items-center justify-center px-4 pt-5 sm:px-6 sm:pt-6 lg:px-6 lg:pt-8">
-                {venueMap.mapImageSp ? (
+            <div className={`${cardClassName} flex flex-1 flex-col overflow-hidden`}>
+              <div className="flex flex-1 flex-col items-center justify-center px-4 py-5 sm:px-6 sm:py-6 lg:px-6 lg:py-8">
+                <div className="w-full">
+                  {venueMap.mapImageSp ? (
+                    <Image
+                      src={withBasePath(venueMap.mapImageSp)}
+                      alt={venueMap.mapAlt}
+                      width={708}
+                      height={448}
+                      className="h-auto w-full lg:hidden"
+                      sizes="(max-width: 1024px) 100vw, 625px"
+                    />
+                  ) : null}
                   <Image
-                    src={withBasePath(venueMap.mapImageSp)}
+                    src={withBasePath(venueMap.mapImage)}
                     alt={venueMap.mapAlt}
-                    width={708}
-                    height={448}
-                    className="h-auto w-full lg:hidden"
-                    sizes="(max-width: 1024px) 100vw, 625px"
+                    width={1151}
+                    height={729}
+                    className={`h-auto w-full ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
+                    sizes="625px"
                   />
-                ) : null}
-                <Image
-                  src={withBasePath(venueMap.mapImage)}
-                  alt={venueMap.mapAlt}
-                  width={1151}
-                  height={729}
-                  className={`h-auto w-full ${venueMap.mapImageSp ? "hidden lg:block" : ""}`}
-                  sizes="625px"
-                />
-              </div>
-              <div className="flex justify-center px-4 pt-5 pb-6 sm:pt-6 lg:pt-7 lg:pb-8">
-                <VenueAreaButton
-                  href={venueMap.detailButton.href}
-                  label={venueMap.detailButton.label}
-                  download
-                />
+                </div>
+                <div className="pt-5 sm:pt-6 lg:pt-7">
+                  <VenueAreaButton
+                    href={venueMap.detailButton.href}
+                    label={venueMap.detailButton.label}
+                    download
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="flex h-full flex-col">
             <SectionTitle title="アクセス" subtitle="ACCESS" />
-            <div className={`${cardClassName} px-4 py-5 text-foreground sm:px-6 lg:px-[23px] lg:py-5`}>
+            <div className={`${cardClassName} flex-1 px-4 py-5 text-foreground sm:px-6 lg:px-[23px] lg:py-5`}>
               <p className="text-base leading-7">
                 <span className="font-bold">{access.placeName}</span>
                 <span className="text-sm">（</span>
